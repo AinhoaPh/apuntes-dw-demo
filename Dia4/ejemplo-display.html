@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+    
+        .box {
+            width: 100px;/*Ancho*/
+            height: 100px;/*Alto*/
+            padding: 5px;/*Espacio interno*/
+            margin: 10px;/*centrado horizontal*/
+
+            background-color: #eb9d37;
+            border: 4px solid black;
+            box-shadow: inset 10px 10px 10px rgb(253,200,102); /*sombra interna  interna */
+            border-radius: 255px 15px 225px 15px/1px 2px 3px 4px;/*esquinas*/
+/* propiedades de CSS standard */
+            color: rgb(43, 41, 41);
+            filter: drop-shadow(  2px 2px 2px rgba(0,0,0,0.5)  );/*sombra fuera*/
+            font-weight: bold;/*Texto negrita*/
+            font-size:large;/*Texto grande*/
+            text-align:center;
+        }
+        .inline {
+            display:inline;
+            width: 100px;
+            height:100px; 
+        }
+        .block{
+            display:block;
+            width:100px;
+            height:100px;
+        }
+        .inline-block{
+            display:inline-block;
+            width:100px;
+            height:100px;
+        }
+        .hidden {
+            display: none; 
+            }
+
+
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <h1>Display</h1>
+    
+  
+    <h2>Display: Inline</h2>  
+        <span class="box Inline">Caja 1: block Elemento inline, no tengo height o width </span>
+        <span class="box Inline">Caja 2</span>
+       <div>
+        <br class="block" style="margin-top: 50px;"> Tampoco se aplican los margin y los bottom.
+       </div>
+    <h2>Display: Block</h2>
+        <span class="box block">Caja 1: ksfknfknfkk njkwn</span>
+        <span class="box block">Caja 2</span>
+    <h2>Display: inline-block</h2>
+        <span class="box inline-block">Caja 1</span>
+        <span class="box inline-block">Caja 2</span>
+        Nos permite combinar amabas opciones, pudiendo aplicar width y height con la unica diferencia de que no hace un salto de linea.
+    <h2>Display: None</h2>
+
+   
+     Cajas invisibles: 
+        
+        <span class="box block"> Caja 1</span>   
+        </div> 
+        <span class="box hidden">Caja 2: inline</span>
+        <span class="box block">Caja 3: inline.block</span>
+   
+    </body>
+    
+
+    <br><span class="block" style="margin-top:  50px;">Tampoco se aplican los margin top y bottom.
+    </span></div>
+
+</body>
+</html>
