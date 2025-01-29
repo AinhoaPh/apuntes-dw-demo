@@ -20,7 +20,7 @@
         } 
         .purpleBox{
             background: purple;
-            height:5px ;
+           
             padding: 250px;
 
         }
@@ -38,6 +38,22 @@
         .boxDouble{
             width: 200px;
         
+        }
+        .container1{
+            
+            background: lightcoral;
+            align-items: flex-start; 
+            margin:4px
+        }
+        .container2{
+            background: lightsalmon;
+            align-items: flex-end;
+            margin:4px;
+        }
+        .container3{
+            background: lightblue;
+            align-items: center;
+            margin:4px;
         }
        
         .ej1{
@@ -64,6 +80,25 @@
             justify-content: space-between;
             justify-content: space-around;/* los laterales 1/2 de los centrales*/
         }
+        .ej4{
+        
+           
+            
+            /*
+            align-items:flex-start;
+            align-items:flex-end;
+            align-items:center;
+            align-items:baseline;
+            align-items:stretch;*/
+           
+        
+        }
+        .ej5{
+
+        }
+        .ej6{
+
+        }
     
     </style>
 </head>
@@ -75,11 +110,6 @@
         Podemos utilizar <b>flex-flow: row wrap</b>
     </p>
 
-
-
-
-
-
     <div class="flexx ej1">
         <div class="box">1</div>
         <div class="box">2</div>
@@ -88,6 +118,8 @@
         <div class="box">5</div>
         <div class="box">6</div>
     </div>
+
+
     
     <h3>Flex Wrap</h3>
     <p>Controla si los elementos se ajustan a la misma fila o se desplaza a la siguiente. Conserva el width y height de los ejementos</p>
@@ -100,16 +132,78 @@
         <div class="box">5</div>
         <div class="box">6</div>
     </div>
+
+
     
-    <h3>Justifu Content</h3>
+    <h3>Justify Content</h3>
 
 
     <div class="flexx ej3 purpleBox">
-        <div class="boxDouble">1 d</div>
+        <div class="box">1 d</div>
         <div class="box">2</div>
-        <div class="boxDouble">3 d</div>
+        <div class="box">3 d</div>
         
     </div>
+
+
+
+    <h3>Align-Item</h3>
+
+    Flex-Start:
+    <div class="flexx ej4 container1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div> 
+     Flex-End:
+     <div class="flexx ej4 container2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+      
+    Center:
+    <div class="flexx ej4 container3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+     </div> 
+
+
+
+
+
+    </div> 
+
+     
+   
+
+
+    <h3>Order</h3>
+
+
+    <div class="flexx ej5 purpleBox">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      
+    </div>
+
+    <h3>Flex Grow</h3>
+    <div class="flexx ej6">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+       
+    </div>
+
+
 
 </body>
 </html>
