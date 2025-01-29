@@ -20,7 +20,7 @@
         } 
         .purpleBox{
             background: purple;
-           
+            height: 5px ;
             padding: 250px;
 
         }
@@ -55,7 +55,10 @@
             align-items: center;
             margin:4px;
         }
-       
+       .container6{
+           flex-grow:1;
+            margin:4px;
+       }
         .ej1{
             flex-direction: row;/*ordena en linea*/ 
            /* flex-direction: column;
@@ -80,7 +83,7 @@
             justify-content: space-between;
             justify-content: space-around;/* los laterales 1/2 de los centrales*/
         }
-        .ej4{
+    
         
            
             
@@ -92,13 +95,6 @@
             align-items:stretch;*/
            
         
-        }
-        .ej5{
-
-        }
-        .ej6{
-
-        }
     
     </style>
 </head>
@@ -188,7 +184,7 @@
     <h3>Order</h3>
 
 
-    <div class="flexx ej5 purpleBox">
+    <div class="flexx ej5 ">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
@@ -196,9 +192,9 @@
     </div>
 
     <h3>Flex Grow</h3>
-    <div class="flexx ej6">
+    <div class="flexx container6 " >
         <div class="box">1</div>
-        <div class="box">2</div>
+        <div class="box container6">2</div>
         <div class="box">3</div>
        
     </div>
