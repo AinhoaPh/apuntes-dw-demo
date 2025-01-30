@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
-        .header, .self, .self a{
+
+        .header a{
             display: flex;
             flex-direction: row;
             background-color: teal;
-           color: antiquewhite;
+            color: antiquewhite;
             padding: 15px 20px;
             justify-content: flex-end;
-           
+
         }
 
 
 
-       /* clase contiene a la sidebar y la section*/
-        .row{
-            display:flex;
+        /* clase contiene a la sidebar y la section*/
+        .row {
+            display: flex;
             flex-wrap: wrap;
         }
+
         /*Barra lateral*/
-        .sidebar{
+        .sidebar {
             flex: 30px;
             padding: 20px;
-            background-color:rgb(168, 65, 164) ;
+            background-color: rgb(168, 65, 164);
             list-style: none;
         }
+
         /*Elimina marcadores*/
-        .sidebar ul{
-        list-style:none;
+        .sidebar ul {
+            list-style: none;
         }
+
         /* elimina el subrayado y cambia la letra a negro*/
-        .sidebar ul li a{
-         text-decoration: none;
-        color:black
-         }
-         /*Se colorean cuando se pasa por encima*/
-         .sidebar ul li a:hover{
-        color:teal;
-         }
-         /*Contenido principal*/
-        .section{
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black
+        }
+
+        /*Se colorean cuando se pasa por encima*/
+        .sidebar ul li a:hover {
+            color: teal;
+        }
+
+        /*Contenido principal*/
+        .section {
             flex: 70%;
-            background-color:lightpink ;
+            background-color: lightpink;
             padding: 20px;
         }
-        .header1{
+
+        .header1 {
             justify-content: flex-start;
         }
-        .footer{
+
+        .footer {
             padding: 20px;
             text-align: center;
             background-color: teal;
             align-content: stretch;
-         
+
         }
-        
-
-
-
     </style>
 
 
@@ -77,42 +82,53 @@
 
 
 <!-- self porque es en la misma pagina o seria nav?? -->
-<body> 
-    
-    <self class="header self self a">
-       <h1 class="header1">Logo</h1>
-       
+
+<body>
+
+    <div class="header self">
+        <h1 class="header1">Logo</h1>
+
         <a href="#">Inicio</a>
         <a href="#">Acerca de</a>
         <a href="#">Servicios</a>
         <a href="#">Contacto</a>
-        
-    </self>
-    <div class="row">
-        
-        <aside class="sidebar">
-            <h2>Barra Lateral</h2>
-           
-                <ul>
-                    <li><a href="./index.html">Enlace 1</a></li>
-                    <li><a href="./index.html">Enlace 2</a></li>
-                    <li><a href="./index.html">Enlace 3</a></li>
-                    <li><a href="./index.html">Home</a></li>
-                </ul>
-            
-        </aside>
-        <section class="section">
-            <h2>Contenido Principal</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam iste ab reprehenderit velit, repellendus inventore illum tenetur quod distinctio. Facilis nisi quod suscipit molestiae praesentium magni omnis numquam incidunt.
-            Minima minus fuga debitis nobis aspernatur recusandae tenetur accusamus excepturi ea? Totam magnam, iste minus eos hic omnis laudantium quisquam tenetur repellat! Culpa consequuntur aperiam quis adipisci magnam quidem quod?
-            Excepturi, rem sit! Nesciunt at, est praesentium amet laboriosam quisquam nostrum vero? Ducimus laudantium dicta voluptates, sunt, vero exercitationem sequi, consequuntur quia unde eum ex rerum explicabo porro officiis alias.</p>
-        </section>
-       
-        <footer class="footer">
+    </div>
 
-            <h2>   Derechos de autor &copy; 2025 Nombre de la Empresa</div></h2>
-        </footer>
-        
+<div class="row"> 
+    <aside class="sidebar">
+        <h2>Barra Lateral</h2>
+
+        <ul>
+            <li><a href="./index.html">Enlace 1</a></li>
+            <li><a href="./index.html">Enlace 2</a></li>
+            <li><a href="./index.html">Enlace 3</a></li>
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+
+    </aside>
+</div>
+<div>
+    <section class="section">
+        <h2>Contenido Principal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam iste ab reprehenderit
+            velit, repellendus inventore illum tenetur quod distinctio. Facilis nisi quod suscipit molestiae
+            praesentium magni omnis numquam incidunt.
+            Minima minus fuga debitis nobis aspernatur recusandae tenetur accusamus excepturi ea? Totam magnam, iste
+            minus eos hic omnis laudantium quisquam tenetur repellat! Culpa consequuntur aperiam quis adipisci
+            magnam quidem quod?
+            Excepturi, rem sit! Nesciunt at, est praesentium amet laboriosam quisquam nostrum vero? Ducimus
+            laudantium dicta voluptates, sunt, vero exercitationem sequi, consequuntur quia unde eum ex rerum
+            explicabo porro officiis alias.</p>
+    </section>
+</div>
+    <footer class="footer">
+
+        <h2> Derechos de autor &copy; 2025 Nombre de la Empresa
+            </div>
+        </h2>
+    </footer>
+
     </div>
 </body>
+
 </html>
