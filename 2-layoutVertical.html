@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Layout Vertical</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+       .container{
+        display:flex;
+        flex-direction: column;
+        height:100vh;
+        justify-content: space-between;
+        }
+       .header,.footer{
+        background-color: teal;
+        padding:10px;
+        }
+       .content{
+        background-color: blue;
+        padding:10px;
+        flex-grow: 1;
+        overflow-y: scroll;       }
+
+       
+     
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header"> Header</div>
+        <div class="Content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolorum nobis. In nihil expedita est. Possimus vitae nulla enim suscipit repudiandae quos nam porro quaerat? Iure, non. Fugiat, dolorem consequatur.
+            Accusantium omnis cumque nulla, minima labore ex incidunt voluptatibus earum explicabo natus quia id et eum sit porro illum nisi, nostrum quisquam error atque. Amet distinctio error enim quae eos.
+        </div>
+        <div clas="footer">Footer</div>
+    </div>
+
+</body>
+</html>

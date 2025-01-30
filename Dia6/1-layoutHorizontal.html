@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Layout Horizontal</title>
+    
+    <!-- /*ESTRUCTURA HORIZONTAL*/ -->
+
+    <style>
+    /* Reset CSS*/
+     *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+   
+    /* Estilos de mi App*/
+    .container{
+        display: flex;
+        background: teal;
+        height:100vh;/*view height: el alto de la vista completa*/
+    }
+    .sidebar{
+        width: 100vh;/*ancho de la barra lateral*/
+        padding: 20px;
+        background-color: beige;
+    }
+    /*opcional: quitar el formato de listas/li*/
+    .sidebar ul{
+        list-style:none;
+    }
+    .sidebar ul li a{
+        text-decoration: none;
+        color:black
+    }
+    /*para que se ilumine cuando pasemos por encima*/
+    .sidebar ul li a:hover{
+        color:teal;
+    }
+    .main-content{
+        
+        padding: 20px;
+    }
+    </style>
+</head> 
+           <!--      
+        ul>li*3{Elemento $}+li>a[href="./index.html"]{Home}  
+        
+        .   clases
+        #   id
+        >   nos metemos dentro de la etiqueta
+        *   multiplica los elementos
+        {}  escriben texto
+        {$} agregan un número a cada item
+        +   agregar una etiqueta hermana (sibling)
+        []  acceden a los atributos
+
+        -->
+
+ 
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Contenido Principal</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis at laborum minima reiciendis
+            animi aspernatur magn
+animi aspernatur magnam! Quaerat dicta maiores ipsa ratione enim qui velit sunt culpa, sint vero
+            aliquid.</p>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- shortcut en emmet 
+        div.main-content>h1{Contenido Principal}+p{Lorem}
+    -->

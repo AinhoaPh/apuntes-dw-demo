@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+        .container{
+            display:flex;
+            background:teal;
+            padding:0;
+            flex-wrap:row nowrap;
+            height: 30px;
+            font-weight: bold;
+            font-size: x-large;
+        
+        }
+       
+         .sidebar{
+        width: 250px;/*ancho de la barra lateral*/
+        padding: 20px;
+        background-color: lightpink;
+        height:100vh;
+         }
+         .sidebar ul{
+        list-style:none;
+        }
+         .sidebar ul li a{
+         text-decoration: none;
+        color:black
+         }
+         /*para que se ilumine cuando pasemos por encima*/
+        .sidebar ul li a:hover{
+        color:teal;
+         }
+        .main-content{
+        padding: 20px;
+        
+         }
+         .container2{
+        display: flex;
+        background: rgb(182, 93, 140);
+        height:100vh;/*view height: el alto de la vista completa*/
+    }
+   
+    </style>
+
+
+
+    </head>
+    <body>
+    <div class="container">Logo</div>
+        
+       
+        
+  
+        <div class="container1">
+           <div class="sidebar"><h2>Barra Lateral</h2>
+           
+            <ul>
+                <li><a href="./index.html">Enlace 1</a></li>
+                <li><a href="./index.html">Enlace 2</a></li>
+                <li><a href="./index.html">Enlace 3</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="container2">
+        <div class="main-content">
+            <h1>Contenido Principal</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis at laborum minima reiciendis
+                animi aspernatur magn
+    animi aspernatur magnam! Quaerat dicta maiores ipsa ratione enim qui velit sunt culpa, sint vero
+                aliquid.</p>
+        </div>
+    
+         
+    </body>
+ </html>
