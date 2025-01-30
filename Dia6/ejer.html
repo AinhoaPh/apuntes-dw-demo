@@ -1,56 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         *{
-            padding:0;
             margin: 0;
-            box-sizing:border-box;
+            padding: 0;
+            box-sizing: border-box; 
         }
-        .container{
+        .header, .self, .self a{
+            display: flex;
+            flex-direction: row;
+            background-color: teal;
+           color: antiquewhite;
+            padding: 15px 20px;
+            justify-content: flex-end;
+        }
+       /* clase contiene a la sidebar y la section*/
+        .row{
             display:flex;
-            background:teal;
-            padding:0;
-            flex-wrap:row nowrap;
-            height: 30px;
-            font-weight: bold;
-            font-size: x-large;
-
+            flex-wrap: wrap;
         }
-         .sidebar{
-        width: 250px;/*ancho de la barra lateral*/
-        padding: 20px;
-        background-color: beige;
-        height:100vh;
-        
+        .sidebar{
+            flex: 30px;
+            padding: 20px;
+            background-color:rgb(168, 65, 164) ;
+            list-style: none;
+        }
+        .sidebar ul{
+        list-style:none;
+        }
+
+        .sidebar ul li a{
+         text-decoration: none;
+        color:black
          }
+         .sidebar ul li a:hover{
+        color:teal;
+         }
+        .section{
+            flex: 70%;
+            background-color:lightpink ;
+            padding: 20px;
+        }
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background-color: teal;
+        }
+        
+
+
 
     </style>
 
 
 
-    </head>
-    <body>
-    <div class="container">Logo</div>
-        <div class="container">Inicio</div>
+</head>
+
+
+
+
+
+<body> 
     
-  
-     <div class="container1">
-        <div class="sidebar">
+    <self class="header self self a">
+
+       
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </self>
+    <div class="row">
+        
+        <aside class="sidebar">
+            <h2>Barra Lateral</h2>
            
-            <ul>
-                <li><a href="./index.html">Enlace 1</a></li>
-                <li><a href="./index.html">Enlace 2</a></li>
-                <li><a href="./index.html">Enlace 3</a></li>
-                <li><a href="./index.html">Home</a></li>
-            </ul>
-        </div>
+                <ul>
+                    <li><a href="./index.html">Enlace 1</a></li>
+                    <li><a href="./index.html">Enlace 2</a></li>
+                    <li><a href="./index.html">Enlace 3</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            
+        </aside>
+        <section class="section">
+            <h2>Contenido Principal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam iste ab reprehenderit velit, repellendus inventore illum tenetur quod distinctio. Facilis nisi quod suscipit molestiae praesentium magni omnis numquam incidunt.
+            Minima minus fuga debitis nobis aspernatur recusandae tenetur accusamus excepturi ea? Totam magnam, iste minus eos hic omnis laudantium quisquam tenetur repellat! Culpa consequuntur aperiam quis adipisci magnam quidem quod?
+            Excepturi, rem sit! Nesciunt at, est praesentium amet laboriosam quisquam nostrum vero? Ducimus laudantium dicta voluptates, sunt, vero exercitationem sequi, consequuntur quia unde eum ex rerum explicabo porro officiis alias.</p>
+        </section>
 
-    
+        <footer class="footer">
 
-</body
+            <h2>   Derechos de autor &copy; 2025 Nombre de la Empresa</div></h2>
+        </footer>
+
+    </div>
+</body>
 </html>

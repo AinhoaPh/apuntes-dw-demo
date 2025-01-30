@@ -1,4 +1,4 @@
-
+<style>
  /*estilos de mi pagina*/
  .caja {
     border: 3px dashed salmon;
@@ -15,5 +15,25 @@
     border-style: double;
     box-sizing: border-box;/* contenido +  padding + borde */
     }
-  
- 
+
+   
+style
+   
+
+  /*Diseño con Grid Areas*/
+ body class="grid_container"
+
+ <hea{}ader">
+    <h2>Header>h2>
+   </header>
+   <main class="main">
+    <h2>Main>h2>
+    </main>
+   <aside class="aside">
+    <h2>Aside<h2>
+    </aside>
+    <footer class="footer">
+      <h2>Footer</h2>
+   </footer>
+</body>
+   
