@@ -22,47 +22,57 @@
                         }
 
                         /* Estilos para el header y footer */
-                        .header,
-                        .footer {
+                        .header {
                             background-color: #333;
                             color: #fff;
-                            padding: 10px;
-                        }
-
-                        .footer {
-                            text-align: center;
-                        }
-
-
-                        /* Estilos para la navegación del header */
-                        .nav {
+                            padding: 15px;
                             display: flex;
                             justify-content: space-between;
+                            align-items: center;
                         }
 
-                        .nav ul {
-                            list-style-type: none;
-                            margin: 0;
-                            padding: 0;
+                        .header .logo {
+                            font-size: 24px;
+                            font-weight: bold;
                         }
-
-                        .nav ul li {
-                            display: inline;
-                            margin-right: 20px;
+                        .search-container {
+                            display: flex;
+                            align-items: center;
                         }
-
-                        .header a,
-                        .footer a {
-                            color: #fff;
-                            text-decoration: none;
+                        .search-container input {
+                            padding: 8px;
+                            font-size: 16px;
+                            border: none;
+                            border-radius: 5px;
+                            width: 250px;
                         }
+                        .search-container button {
+                            background-color: #555;
+                            color: white;
+                            border: none;
+                            padding: 8px 12px;
+                            margin-left: 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
 
-                        .header a:hover,
-                        .footer a:hover {
-                            color: #999;
-                        }
+                         }
+                         .search-container button:hover {
+                            background-color: #777;
+                         }
+                         .login-btn {
+                            background-color: #007bff;
+                            color: white;
+                            border: none;
+                            padding: 10px 15px;
+                           text-decoration: none;
+                            border-radius: 5px;
+                            cursor: pointer;
 
-                        /* main: incluye sidebar + content */
+                         }
+                         .login-btn:hover {
+                            background-color: #0056b3;
+                         }
+                         /* main: incluye sidebar + content */
                         .main {
                             display: flex;
                             flex: 1;
@@ -71,18 +81,22 @@
                         /* Estilos para la navegación del sidebar */
                         .sidebar {
                             background-color: #f0f0f0;
-                            width: 200px;
-                            padding: 10px;
+                            width: 250px;
+                            padding: 15px;
                         }
 
                         .sidebar ul {
-                            margin: 10px;
+                            padding: 0;
                             list-style-type: none;
+                        }
+                        .sidebar ul li {
+                           margin: 8px 0;
                         }
 
                         .sidebar a {
                             text-decoration: none;
                             color: gray;
+                            font-size: 16px;
                         }
 
                         .sidebar a:hover {
@@ -92,11 +106,16 @@
 
                         /* EStilos para el contenido */
                         .content {
-                            display: flex;
-                            flex-direction: column;
+                          padding: 20px;
+                            text-align: center;
                             flex: 1;
                             /*Padding:10px;*/
                         }
+                        .content h1 {
+                            margin-bottom: 20px;
+                        }
+
+
 
                         section {
                             margin:10px;
@@ -135,6 +154,13 @@
                             box-shadow: 2px 2px 5px #bbbbbb;
                             margin: 5px;
                             border-radius: 5px;
+
+                        }
+                        .footer {
+                            background-color: #333;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px;
                         }
                     </style>
                 </head>
@@ -153,37 +179,42 @@
 
                     <!-- container: Contenedor que engloba todo el layout -->
                     <div class="container">
-
-
                         <div class="header">
-                            <div class="nav">
-                                <div>Logo</div>
+                            <div class="logo"> Biblioteca Virtual</div>
+                           <div class="search-container">
+                                <input type="text" placeholder="Buscar libro...">
+                                <button></button>
+                           </div>
+                           
+                        <div class="main">
+                            <div class="sidebar">
+                                <h2>Categorias de Libros</h2>
                                 <ul>
-                                    <li><a href="#">Inicio</a></li>
-                                    <li><a href="#">Acerca de</a></li>
-                                    <li><a href="#">Servicios</a></li>
-                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="#">Novela</a></li>
+                                    <li><a href="#">Ciencia Ficcion</a></li>
+                                    <li><a href="#">Fantasia</a></li>
+                                    <li><a href="#">Misterio y Suspense</a></li>
+                                    <li><a href="#">Terror</a></li>
+                                    <li><a href="#">Romance</a></li>
+                                    <li><a href="#">Historia</a></li>
+                                    <li><a href="#">Biografias</a></li>
+                                    <li><a href="#">Poesia</a></li>
+                                    <li><a href="#">Comic, Anime y Novelas Graficas</a></li>
+                                    <li><a href="#">Infantil y Juvenil</a></li>
+
                                 </ul>
                             </div>
                         </div>
 
                         <!-- main: Contenido Principal (incluye sidebar que también es parte del contenido) -->
-                        <div class="main">
-                            <div class="sidebar">
-                                <h2>Barra lateral</h2>
-                                <ul>
-                                    <li><a href="#">Enlace 1</a></li>
-                                    <li><a href="#">Enlace 2</a></li>
-                                    <li><a href="#">Enlace 3</a></li>
-                                </ul>
-                            </div>
+                    
 
                             <!-- Contenido a la derecha: Nuestro container de secciones  -->
                             <div class="content  ">
                                 <div class="grid-container">
 
 
-                                    <h1>Contenido principal</h1>
+                                    <h1>Book-Nest</h1>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget erat vel quam
                                         facilisis semper. Morbi ac mauris ac nisi bibendum ultrices.</p>
 
