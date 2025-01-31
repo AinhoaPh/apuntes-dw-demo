@@ -13,14 +13,19 @@
             box-sizing: border-box;
         }
         
-        /* Contenedor Layout General */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid Layout Principal (Eje vertical) */
         .container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto; /* Header - Sidebar - Contenido - Footer */
+            grid-template-columns: 1fr;
             height: 100vh;
         }
 
-        /* Estilos para el header */
+        /* Header */
         .header {
             background-color: #333;
             color: #fff;
@@ -30,12 +35,12 @@
             align-items: center;
         }
 
-        .header .logo {
+        .logo {
             font-size: 24px;
             font-weight: bold;
         }
 
-        /* Buscador en el header */
+        /* Buscador */
         .search-container {
             display: flex;
             align-items: center;
@@ -78,17 +83,11 @@
             background-color: #0056b3;
         }
 
-        /* Estilos para el main (sidebar + content) */
-        .main {
-            display: flex;
-            flex: 1;
-        }
-
-        /* Sidebar (categorías de libros) */
+        /* Sidebar (Eje vertical, ocupa todo el ancho) */
         .sidebar {
             background-color: #f0f0f0;
-            width: 250px;
             padding: 15px;
+            text-align: center;
         }
 
         .sidebar h2 {
@@ -99,25 +98,36 @@
         .sidebar ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
 
         .sidebar ul li {
-            margin: 8px 0;
+            display: inline;
         }
 
         .sidebar a {
             text-decoration: none;
             color: #333;
             font-size: 16px;
+            padding: 8px 12px;
+            background-color: #ddd;
+            border-radius: 5px;
         }
 
         .sidebar a:hover {
-            color: #007bff;
+            background-color: #007bff;
+            color: white;
         }
 
         /* Contenido principal */
         .content {
-            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
             text-align: center;
         }
@@ -129,19 +139,20 @@
         /* Botones de acción */
         .buttons-container {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
             margin-top: 20px;
         }
 
         .action-btn {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            width: 200px;
         }
 
         .action-btn:hover {
@@ -155,8 +166,9 @@
             text-align: center;
             padding: 10px;
         }
+
         .footer a {
-            color: #7254be;
+            color: #f8c471;
             text-decoration: none;
             margin-left: 10px;
         }
@@ -187,7 +199,6 @@
                 align-items: center;
             }
         }
-
     </style>
 </head>
 <body>
@@ -204,59 +215,41 @@
             <a href="#" class="login-btn">Iniciar Sesión</a>
         </div>
 
-        <!-- Main: Sidebar + Contenido -->
-        <div class="main">
-
-            <!-- Sidebar con categorías de libros -->
-            <div class="sidebar">
-                <h2>Categorías de Libros</h2>
-                <br>
-                <ul>
-                    <li><a href="#">Novela</a></li>
-                    <hr>
-                    <li><a href="#">Ciencia Ficción</a></li>
-                    <hr>
-                    <li><a href="#">Fantasía</a></li>
-                    <hr>
-                    <li><a href="#">Misterio y Suspenso</a></li>
-                    <hr>
-                    <li><a href="#">Terror</a></li>
-                    <hr>
-                    <li><a href="#">Romance</a></li>
-                    <hr>
-                    <li><a href="#">Historia</a></li>
-                    <hr>
-                    <li><a href="#">Biografías</a></li>
-                    <hr>
-                    <li><a href="#">Poesía</a></li>
-                    <hr>
-                    <li><a href="#">Cómics y Novelas Gráficas</a></li>
-                    <hr>
-                    <li><a href="#">Infantil y Juvenil</a></li>
-                    <hr>
-                </ul>
-            </div>
-
-            <!-- Contenido principal -->
-            <div class="content">
-                <h1>Gestión de Libros</h1>
-                <p>Selecciona una acción:</p>
-                <div class="buttons-container">
-                    <button class="action-btn">Subir Libro</button>
-                    <button class="action-btn">Mis Libros</button>
-                    <button class="action-btn">Prestar Libro</button>
-                </div>
-            </div>
-
+        <!-- Sidebar con categorías de libros -->
+        <div class="sidebar">
+            <h2>Categorías de Libros</h2>
+            <ul>
+                <li><a href="#">Novela</a></li>
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Fantasía</a></li>
+                <li><a href="#">Misterio</a></li>
+                <li><a href="#">Terror</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Biografías</a></li>
+                <li><a href="#">Poesía</a></li>
+                <li><a href="#">Cómics</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ul>
         </div>
 
-        <!-- Footer -->
+        <!-- Contenido principal -->
+        <div class="content">
+            <h1>Gestión de Libros</h1>
+            <p>Selecciona una acción:</p>
+            <div class="buttons-container">
+                <button class="action-btn">Subir Libro</button>
+                <button class="action-btn">Mis Libros</button>
+                <button class="action-btn">Prestar Libro</button>
+            </div>
+        </div>
+
+        <!-- Footer con enlace de términos y condiciones -->
         <div class="footer">
-            <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.
-                <a href="#">Términos y Condiciones</a>
+            <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.  
+               <a href="#">Términos y Condiciones</a>
             </p>
         </div>
-
 
     </div>
 
