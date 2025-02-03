@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+        GET => RECIBIR DATOS (LIMITE DE DATOS)
+        POST => PARA ENVIAR DATOS
+
+    <form action="./" method="POST">
+        <label for="txt-usuario">Usuario</label>
+        <input type="text" id="txt-usuario" name="txt-usuario" placeholder="Usuario">
+        <br />
+        <label for="txt-email">Email</label>
+        <input type="email" id="txt-email" name="txt-email" placeholder="Tu Correo">
+        <br />
+       <label for="txt-clave">Clave</label>
+       <input type="password" id="txt-clave" name="txt-clave" placeholder="Tu clave(8 caracteres)">
+       <br />
+       <label for="txt-info">Biografía</label>
+       <textarea name="descripcion" id="txt-info" cols="" rows=" 5"></textarea>
+        <br />
+        <label for="rd-edad">Mayor de 18</label>
+        <input type="radio"  id="rd-edad" name="rd-edad" value="mayor">
+        <br />
+        <input type="rd-edad-menor" id="rd-edad-no" name="rd-edad" value="menor">
+        <label for="rd-edad-menor">Menor de 18</label>
+       
+        <br />
+        <input type="radio" id="rd-edad-no" name="rd-edad-no" value="no-contesta">
+        <label for="rd-edad-no">No contesta</label>
+        <br>
+
+            <h3>Hobbies</h3>
+        <br />
+
+            <input type="checkbox" checked id="chk-futbol" name="chk-futbol" value="futbol">
+            <label for="chk-futbol">Futbol</label>
+            <br />
+            <input type="checkbox" checked id="chk-volley" name="chk-volley" value="volley">
+            <label for="chk-volley">Volley</label> 
+            <br />
+            <input type="checkbox" checked id="chk-leer" name="chk-leer" value="leer">
+            <label for="chk-leer">Leer</label>
+        <br>
+            <label for="select_puesto">Trabajo</label>
+            <select name="select_puesto" id="select_puesto">
+                    <option value="estudiante">Estudiante</option>
+                    <option selected value="profesor">Profesor</option>
+                    <option value="medico">Médico</option>
+            </select>
+
+
+            <br/>
+           <input type="submit" value="Mandar...">
+    </form>
+</body>
+</html>
