@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño con Flexbox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Menú lateral */
+    .sidebar {
+      width: 20%;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    /* Sección 1 ocupa toda la primera fila */
+    .section1 {
+      background: #f4f4f4;
+      padding: 20px;
+      height: 50%;
+    }
+
+    /* Contenedor de las dos secciones inferiores */
+    .section-container {
+      display: flex;
+      height: 50%;
+    }
+
+    /* Secciones 2 y 3 en fila */
+    .section2, .section3 {
+      background: #ddd;
+      padding: 20px;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">Menú Lateral</aside>
+    <div class="main-content">
+      <section class="section1">Sección 1 (Columna)</section>
+      <div class="section-container">
+        <section class="section2">Sección 2</section>
+        <section class="section3">Sección 3</section>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
