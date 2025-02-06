@@ -22,11 +22,11 @@ TEL, Url, SEARCH, TIME, WEEK, MONTH, DATETIME-LOCAL
 
         <label for="txt-clave">Contraseña:</label>
         <input type="password" id="txt-clave" placeholder="Minimo 4 caracteres" required>    
-       <!-- Te ahorras el for E id pero es lo mismo-->
+      
 
     
      Ingresa tu clave:
-             <input type="text" name="pass" placeholder="Mayúsculas y minusculas"/>
+             <input type="text" name="pass" placeholder="Mayúsculas y minusculas"/>     Te ahorras el for E id pero es lo mismo
             </label>
 
              <input type="submit">
@@ -56,7 +56,7 @@ TEL, Url, SEARCH, TIME, WEEK, MONTH, DATETIME-LOCAL
             <input type="hidden">
 
             <input type="file">
-
+</form>
 
 # Introduccion a Nomenclaturas CSS y BEM
 
@@ -76,8 +76,30 @@ Forma de nombrar nuestras clases CSS para mantener codigo limpio y ordenadp. Bus
 
 -[BEM](https://getbem.com/naming)
 
+## Para que?
+1. comunicar un proposito o funcion .
+2. comunicar la esctructura del componente.
+3. Marca una especificidad baja consisitente en la estructura de la pagina.
+ 
+ ![Specificity](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdkerupv5p9lu9k10w5l1.png)
 
+ Su nombre es en "kebeb-case" separando__para elementos y -- para modificadores.
+ 
+ Ejemplo:
+ .[bloque]__[elemento]--[modificador]
+
+El nombre de clase BEM posee 3 partes :
+1. Bloque: El nombre del componeente el cual por si solo tiene sentido : card, header, button, footer, menu, containe, checkbox,
+2. Elemento: Dentro de un bloque puede haber uno o mas elementos. Estas partes no tiene sentido por si solas: "menu item", "list item", "checkbox label", "header tittle"
+3. Modificador: Una variacion o estado diferente para un bloque o elemento. Que quiere decir que cambia la pariencia o el comportamiento del mismo: "xmas", "disabled", "highlighted", "checked", "size big", "color yellow". No olvidemos ue si agregamos un modificador la etiqueta debe incluir el nombre del elemento o bloque:
+ej: <div class="footer footer-red"></div>
+
+
+Ejemplo con BEM
+
+```html
 <style>
+    /*listado BEM*/
     .card {
         
     }
@@ -87,6 +109,21 @@ Forma de nombrar nuestras clases CSS para mantener codigo limpio y ordenadp. Bus
 
     .form input{}
     .form__input{}
+
+.form_input #item1 .card {
+    color:red;
+}
+form{
+    color:blue;
+}
+div{
+    color:red;
+}
+div {
+    color:blue;
+}
+
+
 
     
    
@@ -108,25 +145,12 @@ Forma de nombrar nuestras clases CSS para mantener codigo limpio y ordenadp. Bus
         <a class="lista__link" href="#">Home</a>
         </li>
         <li class="lista__item" >
-        <a class="lista__link" href="#">Home</a>
+        <a class="lista__link" href="#">Contacto</a>
         </li>
         <li class="lista__item" >
-        <a class="lista__link" href="#">Home</a>
+        <a class="lista__link" href="#">Acerca de nosotros</a>
         </li>
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
+    </ul>
 
 
     <ul class="sidebar__nav-list">

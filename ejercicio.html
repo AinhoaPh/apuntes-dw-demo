@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución con Flexbox</title>
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo común para todos los elementos */
+        .item {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            gap: 10px; /* Espaciado entre las secciones */
+            padding: 10px;
+        }
+
+        /* Header */
+        .header {
+            height: 70px;
+        }
+
+        /* Main */
+        .main {
+            display: flex;
+            gap: 10px;
+            flex-grow: 1; /* Ocupa todo el espacio disponible */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 25%; /* Ocupa el 25% del ancho */
+        }
+
+        /* Content */
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Ocupa el resto del espacio horizontal */
+            gap: 10px;
+        }
+
+        /* Content-3 y Content-2 alineados horizontalmente */
+        .item section {
+            display: flex;
+            gap: 10px;
+           
+    
+        }
+        .article {
+            display: flex;
+        }
+        .content-2,
+        .content-3 {
+            flex: 1; /* Ocupan el mismo espacio dentro del row */
+        }
+
+        /* Footer */
+        .footer {
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header item">Header</div>
+
+        <!-- Main (Sidebar + Content) -->
+        <div class="main">
+            <div class="sidebar item">Sidebar</div>
+            <div class="content">
+                <div class="item section">Content-1</div>
+            </div>
+             <div class="article">
+                 <div class="content-3 item">Content-3</div>
+                 <div class="content-2 item">Content-2</div>
+            </div>
+           
+        </div>
+
+        <!-- Footer -->
+        <div class="footer item">Footer</div>
+    </div>
+
+</body>
+</html>

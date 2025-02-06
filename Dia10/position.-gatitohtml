@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 300px;
+            position: relative;
+            /*position: static;*/
+        }
+        
+        .container__img{
+        opacity: 50%;/*0.5*/
+        width: 100%;
+
+            }
+     
+        .box {
+        border:1px solid rgba(238, 98, 98, 0.806);
+        position: absolute;
+        top: 10px;
+        }
+        .box--center{
+            top:10px;
+            width: 100%;
+            text-align: center;
+         /*centro perfecto
+            left: 50%;
+            transform: translate(-50%, -50%=);*/
+        }
+        .box--topleft {
+            top:10px;
+            right:10px;
+        }
+        .box--topright {
+            top:10px;
+            left:10px;
+        }
+        .box--bottomleft {
+            top:10px;
+            right:10px;
+        }
+        .box--bottomright {
+            top:10px;
+            left:10px;
+       } 
+    </style>
+</head>
+<body>
+    <h1>Position Absolute Gatito</h1>
+
+ <div class="container" >
+    <img src="https://images.hola.com/imagenes/mascotas/20201104178485/consejos-gatos-para-principiantes/0-884-859/gatito-m.jpg?tx=w_680" alt="Foto Gatito">
+    
+       
+        <div class="box box__center">Centro</div>
+        <div class="box box__topleft">Arriba izq</div>
+        <div class="box box__topright">Arriba der</div>
+        <div class="box box__bottomleft">Abajo Izq</div>
+        <div class="box__bottomright">Abajo Der</div>
+    </div>
+</body>
+</html>
