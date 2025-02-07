@@ -82,11 +82,23 @@ browserstack.com
 
 ```css
 /** Mobile first/
+
 /*Tablet*/
 @media only screen and (min-width: 768px){
     /*reglas para tablet*/
 }
+
 @media only screen and (min-width: 1024px){
     /*reglas para Desktop*/
 }
-````
+```
+
+# Ejemplo de Media queries en imagenes (usando Picture)
+
+```html
+    <picture>
+        <source media="(min-width:650px)" srcset="./img/grande.jpg">
+        <source media="(max-width:450px)" srcset="./img/mediana.jpg">
+       <img src="./img/foto-pequenia.jpg" alt="mimascota">
+    <picture>
+```
