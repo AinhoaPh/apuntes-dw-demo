@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.content{
+
+}
+
+.tittle{
+
+}
+.tittle__h1-desktop{
+
+}
+.picture{
+
+}
+.picture__img{
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:1024px) {
+    .tittle__h1--mobile{
+        display;:none;
+        
+    }
+    display:block;
+    
+}
