@@ -62,7 +62,9 @@ Ejemplo de impresion:
         display:none !important;
     }
 }
+
 ```
+<div class="solo-impresion " > solo visible en impresion</div>  
 
 ### Tips para utilizarlos :
 - Sobreescriben las reglas de css normales, pero no poseeen una mayor especificidad por lo tanto los media queries deben estar por debajo de las reglas que quiero reemplazar.
@@ -140,4 +142,4 @@ Ejemplos NO RECOMENDADOS:
 [CSS MQ w3Schools](https://www.w3schools.com/css/css3_mediaqueries.asp)
 [Responsive Design w3Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 [Responsive Design MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-[SCSS + MQ](https://www.freecodecamp.org/news/learn-css-media-queries-by-building-projects/)
+[CSS + MQ](https://www.freecodecamp.org/news/learn-css-media-queries-by-building-projects/)
