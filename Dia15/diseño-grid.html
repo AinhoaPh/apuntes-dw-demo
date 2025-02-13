@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+            .gridContainer {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-gap: 1em  ;/* tambien se puede uno solo*/
+         
+        }
+        .item-1{
+        grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        background-color: lightpink;
+    }
+    </style>
+</head>
+<body>
+      <div class="gricContainer">
+        <div class="item-1"></div>
+
+
+      </div>
+</body>
+</html>
