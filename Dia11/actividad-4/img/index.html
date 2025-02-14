@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/Dia11/actividad-4/img/style.css">
 </head>
 
 <body class="body">
+    
+    <div class="content"> 
 
-    <div>
-        <h2>Mobile</h2>
-        <picture>
+        <div class="tittle">
+        <h1 class="tittle__h1 tittle__h1--mobile">Mobile</h1>
+        <h1 class="tittle__h1 tittle__h1--tablet">Tablet</h1>
+        <h1 class="tittle__h1 tittle__h1--desktop" >Desktop</h1>
+        </div>
+        <picture class="picture">
 
-            <source media="(max-width: 450px)" srcset=".img/blue.jpeg">
-            <img src="./img/blue.jpeg" alt="Blue">
-
-        </picture>
-
-        <picture>
-        
-            <source media="(min-width: 600px)" srcset=".img/gatito.jpeg">
-            <img src="./img/gatito.jpeg" alt="gatito">
+            <source media="(min-width: 450px)" srcset="./img/blue.jpeg">
+            <source media="(min-width: 450px)" srcset="./img/gatito.jpeg">
+            <img class="picture__img" src="./img/gatito.jpeg" alt="gatito">
 
         </picture>
 
@@ -32,5 +31,7 @@
 
     </div>
 </body>
+
+
 
 </html>
