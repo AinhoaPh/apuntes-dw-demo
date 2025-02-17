@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Dia16/css/style.css">
+    <style>
+        /* 🔹 Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* 🔹 HEADER */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    width: 120px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header__nav-li {}
+
+.header__menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header__toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* 🔹 GALERÍA */
+.main__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(6, auto); /* 6 filas */
+    gap: 10px;
+    padding: 20px;
+}
+
+/* 🔹 Ubicación de cada imagen con grid-area */
+.main__gallery-item--1  { 
+    grid-area: 1 / 1 / 2 / 3;
+
+    background: gray;}
+
+
+                       
+.main__gallery-item--2  { grid-area: 1 / 3 / 3 / 4;
+
+                        background: gray;}
+
+
+                        
+.main__gallery-item--3  { grid-area: 1 / 4 / 2 / 5;
+
+                        background: gray;}
+
+
+                        
+.main__gallery-item--4  { grid-area: 1 / 5 / 2 / 6;
+
+                        background: gray;}
+
+
+                        
+.main__gallery-item--5  { grid-area: 2 / 1 / 3 / 2;
+
+                        background: gray;}
+
+
+                    
+.main__gallery-item--6  { grid-area: 2 / 2 / 3 / 3;
+
+                        background: gray;}
+
+
+                     
+.main__gallery-item--7  { grid-area: 3 / 3 / 4 / 4;
+
+                        background: gray;}
+
+
+                        background: gray;
+.main__gallery-item--8  { grid-area: 2 / 4 / 3 / 6;
+
+                        background: gray;}
+
+
+                        background: gray;
+.main__gallery-item--9  { grid-area: 3 / 1 / 4 / 2;
+
+                        background: gray;}
+
+
+                        background: gray;
+.main__gallery-item--10 { grid-area: 3 / 2 / 4 / 3;
+
+                        background: gray;}
+
+
+                        background: gray;
+.main__gallery-item--11 { grid-area: 4 / 3 / 5 / 5;
+
+                        background: gray;}
+
+
+                        background: gray;
+.main__gallery-item--12 { grid-area: 3 / 5 / 5 / 6;
+
+                        background: gray;}
+.main__gallery-item--13 { grid-area: 4 / 1 / 5 / 2;
+
+                        background: gray;}
+
+.main__gallery-item--14 { grid-area: 4 / 2 / 5 / 3;
+
+                        background: gray;}
+
+.main__gallery-item--15 { grid-area: 5 / 3 / 6 / 4;
+
+                        background: gray;}
+
+.main__gallery-item--16 { grid-area: 5 / 4 / 6 / 6;
+
+                        background: gray;}
+
+
+
+.main__gallery-item--17 { grid-area: 5 / 1 / 6 / 2;
+
+                        background: gray;}
+
+
+.main__gallery-item--18 { grid-area: 5 / 2 / 6 / 3;
+
+                        background: gray;}
+
+
+.main__gallery-item--19 { grid-area: 6 / 3 / 7 / 4;
+
+                        background: gray;}
+
+
+                 
+.main__gallery-item--20 { grid-area: 6 / 4 / 7 / 5;
+
+                        background: gray;}
+
+
+                        
+.main__gallery-item--21 { grid-area: 6 / 5 / 7 / 6;
+
+                        background: gray;}
+
+
+/* 🔹 Ajustes generales para las imágenes */
+.main__gallery-item {
+    width: 100%;
+   
+    object-fit: cover;
+    border-radius: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="#" alt="Stockholm LOGO">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__nav-li">MAIN</li>
+                <li class="header__nav-li">ABOUT</li>
+                <li class="header__nav-li">CONTACT</li>
+            </ul>
+        </nav>
+        <button></button>
+    </header>
+    <main class="main__gallery">
+        <section>
+            <div><img src="#" alt="Imagen1" class="main__gallery-img main__gallery-img--1"></div>
+            <div><img src="#" alt="Imagen2" class="main__gallery-img main__gallery-img--2"></div>
+            <div><img src="#" alt="Imagen3" class="main__gallery-img main__gallery-img--3"></div>
+            <div><img src="#" alt="Imagen4" class="main__gallery-img main__gallery-img--4"></div>
+            <div><img src="#" alt="Imagen5" class="main__gallery-img main__gallery-img--5"></div>
+            <div><img src="#" alt="Imagen6" class="main__gallery-img main__gallery-img--6"></div>
+            <div><img src="#" alt="Imagen7" class="main__gallery-img main__gallery-img--7"></div>
+            <div><img src="#" alt="Imagen8" class="main__gallery-img main__gallery-img--8"></div>
+            <div><img src="#" alt="Imagen9" class="main__gallery-img main__gallery-img--9"></div>
+            <div><img src="#" alt="Imagen10" class="main__gallery-img main__gallery-img--10"></div>
+            <div><img src="#" alt="Imagen11" class="main__gallery-img main__gallery-img--11"></div>
+            <div><img src="#" alt="Imagen12" class="main__gallery-img main__gallery-img--12"></div>
+            <div><img src="#" alt="Imagen13" class="main__gallery-img main__gallery-img--13"></div>
+            <div><img src="#" alt="Imagen14" class="main__gallery-img main__gallery-img--14"></div>
+            <div><img src="#" alt="Imagen15" class="main__gallery-img main__gallery-img--15"></div>
+            <div><img src="#" alt="Imagen16" class="main__gallery-img main__gallery-img--16"></div>
+            <div><img src="#" alt="Imagen17" class="main__gallery-img main__gallery-img--17"></div>
+            <div><img src="#" alt="Imagen18" class="main__gallery-img main__gallery-img--18"></div>
+            <div><img src="#" alt="Imagen19" class="main__gallery-img main__gallery-img--19"></div>
+            <div><img src="#" alt="Imagen20" class="main__gallery-img main__gallery-img--20"></div>
+            <div><img src="#" alt="Imagen21" class="main__gallery-img main__gallery-img--21"></div>
+
+        </section>
+    </main>
+    <footer>
+        <img src="#" alt="Stockholm LOGO">
+        <p>Aliquam lorem ante, dapibus in, viverra quis, elit feugiat
+            Etiam sit tellus. Phasellus rutru nulla euter ameter
+            metus varius laoreet amet orci.
+            </p>
+    </footer>
+
+</body>
+
+</html>

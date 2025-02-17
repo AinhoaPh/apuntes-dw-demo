@@ -1,0 +1,93 @@
+/* 🔹 Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* 🔹 HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    width: 120px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header__menu-li {}
+
+.header__menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header__toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* 🔹 GALERÍA */
+.main__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(6, auto); /* 6 filas */
+    gap: 10px;
+    padding: 20px;
+}
+
+/* 🔹 Ubicación de cada imagen con grid-area */
+.main__gallery-item--1  { grid-area: 1 / 1 / 2 / 3; }
+.main__gallery-item--2  { grid-area: 1 / 3 / 3 / 4; }
+.main__gallery-item--3  { grid-area: 1 / 4 / 2 / 5; }
+.main__gallery-item--4  { grid-area: 1 / 5 / 2 / 6; }
+.main__gallery-item--5  { grid-area: 2 / 1 / 3 / 2; }
+.main__gallery-item--6  { grid-area: 2 / 2 / 3 / 3; }
+.main__gallery-item--7  { grid-area: 3 / 3 / 4 / 4; }
+.main__gallery-item--8  { grid-area: 2 / 4 / 3 / 6; }
+.main__gallery-item--9  { grid-area: 3 / 1 / 4 / 2; }
+.main__gallery-item--10 { grid-area: 3 / 2 / 4 / 3; }
+.main__gallery-item--11 { grid-area: 4 / 3 / 5 / 5; }
+.main__gallery-item--12 { grid-area: 3 / 5 / 5 / 6; }
+.main__gallery-item--13 { grid-area: 4 / 1 / 5 / 2; }
+.main__gallery-item--14 { grid-area: 4 / 2 / 5 / 3; }
+.main__gallery-item--15 { grid-area: 5 / 3 / 6 / 4; }
+.main__gallery-item--16 { grid-area: 5 / 4 / 6 / 6; }
+.main__gallery-item--17 { grid-area: 5 / 1 / 6 / 2; }
+.main__gallery-item--18 { grid-area: 5 / 2 / 6 / 3; }
+.main__gallery-item--19 { grid-area: 6 / 3 / 7 / 4; }
+.main__gallery-item--20 { grid-area: 6 / 4 / 7 / 5; }
+.main__gallery-item--21 { grid-area: 6 / 5 / 7 / 6; }
+
+/* 🔹 Ajustes generales para las imágenes */
+.main__gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

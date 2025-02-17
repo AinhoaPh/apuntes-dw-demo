@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockholm</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color:#ffffff ;
+        }
+
+        .header__logo {
+            width: 120px;
+        }
+
+        .header__nav {
+            display: flex;
+            
+
+        }
+
+        .nav__a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+           
+
+
+        }
+
+
+      
+
+        /*   MAIN (GALERÍA DE IMÁGENES) */
+        .main {
+            width: 100%;
+
+            padding: 20px;
+        }
+
+        .main__gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-teMplate-rows: repeat(5, 1fr);
+            gap: 5px;
+
+
+        }
+
+        .main__gallery-item {
+            width: 100%;
+
+        }
+
+        .gallery__item--1 {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .gallery__item--2 {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .gallery__item--3 {
+            grid-area: 1 / 4 / 3 / 3;
+        }
+
+        .gallery__item--4 {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+
+        .gallery__item--5 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .gallery__item--6 {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .gallery__item--7 {
+            grid-area: 3 / 2 / 4 / 4;
+        }
+
+        .gallery__item--8 {
+            grid-area: 3 / 4 / 5 / 5;
+        }
+
+        .gallery__item--9 {
+            grid-area: 4 / 1 / 5 / 3;
+        }
+
+        .gallery__item--10 {
+            grid-area: 4 / 3 / 5 / 4;
+        }
+
+        .gallery__item--11 {
+            grid-area: 5 / 1 / 6 / 2;
+        }
+
+        .gallery__item--12 {
+            grid-area: 5 / 2 / 6 / 4;
+        }
+
+        .gallery__item--13 {
+            grid-area: 5 / 4 / 6 / 5;
+        }
+
+        .gallery__item--14 {
+            grid-area: 6 / 1 / 7 / 2;
+        }
+
+        .gallery__item--15 {
+            grid-area: 6 / 2 / 7 / 3;
+        }
+
+        .gallery__item--16 {
+            grid-area: 6 / 3 / 7 / 5;
+        }
+
+        .gallery__item--17 {
+            grid-area: 7 / 1 / 8 / 3;
+        }
+
+        .gallery__item--18 {
+            grid-area: 7 / 3 / 8 / 4;
+        }
+
+        .gallery__item--19 {
+            grid-area: 8 / 1 / 9 / 2;
+        }
+
+        .gallery__item--20 {
+            grid-area: 8 / 2 / 9 / 3;
+        }
+
+        .gallery__item--21 {
+            grid-area: 1 / 1 / 3 / 4;
+        }
+
+        /* FOOTER */
+        .footer {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .footer__logo {
+            width: 120px;
+
+        }
+
+        .footer__p {
+            font-size: 10px;
+            color: lightgrey;
+            text-align: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--  HEADER -->
+    <header class="header">
+        <img src="./img/Logo-dark.png" alt="Stockholm Logo" class="header__logo">
+
+        <nav class="header__nav">
+
+            <a class="nav__a" style="color:#afb99f" href="#">Main</a></li>
+            <a class="nav__a" href="#">About</a></li>
+            <a class="nav__a" href="#">Contact</a></li>
+
+        </nav>
+
+        <button></button>
+    </header>
+
+    <!--  MAIN (GALERÍA) -->
+    <main class="main">
+        <section class="main__gallery">
+            <img src="./img/img1.jpg" class="main__gallery-item main__gallery-item--1" alt="Image 1">
+            <img src="./img/img2.jpg" class="main__gallery-item main__gallery-item--2" alt="Image 2">
+            <img src="./img/img3.jpg" class="main__gallery-item main__gallery-item--3" alt="Image 3">
+            <img src="./img/img4.jpg" class="main__gallery-item main__gallery-item--4" alt="Image 4">
+            <img src="./img/img5.jpg" class="main__gallery-item main__gallery-item--5" alt="Image 5">
+            <img src="img6.jpg" class="main__gallery-item main__gallery-item--6" alt="Image 6">
+            <img src="./img/img6.jpg" class="main__gallery-item main__gallery-item--7" alt="Image 7">
+            <img src="./img/img7.jpg" class="main__gallery-item main__gallery-item--8" alt="Image 8">
+            <img src="img9.jpg" class="main__gallery-item main__gallery-item--9" alt="Image 9">
+            <img src="./img/img8.jpg" class="main__gallery-item main__gallery-item--10" alt="Image 10">
+            <img src="img1.jpg" class="main__gallery-item main__gallery-item--11" alt="Image 1">
+            <img src="img2.jpg" class="main__gallery-item main__gallery-item--12" alt="Image 2">
+            <img src="./img/img9.jpg" class="main__gallery-item main__gallery-item--13" alt="Image 3">
+            <img src="img4.jpg" class="main__gallery-item main__gallery-item--14" alt="Image 4">
+            <img src="./img/img11.jpg" class="main__gallery-item main__gallery-item--15" alt="Image 5">
+            <img src="./img/img10.jpg" class="main__gallery-item main__gallery-item--16" alt="Image 6">
+            <img src="./img/img12.jpg" class="main__gallery-item main__gallery-item--17" alt="Image 7">
+            <img src="./img/img13.jpg" class="main__gallery-item main__gallery-item--18" alt="Image 8">
+            <img src="" class="main__gallery-item main__gallery-item--19" alt="Image 9">
+            <img src="img10.jpg" class="main__gallery-item main__gallery-item--20" alt="Image 10">
+            <img src="./img/img.14.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img14.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="img.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img15.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img16.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="imgs.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img17.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img18.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img19.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+            <img src="./img/img20.jpg" class="main__gallery-item main__gallery-item--21" alt="Image 10">
+        </section>
+    </main>
+
+    <!--  FOOTER -->
+    <footer class="footer">
+        <img class="footer__logo" src="./img/Footer-logo.png" alt="logo">
+        <aside class="footer__p">
+            <p>Aliquam lorem ante, dapibus in, viverra quis, elit feugiat
+                Etiam sit tellus. Phasellus rutru nulla euter ameter
+                metus varius laoreet amet orci.
+            </p>
+        </aside>
+    </footer>
+
+</body>
+
+</html>
