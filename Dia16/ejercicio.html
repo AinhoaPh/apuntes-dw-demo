@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "header header header "
+                "sidebar content1 content1"
+                "sidebar content2 content3"
+                "footer footer footer";
+
+        }
+
+        .box {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+
+            /*Flex para centrar el texto*/
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+           
+           
+         
+        }
+        .sidebar{
+            grid-area: sidebar;
+            
+           
+        }
+        .content1{
+            grid-area: content1;
+         
+        }
+        .content2 {
+            grid-area: content2;
+          
+        }
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header class="box header">Header</header>
+    <aside class="box sidebar">Sidebar</aside>
+    <section class="box content1">Content1</section>
+    <section class="box content2">Content2</section>
+    <section class="box">Content3</section>
+    <footer class="box footer">Footer</footer>
+
+</body>
+
+</html>
