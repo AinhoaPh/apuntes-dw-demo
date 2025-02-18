@@ -8,243 +8,297 @@
     <link rel="stylesheet" href="/Dia16/css/style.css">
     <style>
         /* 🔹 Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* 🔹 Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-}
+        /* 🔹 Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
 
-/* 🔹 HEADER */
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        /* 🔹 HEADER */
+        .Header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .Header-logo {
+            width: 120px;
+        }
+
+        .Header-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .Nav-ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .Nav-ulLi { 
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;}
+
     
-    padding: 15px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        .header__toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
 
-.header__logo {
-    width: 120px;
-}
+        /* 🔹 GALERÍA */
+        .Main-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 5 columnas */
+            grid-template-rows: repeat(5, auto);
+            /* 6 filas */
+            grid-gap: 10px;
+          
+        }
 
-.header__nav {
-    display: flex;
-    align-items: center;
-}
+        /* 🔹 Ubicación de cada imagen con grid-area */
+        .Main-item {
+            
+            
 
-.header__ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
+        }
 
-.header__nav-li {}
 
-.header__menu-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
 
-.header__toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: 20px;
-}
+        .Main-item--2f1c {
+            grid: ;
 
-/* 🔹 GALERÍA */
-.main__gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-    grid-template-rows: repeat(6, auto); /* 6 filas */
-    gap: 10px;
-    padding: 20px;
-}
+        }
 
-/* 🔹 Ubicación de cada imagen con grid-area */
-.main__gallery-item--1  { 
-    grid-area: 1 / 1 / 2 / 3;
 
-    background: gray;}
 
+        .Main-item--2f2c {
+            grid: ;
 
-                       
-.main__gallery-item--2  { grid-area: 1 / 3 / 3 / 4;
+        }
+        .Main-item--2f2c {
+            grid: span 2;
 
-                        background: gray;}
+        }
 
 
-                        
-.main__gallery-item--3  { grid-area: 1 / 4 / 2 / 5;
+        .M
 
-                        background: gray;}
+     {
+            grid-area: 1 / 5 / 2 / 6;
 
+        }
 
-                        
-.main__gallery-item--4  { grid-area: 1 / 5 / 2 / 6;
 
-                        background: gray;}
 
+        .Main-galleryImg5 {
+            grid-area: 2 / 1 / 3 / 2;
 
-                        
-.main__gallery-item--5  { grid-area: 2 / 1 / 3 / 2;
+        }
 
-                        background: gray;}
 
 
-                    
-.main__gallery-item--6  { grid-area: 2 / 2 / 3 / 3;
+        .Main-galleryImg6 {
+            grid-area: 2 / 2 / 3 / 3;
 
-                        background: gray;}
+        }
 
 
-                     
-.main__gallery-item--7  { grid-area: 3 / 3 / 4 / 4;
 
-                        background: gray;}
+        .Main-galleryImg7 {
+            grid-area: 3 / 3 / 4 / 4;
 
+        }
 
-                        background: gray;
-.main__gallery-item--8  { grid-area: 2 / 4 / 3 / 6;
 
-                        background: gray;}
 
 
-                        background: gray;
-.main__gallery-item--9  { grid-area: 3 / 1 / 4 / 2;
+        .Main-galleryImg8 {
+            grid-area: 2 / 4 / 3 / 6;
 
-                        background: gray;}
+        }
 
 
-                        background: gray;
-.main__gallery-item--10 { grid-area: 3 / 2 / 4 / 3;
 
-                        background: gray;}
 
+        .Main-galleryImg9 {
+            grid-area: 3 / 1 / 4 / 2;
 
-                        background: gray;
-.main__gallery-item--11 { grid-area: 4 / 3 / 5 / 5;
+        }
 
-                        background: gray;}
 
 
-                        background: gray;
-.main__gallery-item--12 { grid-area: 3 / 5 / 5 / 6;
 
-                        background: gray;}
-.main__gallery-item--13 { grid-area: 4 / 1 / 5 / 2;
+        .Main-galleryImg10 {
+            grid-area: 3 / 2 / 4 / 3;
 
-                        background: gray;}
+        }
 
-.main__gallery-item--14 { grid-area: 4 / 2 / 5 / 3;
 
-                        background: gray;}
 
-.main__gallery-item--15 { grid-area: 5 / 3 / 6 / 4;
 
-                        background: gray;}
+        .Main-gallery1 {
+            grid-area: 4 / 3 / 5 / 5;
 
-.main__gallery-item--16 { grid-area: 5 / 4 / 6 / 6;
+        }
 
-                        background: gray;}
 
 
+        .Main-gallery2 {
+            grid-area: 3 / 5 / 5 / 6;
 
-.main__gallery-item--17 { grid-area: 5 / 1 / 6 / 2;
+        }
 
-                        background: gray;}
+        .Main-gallery3 {
+            grid-area: 4 / 1 / 5 / 2;
 
+        }
 
-.main__gallery-item--18 { grid-area: 5 / 2 / 6 / 3;
+        .Main-gallery4 {
+            grid-area: 4 / 2 / 5 / 3;
 
-                        background: gray;}
+        }
 
+        .Main-gallery5 {
+            grid-area: 5 / 3 / 6 / 4;
 
-.main__gallery-item--19 { grid-area: 6 / 3 / 7 / 4;
+        }
 
-                        background: gray;}
+        .Main-gallery6 {
+            grid-area: 5 / 4 / 6 / 6;
 
+        }
 
-                 
-.main__gallery-item--20 { grid-area: 6 / 4 / 7 / 5;
 
-                        background: gray;}
 
+        .Main-gallery7 {
+            grid-area: 5 / 1 / 6 / 2;
 
-                        
-.main__gallery-item--21 { grid-area: 6 / 5 / 7 / 6;
+        }
 
-                        background: gray;}
 
+        .Main-gallery8 {
+            grid-area: 5 / 2 / 6 / 3;
 
-/* 🔹 Ajustes generales para las imágenes */
-.main__gallery-item {
-    width: 100%;
-   
-    object-fit: cover;
-    border-radius: 5px;
-}
+        }
+
+
+        .Main-gallery9 {
+            grid-area: 6 / 3 / 7 / 4;
+
+        }
+
+
+
+        .Main-galleryImg20 {
+            grid-area: 6 / 4 / 7 / 5;
+
+        }
+
+
+
+        .Main-galleryImg21 {
+            grid-area: 6 / 5 / 7 / 6;
+
+        }
+
+
+        /* 🔹 Ajustes generales para las imágenes */
+        .Main-gallery-item {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+         /* FOOTER */
+         .Footer {
+            width: 100%;
+            max-width: 1200px;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .Footer-logo {
+            width: 120px;
+
+        }
+
+        .Footer-p {
+            font-size: 10px;
+            color: lightgrey;
+            text-align: center;
+            align-items: center;
+
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header__logo">
+    <header class="Header">
+        <div class="Header-logo">
             <img src="#" alt="Stockholm LOGO">
         </div>
-        <nav class="header__nav">
-            <ul class="header__ul">
-                <li class="header__nav-li">MAIN</li>
-                <li class="header__nav-li">ABOUT</li>
-                <li class="header__nav-li">CONTACT</li>
+        <nav class="Header-nav">
+            <ul class="Nav-ul">
+                <li class="Nav-ulLi">MAIN</li>
+                <li class="Nav-ulLi">ABOUT</li>
+                <li class="Nav-ulLi">CONTACT</li>
             </ul>
         </nav>
         <button></button>
     </header>
-    <main class="main__gallery">
-        <section>
-            <div><img src="#" alt="Imagen1" class="main__gallery-img main__gallery-img--1"></div>
-            <div><img src="#" alt="Imagen2" class="main__gallery-img main__gallery-img--2"></div>
-            <div><img src="#" alt="Imagen3" class="main__gallery-img main__gallery-img--3"></div>
-            <div><img src="#" alt="Imagen4" class="main__gallery-img main__gallery-img--4"></div>
-            <div><img src="#" alt="Imagen5" class="main__gallery-img main__gallery-img--5"></div>
-            <div><img src="#" alt="Imagen6" class="main__gallery-img main__gallery-img--6"></div>
-            <div><img src="#" alt="Imagen7" class="main__gallery-img main__gallery-img--7"></div>
-            <div><img src="#" alt="Imagen8" class="main__gallery-img main__gallery-img--8"></div>
-            <div><img src="#" alt="Imagen9" class="main__gallery-img main__gallery-img--9"></div>
-            <div><img src="#" alt="Imagen10" class="main__gallery-img main__gallery-img--10"></div>
-            <div><img src="#" alt="Imagen11" class="main__gallery-img main__gallery-img--11"></div>
-            <div><img src="#" alt="Imagen12" class="main__gallery-img main__gallery-img--12"></div>
-            <div><img src="#" alt="Imagen13" class="main__gallery-img main__gallery-img--13"></div>
-            <div><img src="#" alt="Imagen14" class="main__gallery-img main__gallery-img--14"></div>
-            <div><img src="#" alt="Imagen15" class="main__gallery-img main__gallery-img--15"></div>
-            <div><img src="#" alt="Imagen16" class="main__gallery-img main__gallery-img--16"></div>
-            <div><img src="#" alt="Imagen17" class="main__gallery-img main__gallery-img--17"></div>
-            <div><img src="#" alt="Imagen18" class="main__gallery-img main__gallery-img--18"></div>
-            <div><img src="#" alt="Imagen19" class="main__gallery-img main__gallery-img--19"></div>
-            <div><img src="#" alt="Imagen20" class="main__gallery-img main__gallery-img--20"></div>
-            <div><img src="#" alt="Imagen21" class="main__gallery-img main__gallery-img--21"></div>
+    <main class="Main">
+        <section class="Main-gallery" >
+            <img src="#" alt="Imagen1" class="Main-item ">
+            <img src="#" alt="Imagen2" class="Main-item ">
+            <img src="#" alt="Imagen3" class="Main-item Grid-item--2f1c">
+            <img src="#" alt="Imagen4" class="Main-item ">
+            <img src="#" alt="Imagen5" class="Main-item Grid-item--2f2c ">
+            <img src="#" alt="Imagen6" class="Main-item ">
+            <img src="#" alt="Imagen7" class="Main-item ">
+            <img src="#" alt="Imagen8" class="Main-item ">
+            <img src="#" alt="Imagen9" class="Main-item Grid-item--2f1c">
+            <img src="#" alt="Imagen10" class="Main-item">
+            <img src="#" alt="Imagen11" class="Main-item">
+            <img src="#" alt="Imagen12" class="Main-item G">
+            <img src="#" alt="Imagen13" class="Main-item">
+            <img src="#" alt="Imagen14" class="Main-item">
+            <img src="#" alt="Imagen15" class="Main-item">
+            <img src="#" alt="Imagen16" class="Main-item">
+            <img src="#" alt="Imagen17" class="Main-item Grid-item--1f2c">
+            <img src="#" alt="Imagen18" class="Main-item">
+            <img src="#" alt="Imagen19" class="Main-item">
+            <img src="#" alt="Imagen20" class="Main-item">
+            <img src="#" alt="Imagen21" class="Main-item">
 
         </section>
     </main>
-    <footer>
-        <img src="#" alt="Stockholm LOGO">
-        <p>Aliquam lorem ante, dapibus in, viverra quis, elit feugiat
+    <footer class="Footer">
+        <img class="Footer-logo" src="#" alt="Stockholm LOGO">
+        <p class="Footer-p">Aliquam lorem ante, dapibus in, viverra quis, elit feugiat
             Etiam sit tellus. Phasellus rutru nulla euter ameter
             metus varius laoreet amet orci.
-            </p>
+        </p>
+
     </footer>
+
 
 </body>
 
