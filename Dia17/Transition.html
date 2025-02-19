@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cubos{
+            display:flex;
+            flex-direction: row;
+            gap: 10px;
+           
+        }
+        .box{
+            width: 200px; 
+            height: 200px;
+            background-color: lightpink;
+            border: 5px solid rgb(225, 38, 175);
+        }
+        .box1{
+            transition: width 2s, background-color 0.5s; /*lo que tarda en cambiar*/
+        }
+        .box1:hover{
+            width: 300px;
+            background-color: rgb(225, 38, 175); 
+            
+        }
+        
+        .box2{
+
+        }
+        .box3{
+            transform: rotate(0deg);
+            transition: background-color 1s, transform 0.5s;
+        }
+        .box3:hover{
+            background-color: rgb(225, 38, 175);
+            transform: rotate(20deg);
+        }
+        .btn{
+         
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <section class="cubos">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <a href="#" class="box box3" style="text-decoration: none;color: white; font-size: 30px;">Click Me</a>
+    </section>
+
+    <button class="btn">Click me</button>
+</body>
+</html>

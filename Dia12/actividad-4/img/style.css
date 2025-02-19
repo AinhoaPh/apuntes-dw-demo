@@ -1,0 +1,88 @@
+
+/* Estilos generales */
+*{
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+   
+  }
+  
+  /* Contenedor principal */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Estilos por defecto (Mobile First) */
+  body {
+    background-color: #ffcccb; /* Color para móvil */
+  }
+  
+  .tittle_h1 {
+    display: none;
+  }
+  
+  .tittle_h1_mobile {
+    display: block;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .picture_img {
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  /* 📌 Media Query para Tablet (min-width: 600px) */
+  @media (min-width: 600px) {
+    body {
+      background-color: #add8e6; /* Azul claro para tablet */
+    }
+  
+    .tittle_h1 {
+      display: none;
+    }
+  
+    .tittle_h1_tablet {
+      display: block;
+      font-size: 32px;
+      color: white;
+    }
+  
+    .picture_img {
+      width: 60%;
+      max-width: 400px;
+    }
+  }
+  
+  /* 📌 Media Query para Desktop (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    body {
+      background-color: #90ee90; /* Verde claro para desktop */
+    }
+  
+    .tittle_h1 {
+      display: none;
+    }
+  
+    .tittle_h1_desktop {
+      display: block;
+      font-size: 40px;
+      color: navy;
+    }
+  
+    .picture_img {
+      width: 50%;
+      max-width: 500px;
+    }
+  }
