@@ -34,7 +34,7 @@ transition-delay: 2s;
 
 /* Estas 4 reglas en 1*/
 /* prop duration timing-function delay*/
-transition: 
+transition: font-size, 4s, ease-in-out 2s;
 
 }
 ```
@@ -45,7 +45,7 @@ transition:
 - `ease-in`: empieza lenta y depsues mas rapida
 - `ease-out`: rapida-lenta
 - `ease-in-out`: lenta-rapida-lenta (lo hace mas de golpe)
-- `cubic-bezier()`: Timing personalizado
+- `cubic-bezier()`: Timing personalizado .<!-- () dar una funcion -->
 
 [LINK]https://cubic-bezier.com/#.92,.04,.14,.89
 
