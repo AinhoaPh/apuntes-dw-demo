@@ -14,15 +14,6 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
         /* HEADER */
         .header {
             width: 100%;
@@ -39,14 +30,21 @@
 
         .header__nav {
             display: flex;
+            
 
         }
 
-        .nav__a {
+        .nav__ul {
+            display: flex;
+            list-style: none;
+            
+        }
+
+        .nav__li {
             display: flex;
             text-decoration: none;
             color: black;
-
+           
         }
 
 
@@ -89,15 +87,15 @@
         }
 
         .main__gallery-item--1 {
-            grid-area: 1 / 1 / 1 /1;
+            grid-area: 1 / 1 / 2 / 2;
         }
 
         .main__gallery-item--2 {
-            grid-area: 1 / 2;
+            grid-area: 1 / 3 / 2 / 4;
         }
 
         .main__gallery-item--3 {
-            grid-area: 1 / 3;
+            grid-area: 1 / 2 / 3 / 5;
         }
 
         .main__gallery-item--4 {
@@ -169,7 +167,7 @@
         }
 
         .main__gallery-item--21 {
-            grid-area: 1 / 1 / 3 / 4;
+            grid-area: 8/ 3 / 9 / 5;
         } */
 
         /* FOOTER */
@@ -204,11 +202,12 @@
         <img src="./img/Logo-dark.png" alt="Stockholm Logo" class="header__logo">
 
         <nav class="header__nav">
+            <ul class="nav__ul">
 
-            <a class="nav__a" style="color:#afb99f" href="#">Main</a></li>
-            <a class="nav__a" href="#">About</a></li>
-            <a class="nav__a" href="#">Contact</a></li>
-
+                <li><a class="nav__li" style="color:#afb99f" href="#">Main</a></li>
+                <li><a class="nav__li" href="#">About</a></li>
+                <li><a class="nav__li" href="#">Contact</a></li>
+            </ul>
         </nav>
 
         <button></button>

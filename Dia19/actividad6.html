@@ -7,6 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="/Dia19/css/style.css">
     <style>
+        body{
+            background-color: #fff;
+            color:#000;
+            transition: color 2s ease-out;
+                        background-color: 2s ease-in;
+        }
         .container{
             background-color:#fff ;
             color: #000; ;
@@ -89,7 +95,7 @@
         //-----------------------------------------------------------------
         function cambiarAModoOscuro() {
             // body.classList.add("darkMode");(agrega)
-            concole.log("Me hicieron Click");  // console log era para imprimir en el inspeccionadir de elemnt
+            console.log("Me hicieron Click");  // console log era para imprimir en el inspeccionadir de elemnt
             console.log("Mi boton es:");
             console.log(miBoton);
             body.classList.toggle(".darkMode");//(quita)

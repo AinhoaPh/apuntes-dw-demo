@@ -7,31 +7,141 @@
     <title>Document</title>
     <link rel="stylesheet" href="/Dia19/css/style.css">
     <style>
-        #btn-modo-oscuro{
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+
+          .header {
+            display: flex;
+            height: 100px;
+            width: 100%;
+            grid-area: header;
+            padding:10px;
+            background-color: #ccc;
+           
+        }
+        
+        /* Contenedor principal */
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+           
+            grid-template-areas: 
+            "header header header header"
+            "hero   hero   hero   sidebar "
+            "gallery   gallery   gallery   sidebar "
+            "gallery   gallery   gallery   sidebar";
+        }
+        .gallery{
+            grid-area: gallery;
+        }
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .card{
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+
+
+         }
+         .hero{
+            grid-area: hero;
+         }
+      
+
+
+        /* Menú lateral */
+        .sidebar {
             
+            background: #333;
+            color: white;
+            padding: 10px;
+            grid-area: sidebar;
+            
+        }
+        .acordeon{
+            display:flex;
+            flex-direction:column;
 
         }
-        .sidebar{
-            background-color: lightpink;
+        .acordeon__sidebar{
+            max-height: 0;
+            overflow: hidden;
+            border: 1px solid teal;
+            transition: max-height 0.5s ease;
         }
 
-        .darkMode{
-            background-color:black ;
-            color:#fff ;
+        .acordeon__item.open .acordeon__sidebar{
+            max-height: 300px;
         }
+
+        /* Modo oscuro */
+        #btn-modo-oscuro {
+
+        }
+        .darkMode {
+            background-color: black;
+            color: #fff;
+        }
+
+        /* Footer */
+        .footer{
+            height: 100px;
+            padding:10px;
+            grid-area: footer;
+        }
+        
+        
     </style>
 </head>
 
 <body>
-    <div class="container">
+   
         <header class="header">
             <span class="header__title">Header</span>
 
-            <button class="header__btn"></button>
+            <button ></button>
         </header>
         <!--Sidebar-->
-        <aside class="sidebar">Sidebar
-            Acordeon
+        <aside class="sidebar">
+            <h2>Acordeon</h2>
+            <div class="acordeon">
+                <div class="acordeon__item">
+                    <h3>Pregunta 1</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item ">
+                    <h3>Pregunta 2</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item ">
+                    <h3>Pregunta 3</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item open">
+                    <h3>Pregunta 4</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+        
         </aside>
         <!--Main-->
         <main class="main">
@@ -39,7 +149,7 @@
 
             <!--Hero-->
             <section class="hero">
-            <img class="hero__img" src="#" alt="Imagen">
+                <img class="hero__img" src="#" alt="Imagen">
                 <h2>Web Party DW!</h2>
             </section>
             <!--Container-->
@@ -51,17 +161,17 @@
             <!--Galeria-->
             <section class="gallery">
                 <h2> Galeria</h2>
-
-                <div class="gallery__container">
-                    <img src="" alt="Imagen 1">
-                    <img src="" alt="Imagen 2">
-                    <img src="" alt="Imagen 3">
-                    <img src="" alt="Imagen 4">
-                    <img src="" alt="Imagen 5">
-                    <img src="" alt="Imagen 6">
-                    <img src="" alt="Imagen 7">
-                    <img src="" alt="Imagen 8">
+                <div class="gallery__grid">
+                    <img src="https://placehold.co/600x400" alt="Imagen 1">
+                    <img src="https://placehold.co/600x400" alt="Imagen 2">
+                    <img src="https://placehold.co/600x400" alt="Imagen 3">
+                    <img src="https://placehold.co/600x400" alt="Imagen 4">
+                    <img src="https://placehold.co/600x400" alt="Imagen 5">
+                    <img src="https://placehold.co/600x400" alt="Imagen 6">
+                    <img src="https://placehold.co/600x400" alt="Imagen 7">
+                    <img src="https://placehold.co/600x400" alt="Imagen 8">
                 </div>
+             
 
             </section>
 
@@ -71,7 +181,7 @@
             <!--modo oscuro7clasro=theme-->
             <button id="btn-modo-oscuro">Modo oscuro</button>
         </footer>
-    </div>
+    
     <script>
         //-----------------------------------------------------------------
         //Paso 1:obtener elmentos de nuestrp DOM (documento html)
@@ -84,24 +194,43 @@
         //-----------------------------------------------------------------
         function cambiarAModoOscuro() {
             // body.classList.add("darkMode");(agrega)
-            concole.log("Me hicieron Click");  // console log era para imprimir en el inspeccionadir de elemnt
+            console.log("Me hicieron Click");  // console log era para imprimir en el inspeccionadir de elemnt
             console.log("Mi boton es:");
             console.log(miBoton);
             body.classList.toggle("darkMode");//(quita)
         }
-    
-     
-        
+
+
+
         //Agregar escucha de click a mi boton y llamar a la funcion cada vez que lo apretan 
         miBoton.addEventListener("click", cambiarAModoOscuro);
-       
+
         //-----------------------------------------------------------------
         //Paso 3: Ejeceutar nuestro codigo.
         //-----------------------------------------------------------------
         cambiarAModoOscuro();
         console.log("Mi pagina esta funcionando");
         // podemos agregar HTML dentro de nuestro contenedor
-       
+
+        // Codigo JS para nuestro aocrdeon
+
+        //seleccionar todos los items cn la clase "acordeon__item"
+        const lista_items = document.querySelectorAll(".acordeon__item")
+        //Recorrer para cada uno de ellos 
+        lista_items.forEach( item => {
+            //le voy a asignar un evento de click 
+            item.addEventListener("click", ()=>{
+                    //Quitarle la clase "open" a todos 
+                    //lista_items.forEach( item=> item.classList.remove("open"))
+                    //Agregarle la clase"open" al que le hice click
+                    
+                    //item.classList.add("open");
+
+                    //si no esta, agrgalo, si esta quitalo.
+                    item.classList.toggle('open');
+            });
+
+        });
 
     </script>
 </body>
