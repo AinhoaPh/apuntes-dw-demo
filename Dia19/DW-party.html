@@ -4,9 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DW Party</title>
     <link rel="stylesheet" href="/Dia19/css/style.css">
     <style>
+            
+        /* Colores:
+        - header: 
+            background-color: #ccc;
+        - main:
+            background-color: #f4f1f1;
+        -sidebar: 
+        background-color: #8e8c8c;
+        -footer:
+            background-color: #ccc;
+            */
+
+
         * {
             padding: 0;
             margin: 0;
@@ -14,7 +27,6 @@
         }
 
         /* Header */
-
         .header {
             display: flex;
             height: 100px;
@@ -22,26 +34,112 @@
             grid-area: header;
             padding: 10px;
             background-color: #ccc;
+            justify-content: space-between;
+            align-items: center;
+
 
         }
+        .header__title{
+            font-size: 36px;
+        }
+
+        /*Modo oscuro*/
+        body {
+            background-color: #f4f1f1 ;
+            color: #000;
+            transition: color 2s ease-out;
+            background-color: 2s ease-in;
+        }
+
+        #btn-DarkLight {
+            background-color:#f4f1f1 ;
+            color:#000; 
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+         .darkMode{
+            background-color: #333;
+            color: #fff;
+        } 
 
         /* Contenedor principal */
 
         .main {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: auto;
-
+            background-color: #f4f1f1;
+            color: #000;
             grid-template-areas:
                 "header header header header"
                 "hero   hero   hero   sidebar "
+                "container container container sidebar"
                 "gallery   gallery   gallery   sidebar "
                 "gallery   gallery   gallery   sidebar"
                 "footer footer footer footer ";
         }
 
+        /*Hero*/
+        .hero {
+            width: 100%;
+            grid-area: hero;
+            background-color: #f4f1f1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .hero__h2 {
+            font-size: 36px;
+            position: absolute;
+            color:#000;
+            font-weight: bold;
+           
+         
+        }
+
+        .hero__img {
+            width: 500px;
+            opacity: 0.7;
+            transition: transform 1s;
+        }
+
+        .hero__img:hover {
+            transform: rotate(360deg);
+        }
+
+
+        /*Container*/
+        .container {
+            height: 80px;
+            grid-area: container;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f1f1;
+        }
+
+        .btn {
+            display: flex;
+            width: 100px;
+            background-color: #ccc;
+            height: 50px;
+            border-radius: 10px;
+
+        }
+
+
+        /*Galeria */
         .gallery {
             grid-area: gallery;
+            height: 500px;
+            
         }
 
         .gallery__grid {
@@ -49,8 +147,15 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
         }
-        img{
+        .gallery__h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
             width: 100%;
+            
+
         }
 
         .card {
@@ -64,32 +169,30 @@
 
         }
 
-        .hero {
-            grid-area: hero;
-        }
-
-
 
         /* Menú lateral */
         .sidebar {
 
-            background: #333;
-            color: white;
+            background: #8e8c8c;
+            color: #000;
             padding: 10px;
             grid-area: sidebar;
+            height: 100vh;
+            width: 100%;
 
         }
 
         .acordeon {
             display: flex;
             flex-direction: column;
+            
 
         }
 
         .acordeon__sidebar {
             max-height: 0;
             overflow: hidden;
-            border: 1px solid teal;
+            border: 1px solid #f4f1f1;
             transition: max-height 0.5s ease;
         }
 
@@ -97,13 +200,6 @@
             max-height: 300px;
         }
 
-        /* Modo oscuro */
-        #btn-modo-oscuro {}
-
-        .darkMode {
-            background-color: black;
-            color: #fff;
-        }
 
         /* Footer */
         .footer {
@@ -120,11 +216,41 @@
     <header class="header">
         <span class="header__title">Header</span>
 
-        <button></button>
+        <!--modo oscuro7clasro=theme-->
+        <button id="btn-DarkLight" class="btn">Modo oscuro</button>
     </header>
 
     <!--Main-->
     <main class="main">
+
+        <!--Hero-->
+        <section class="hero">
+            <h2 class="hero__h2">Web Party DW!</h2>
+            <img class="hero__img" src="/Dia19/img/blue.jpeg" alt="Imagen">
+
+        </section>
+        <!--Container-->
+        <section class="container">
+
+            <button class="btn">Hazme Click!</button>
+
+        </section>
+        <!--Galeria-->
+        <section class="gallery">
+            <h2 class="gallery__h2"> Galeria</h2>
+            <div class="gallery__grid">
+                <img src="https://placehold.co/600x400" alt="Imagen 1">
+                <img src="https://placehold.co/600x400" alt="Imagen 2">
+                <img src="https://placehold.co/600x400" alt="Imagen 3">
+                <img src="https://placehold.co/600x400" alt="Imagen 4">
+                <img src="https://placehold.co/600x400" alt="Imagen 5">
+                <img src="https://placehold.co/600x400" alt="Imagen 6">
+                <img src="https://placehold.co/600x400" alt="Imagen 7">
+                <img src="https://placehold.co/600x400" alt="Imagen 8">
+            </div>
+
+
+        </section>
         <!--Sidebar-->
         <aside class="sidebar">
             <h2>Acordeon</h2>
@@ -153,7 +279,7 @@
                             exercitationem delectus reiciendis!</p>
                     </div>
                 </div>
-                <div class="acordeon__item open">
+                <div class="acordeon__item ">
                     <h3>Pregunta 4</h3>
                     <div class="acordeon__sidebar">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum
@@ -161,80 +287,23 @@
                             exercitationem delectus reiciendis!</p>
                     </div>
                 </div>
-
+            </div>
         </aside>
 
-
-
-        <!--Hero-->
-        <section class="hero">
-            <img class="hero__img" src="#" alt="Imagen">
-            <h2>Web Party DW!</h2>
-        </section>
-        <!--Container-->
-        <section class="container">
-            <h2>Container</h2>
-            <div> Hazme Click</div>
-
-        </section>
-        <!--Galeria-->
-        <section class="gallery">
-            <h2> Galeria</h2>
-            <div class="gallery__grid">
-                <img src="https://placehold.co/600x400" alt="Imagen 1">
-                <img src="https://placehold.co/600x400" alt="Imagen 2">
-                <img src="https://placehold.co/600x400" alt="Imagen 3">
-                <img src="https://placehold.co/600x400" alt="Imagen 4">
-                <img src="https://placehold.co/600x400" alt="Imagen 5">
-                <img src="https://placehold.co/600x400" alt="Imagen 6">
-                <img src="https://placehold.co/600x400" alt="Imagen 7">
-                <img src="https://placehold.co/600x400" alt="Imagen 8">
-            </div>
-
-
-        </section>
 
     </main>
     <!--Footer-->
     <footer class="footer">
-        <!--modo oscuro7clasro=theme-->
-        <button id="btn-modo-oscuro">Modo oscuro</button>
+
     </footer>
 
     <script>
-        //-----------------------------------------------------------------
-        //Paso 1:obtener elmentos de nuestrp DOM (documento html)
-        //-----------------------------------------------------------------
-        const miBoton = document.querySelector("#btn-modo-oscuro");
-        const body = document.querySelector("body");
-
-        //-----------------------------------------------------------------
-        //Paso 2: Crear nuestras funciones
-        //-----------------------------------------------------------------
-        function cambiarAModoOscuro() {
-            // body.classList.add("darkMode");(agrega)
-            console.log("Me hicieron Click");  // console log era para imprimir en el inspeccionadir de elemnt
-            console.log("Mi boton es:");
-            console.log(miBoton);
-            body.classList.toggle("darkMode");//(quita)
-        }
-
-
-
-        //Agregar escucha de click a mi boton y llamar a la funcion cada vez que lo apretan 
-        miBoton.addEventListener("click", cambiarAModoOscuro);
-
-        //-----------------------------------------------------------------
-        //Paso 3: Ejeceutar nuestro codigo.
-        //-----------------------------------------------------------------
-        cambiarAModoOscuro();
-        console.log("Mi pagina esta funcionando");
-        // podemos agregar HTML dentro de nuestro contenedor
-
-        // Codigo JS para nuestro aocrdeon
-
-        //seleccionar todos los items cn la clase "acordeon__item"
-        const lista_items = document.querySelectorAll(".acordeon__item")
+    
+    
+        // Codigo JS para nuestro acordeon
+  
+    //seleccionar todos los items cn la clase "acordeon__item"
+        const lista_items = document.querySelectorAll(".acordeon__item");
         //Recorrer para cada uno de ellos 
         lista_items.forEach(item => {
             //le voy a asignar un evento de click 
@@ -250,6 +319,20 @@
             });
 
         });
+
+        //Codigo JS Modo oscuro
+
+
+        // const btnDarkLight = document.querySelector("#btn-DarkLight");
+
+        // btnDarkLight.addventListener("click", () => {
+        //       document.body.classList.toggle("darkMode");
+
+        //     //   if(){}
+        //     //   else{}
+               
+        //     });
+       
 
     </script>
 </body>

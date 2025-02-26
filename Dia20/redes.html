@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Redes</title>
     <!--Iconos de google-->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+   
+    <!--icono font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Estilos-->
     <link rel="stylesheet" href="/Dia20/css/layout.css">
     <link rel="stylesheet" href="/Dia20/css/controller.css">
     <link rel="stylesheet" href="/Dia20/css/rrss.css">
   
-    <style>
 
-    </style>
+   
+    
 </head>
 
 <body class="u-bgPrimary">
     <header class="Header">
         <h1 class="u-txtCrotah u-txtPrimary">RRSS</h1>
     </header>
-    <main main="Main u-bgSecondary">
-        <div class="icon">
+    <main class="Main u-bgSecondary">
+        <div class="Icons">
 
             <div class="IconBox u-bgPrimary IconBox--fb">
 
@@ -170,8 +177,10 @@
         //1. Declarar variables de nuestro DOM 
         const btnDarkLight = document.querySelector("#btnDarkLight");
         const btnDireccion = document.querySelector("#btnDireccion");
+        const iconContainer = document.querySelector(".Icons");
 
-        console.log("Boton darklight es:", btnDarkLight)
+        console.log("Boton darklight es:", btnDarkLight);
+        console.log("Boton Direccion es:", btnDireccion);
         //2. Agr4egar funciones y eventListeners
         btnDarkLight.addEventListener("click",  () => {
             document.body.classList.toggle("u-Dark");/*cambia al estado opuesto del que esta */
@@ -186,6 +195,26 @@
                 btnDarkLight.querySelector("span").innerText="dark_mode"
             }
         }  );
+
+        //agregar click fila / columna
+        btnDireccion.addEventListener("click", () => {
+            // agregar o quitar la clase Flexcol
+            iconsContainer.classList.toggle("u-flexCol");
+
+            // Preguntar si tiene la clase flexCol para cambiar el texto
+            if( iconsContainer.classList.contains("u-flexCol") ) {
+                //si tienne texto =fila
+                btnDireccion.textContent = "Fila";
+
+            } else{
+                // sino tiene texto = columna
+                btnDireccion.textContent = "Columna";
+                
+            }
+
+            
+        })
+
 
         //3. Inicializar nuestroo proyecto
 
