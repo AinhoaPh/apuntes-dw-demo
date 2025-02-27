@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Nav*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(36, 54, 78);
+
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav_logo {
+    align-items: flex-start;
+
+}
+
+
+/*HEADER*/
+.header {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+/*MAIN CONTENT*/
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(251, 231, 198);
+}
+
+.main--header {
+    display: flex;
+    align-items: center;
+}
+
+.main__content {
+    padding: 20px;
+    align-items: center;
+
+}
+
+.main__img {
+   
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+/*SECTION*/
+.section {
+
+    padding: 10px;
+    gap: 10px;
+}
+
+.section-img {
+    width: 100px;
+    max-height: 200px;
+    padding: 1.5em;
+}
+
+
+/*ASIDE*/
+
+.aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em;
+
+}
+
+/*Gallery*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: flex-start; /* Centra los elementos en la fila */
+    gap: 1.5em; /* Espacio entre las tarjetas */
+    width: 100%; /* Ocupar todo el ancho disponible */
+   /* Evita que se expanda demasiado en pantallas grandes */
+ 
+}
+
+.gallery__a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+.gallery__ul {
+    font-size: 1em;
+    width:500px ;
+    
+}
+
+
+
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    background-color: rgb(36, 54, 78);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+
+}
