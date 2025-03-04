@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        
+        .container {
+           
+           background-color: rgb(251, 188, 198);
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            justify-content: center;
+            border-radius: 15px;
+           
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <h1>Calculadora</h1>
+    
+    <input type="text" id="valor">
+    <div>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button id="btnSuma">+</button>
+    </div>
+    <div>
+    <button>6</button>
+    <button>5</button>
+    <button>4</button>
+    <button id="btnResta">-</button>
+    </div> 
+    <div>
+    <button>3</button>
+    <button>2</button>
+    <button>1</button>
+    <button id="btnMulti">x</button>
+    </div>
+    <div>
+    <button>0</button>
+    <button id="btnDivi">/</button>
+    <button id="btnIgual">=</button>
+    <button id="btnReset">AC</button>
+    </div>
+    <div id="resultado">Resultado: <span id="valor">0</span></div>
+    </main>
+
+    <script src="/Dia25/calculadora.js"></script>
+</body>
+</html>

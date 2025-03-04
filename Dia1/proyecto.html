@@ -5,17 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+
+    /* Colores
+     - header: 
+            background-color:#2bd0cb ;
+        - main:
+            background-color: #f4f1f1;
+        -sidebar: 
+            background-color: #8e8c8c;
+        -footer:
+            background-color: #ccc;
+
+    */
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+
+    
+    /* Header */
+    .main{
+        display: grid;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 50px 600px 1fr 50px;
+    }
+
+    .header {
+        display: flex;
+        height: 50px;
+        width: 100%;
+        grid-area: header;
+        padding: 10px;
+        background-color: #2bd0cb;
+        justify-content: space-between;
+        align-items: center;
+
+     }
+    .nav {
+        display: flex;
+        align-items: center;
+        
+     }
+     
+    .nav__links {
+        text-decoration: none;
+        color:#fff;
+
+     }
+
+     /* Main */
+    .main {
+        display: grid;
+        height: 100vh;
+        grid-area: 
+        "header  header  header"
+        "hero    hero    sidebar"
+        "content content sidebar"
+        "footer  footer  footer ";
+     }
+     
+
+     /*Hero*/
+    .hero {
+        height: 400px;
+        
+        grid-area: hero;
+        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+        }
+
+    .hero__h2 {
+        font-size: 36px;
+        position: absolute;
+        color:#000;
+        font-weight: bold;
+           
+         
+        }
+
+    .hero__img {
+        width:100%;
+        opacity: 0.7;
+        transition: transform 1s;
+        }
+
+    .hero__img:hover {
+        transform: scale(1.5);
+        }
+
+
+
+     /* Sidebar */
+    .sidebar {
+        grid-area: sidebar;
+        height: 100vh;
+        width: 100%;
+     }
+
+     /* Footer */
+    .footer{
+        display: flex;
+        height: 50px;
+        width: 100%;
+        grid-area: footer;
+        padding: 10px;
+        background-color: #2bd0cb;
+        justify-content: center;
+        align-items: center;
+     }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header">
           <!-- Navbar -->
     <nav class="nav">
-        <div class="nav_logo">LOGO</div>
+        <img src="#" alt="logo">
         <span class="search-container">
             <input type="text" placeholder="Buscar receta...">
             <button>🔍</button>
         </span>
-        <div class="nav-links">
+        <!-- es mejor con etiqueta a o li o las dos??-->
+        <div class="nav__slinks">
             <a href="#">Inicio</a>
             <a href="#">Contacto</a>
             <a href="#">Ayuda</a>
@@ -24,15 +143,15 @@
 
     </header>
     
-    <main>
+    <main class="main">
         <!--Hero-->
         <section class="hero">
-            <h2 class="hero__h2">LOGO</h2>
+            <h1 class="hero__h2">LOGO</h1>
             <img class="hero__img" src="/Dia19/img/blue.jpeg" alt="Imagen">
 
         </section>
     
-    <aside>Sidebar
+    <aside class="sidebar">Sidebar
     <ul>
         <li class="">Dietas y Recetas</li>
         <li class="">Servicios</li>
@@ -41,12 +160,16 @@
         <li>Animales perdidos</li>
     </ul>  
     </aside> 
-    <section></section>
-    <section></section>
+    <section>
+        <h2>Contendio</h2>
+    </section>
+    <section>
+        <h2>Contenido</h2>
+    </section>
 </main>
-    <footer>
-        <p>LOGO &copy; 2025 - Todos los derechos reservados.  
-            <a href="#">Términos y Condiciones</a>
+    <footer class="footer">
+        <p class="footer__p">LOGO &copy; 2025 - Todos los derechos reservados.  
+            <a class="footer__a" href="#">Términos y Condiciones</a>
          </p>
     </footer>
     

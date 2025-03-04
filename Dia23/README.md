@@ -114,3 +114,49 @@ console.log(a ===c); //false
 
 
 ```
+Bucle para imprimir numeros del 1 al 10
+
+Los bubles for se dividen en 3 àrtes:
+1. iniciar una variable (normalment 1)
+2. crear una condicom para esa variable (ej:1<10>)
+3. aplicar un cambio a esa variable cada iteraccion (ej: i++)
+
+```js
+for(let i=0 ; i<10 ; i++){
+    const num= i+1;
+console.log("numero:",num);
+}
+```
+```js
+// numeros del 10 añ 1 
+for(let i=10 ; i>0 ; i--){
+    //const num= i+1;
+console.log("numero:",i);
+}
+```
+
+## Funciones
+
+Seccion de codigo reutilizable.
+
+
+```js
+//parte 1: crear la funcion 
+function saludar(){
+    console.log("hola,como andan?")
+}
+
+
+//parte2: usar la funcion desde donde queramos
+//alumno1
+saludar();// 1 vez
+//alumno2
+saludar();//1 vez
+//profe bucle
+for(1=0; i<2;i++){
+    saludar();//bucle de 2
+}
+
+// esto saludaria 4 veces 
+```
+

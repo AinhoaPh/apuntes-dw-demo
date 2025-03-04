@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <script>
+        //declarar variables
+        const boton= document.querySelector("#btn");
+        const container =document.querySelector("#container");
+        const InputEdad = document.querySelector("#edad");
+
+         let num =0;// variable de ambito global 
+
+        //dexclarr event listener y funciones
+        boton.addEventListener("click", contar);
+       
+
+        function contar(){
+            console.log("Mehicieron click");
+            const nombre="tomi";
+            numero=numero+1
+            container.textContent = numero;
+        }
+
+        function saludar(){
+            container.textContainer = "Soy el texto nuevo agregado con JS";
+        }
+
+        //inicia el programa
+        saludar();
+    </script>
+</body>
+</html>

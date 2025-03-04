@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DW Party</title>
+    <link rel="stylesheet" href="/Dia19/css/style.css">
+    <style>
+            
+        /* Colores:
+        - header: 
+            background-color: #ccc;
+        - main:
+            background-color: #f4f1f1;
+        -sidebar: 
+        background-color: #8e8c8c;
+        -footer:
+            background-color: #ccc;
+            */
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            height: 100px;
+            width: 100%;
+            grid-area: header;
+            padding: 10px;
+            background-color: #ccc;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+        .header__title{
+            font-size: 36px;
+        }
+
+        /*Modo oscuro*/
+        body {
+            background-color: #f4f1f1 ;
+            color: #000;
+            transition: color 2s ease-out;
+            background-color: 2s ease-in;
+        }
+
+        #btn-DarkLight {
+            background-color:#f4f1f1 ;
+            color:#000; 
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+         .darkMode{
+            background-color: #333;
+            color: #fff;
+        } 
+
+        /* Contenedor principal */
+
+        .main {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            background-color: #f4f1f1;
+            color: #000;
+            grid-template-areas:
+                "header     header     header    header"
+                "hero       hero       hero      sidebar "
+                "container  container  container sidebar"
+                "gallery    gallery    gallery   sidebar "
+                "gallery    gallery    gallery   sidebar"
+                "footer     footer     footer    footer ";
+        }
+
+        /*Hero*/
+        .hero {
+           height: 400px;
+            grid-area: hero;
+            background-color: #f4f1f1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .hero__h2 {
+            font-size: 36px;
+            position: absolute;
+            color:#000;
+            font-weight: bold;
+           
+         
+        }
+
+        .hero__img {
+            width:100%;
+            opacity: 0.7;
+            transition: transform 1s;
+        }
+
+        .hero__img:hover {
+            transform: rotate(360deg);
+        }
+
+
+        /*Container*/
+        .container {
+            height: 80px;
+            grid-area: container;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f1f1;
+        }
+
+        .btn {
+            display: flex;
+            width: 100px;
+            background-color: #ccc;
+            height: 50px;
+            border-radius: 10px;
+
+        }
+
+
+        /*Galeria */
+        .gallery {
+            grid-area: gallery;
+            height: 500px;
+            
+        }
+
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .gallery__h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+            
+
+        }
+
+        .card {
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+
+
+        }
+
+
+        /* Menú lateral */
+        .sidebar {
+
+            background: #8e8c8c;
+            color: #000;
+            padding: 10px;
+            grid-area: sidebar;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        .acordeon {
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+
+        .acordeon__sidebar {
+            max-height: 0;
+            overflow: hidden;
+            border: 1px solid #f4f1f1;
+            transition: max-height 0.5s ease;
+        }
+
+        .acordeon__item.open .acordeon__sidebar {
+            max-height: 300px;
+        }
+
+
+        /* Footer */
+        .footer {
+            height: 100px;
+            padding: 10px;
+            background-color: #ccc;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <span class="header__title">Header</span>
+
+        <!--modo oscuro7clasro=theme-->
+        <button id="btn-DarkLight" class="btn">Modo oscuro</button>
+    </header>
+
+    <!--Main-->
+    <main class="main">
+
+        <!--Hero-->
+        <section class="hero">
+            <h2 class="hero__h2">Web Party DW!</h2>
+            <img class="hero__img" src="/Dia19/img/blue.jpeg" alt="Imagen">
+
+        </section>
+        <!--Container-->
+        <section class="container">
+
+            <button class="btn">Hazme Click!</button>
+
+        </section>
+        <!--Galeria-->
+        <section class="gallery">
+            <h2 class="gallery__h2"> Galeria</h2>
+            <div class="gallery__grid">
+                <img src="https://placehold.co/600x400" alt="Imagen 1">
+                <img src="https://placehold.co/600x400" alt="Imagen 2">
+                <img src="https://placehold.co/600x400" alt="Imagen 3">
+                <img src="https://placehold.co/600x400" alt="Imagen 4">
+                <img src="https://placehold.co/600x400" alt="Imagen 5">
+                <img src="https://placehold.co/600x400" alt="Imagen 6">
+                <img src="https://placehold.co/600x400" alt="Imagen 7">
+                <img src="https://placehold.co/600x400" alt="Imagen 8">
+            </div>
+
+
+        </section>
+        <!--Sidebar-->
+        <aside class="sidebar">
+            <h2>Acordeon</h2>
+            <div class="acordeon">
+                <div class="acordeon__item">
+                    <h3>Pregunta 1</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum
+                            nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio
+                            exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item ">
+                    <h3>Pregunta 2</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum
+                            nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio
+                            exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item ">
+                    <h3>Pregunta 3</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum
+                            nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio
+                            exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+                <div class="acordeon__item ">
+                    <h3>Pregunta 4</h3>
+                    <div class="acordeon__sidebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque et architecto harum
+                            nulla illo ex possimus deleniti omnis non, sed, similique cum odit rerum quidem odio
+                            exercitationem delectus reiciendis!</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+
+    </footer>
+
+    <script>
+    
+    
+        // Codigo JS para nuestro acordeon
+  
+    //seleccionar todos los items cn la clase "acordeon__item"
+        const lista_items = document.querySelectorAll(".acordeon__item");
+        //Recorrer para cada uno de ellos 
+        lista_items.forEach(item => {
+            //le voy a asignar un evento de click 
+            item.addEventListener("click", () => {
+                //Quitarle la clase "open" a todos 
+                //lista_items.forEach( item=> item.classList.remove("open"))
+                //Agregarle la clase"open" al que le hice click
+
+                //item.classList.add("open");
+
+                //si no esta, agrgalo, si esta quitalo.
+                item.classList.toggle('open');
+            });
+
+        });
+
+        //Codigo JS Modo oscuro
+
+
+        // const btnDarkLight = document.querySelector("#btn-DarkLight");
+
+        // btnDarkLight.addventListener("click", () => {
+        //       document.body.classList.toggle("darkMode");
+
+        //     //   if(){}
+        //     //   else{}
+               
+        //     });
+       
+
+    </script>
+</body>
+
+</html>
