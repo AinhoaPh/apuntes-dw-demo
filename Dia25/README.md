@@ -13,7 +13,7 @@ if(edad<=120 && edad>=18){
 ```js
 // esta funcion devuelve la suma de amos con el return que debuleve los datos aportados en los parentesis de 2,3 
 function sumar(num1, num2){
-    return num1+num2;
+    return num1+num2;//siempre devulven una cosa
 }
 
 // este llamado a lla funcion envia como argu,ento 2 numeros 
@@ -23,7 +23,7 @@ console.log(resultado):// guarda en un a varible
 
 
 //funcion sin nombrar
-const sumar = function (num1,num2){
+const  = function (num1,num2){
 
     return num1+num2;
 }
@@ -34,13 +34,16 @@ const sumar =  (num1,num2) =>{
     console.log("estoy sumando");
     return num1+num2;
 }
-// funcion flecha reducida solo si el codigo tiene una sola linea
+
+// funcion flecha reducida solo si el codigo tiene una sola linea y es la de return 
+//se quita llave y palabra return
+
 const sumar =  (num1,num2) => num1+num2;
 
 
 const alumno={
     nombre: "juan",
-    edad: 34.
+    edad: 34,
     sumar: function (num1,num2){
 
     return num1 + num2;

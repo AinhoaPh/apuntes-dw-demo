@@ -14,13 +14,20 @@
             height: 400px;
             justify-content: center;
             border-radius: 15px;
+            border-color: 5px solid rgb(245, 227, 230);
            
         }
-        button {
+        .btn {
             margin: 5px;
             padding: 10px;
             font-size: 16px;
+            background-color:rgb(245, 227, 230);
+            border-radius: 40%;
+            cursor: pointer;
+        
+            
         }
+       
         #resultado {
             margin-top: 20px;
             font-size: 20px;
@@ -32,30 +39,30 @@
 <main class="container">
     <h1>Calculadora</h1>
     
-    <input type="text" id="valor">
+    <input type="number" id="valor" placehorlder="0">
     <div>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button id="btnSuma">+</button>
+    <button class="btn" >7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <button class="btn" id="btnSuma">+</button>
     </div>
     <div>
-    <button>6</button>
-    <button>5</button>
-    <button>4</button>
-    <button id="btnResta">-</button>
+    <button class="btn">6</button>
+    <button class="btn">5</button>
+    <button class="btn">4</button>
+    <button class="btn" id="btnResta">-</button>
     </div> 
     <div>
-    <button>3</button>
-    <button>2</button>
-    <button>1</button>
-    <button id="btnMulti">x</button>
+    <button class="btn">3</button>
+    <button class="btn idbtnDos">2</button>
+    <button class="btn" id="btnUno">1</button>
+    <button class="btn" id="btnMulti">x</button>
     </div>
     <div>
-    <button>0</button>
-    <button id="btnDivi">/</button>
-    <button id="btnIgual">=</button>
-    <button id="btnReset">AC</button>
+    <button class="btn">0</button>
+    <button class="btn" id="btnDivi">/</button>
+    <button class="btn" id="btnIgual">=</button>
+    <button class="btn" id="btnReset">AC</button>
     </div>
     <div id="resultado">Resultado: <span id="valor">0</span></div>
     </main>

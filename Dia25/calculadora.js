@@ -1,45 +1,23 @@
 // 1. Obtener elementos del DOM
-const miBotonSuma = document.getElementById("btnSuma");
-const miBotonResta = document.getElementById("btnResta");
-const miBotonMultiplica = document.getElementById("btnMulti");
-const miBotonDivide = document.getElementById("btnDivi");
-const miBotonReset = document.getElementById("btnReset");
-const miBotonIgual = document.getElementById("btnIgual");
+const btnSuma = document.getElementById("btnSuma");
+const btnResta = document.getElementById("btnResta");
+const btnMulti = document.getElementById("btnMulti");
+const btnDivi = document.getElementById("btnDivi");
+const btnReset = document.getElementById("btnReset");
+const btnIgual = document.getElementById("btnIgual");
+const btnUno = document.getElementById("btnUno")
+const btnDos = document.getElementById("btnDos")
 
-const spanResultado = document.getElementById("valor");
 
-// let numero = 0; // Valor inicial
+const Resultado = document.getElementById("valor");
 
-// // Función para actualizar el resultado en pantalla
-// function actualizarPantalla() {
-//     spanResultado.innerText = numero;
-// }
 
-// // 2. Agregar eventos a los botones
-// miBotonSuma.addEventListener("click", () => {
-//     numero += ++;  // Sumar 1
-//     actualizarPantalla();
-// });
+btnSuma.addEventListener("click", () => operacionSumar("+"))
+btnResta.addEventListener("click", () => operacionRestar("-"))
+btnDivi.addEventListener("click", () => operacionMultiplicar("x"))
+btnMulti.addEventListener("click", () => operacionDividir("/"))
+btnReset.addEventListener("click", () => operacionReset("AC"))
 
-// miBotonResta.addEventListener("click", () => {
-//     numero -= 1;  // Restar 1
-//     actualizarPantalla();
-// });
 
-// miBotonMultiplica.addEventListener("click", () => {
-//     numero *= 5;  // Multiplicar por 5
-//     actualizarPantalla();
-// });
+let num = 0; // Valor inicial
 
-// miBotonDivide.addEventListener("click", () => {
-//     numero /= 2;  // Dividir entre 2
-//     actualizarPantalla();
-// });
-
-// miBotonReset.addEventListener("click", () => {
-//     numero = 2;  // Reiniciar a 2
-//     actualizarPantalla();
-// });
-
-// // Mostrar el valor inicial
-// actualizarPantalla();
