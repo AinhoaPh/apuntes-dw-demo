@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3./*  **Filtrado de Comentarios:**
+
+    *   Crear un área de texto (`<textarea>`) para que los usuarios ingresen comentarios.
+    *   Utilizar `.includes()` para detectar palabras ofensivas o no deseadas dentro del comentario.
+    *   Reemplazar las palabras ofensivas con asteriscos ("\*") utilizando `.replace()` y mostrar el comentario filtrado en un elemento HTML.*/ -->
+    <h3>Corrector</h3>
+    <textarea  id="comentario"></textarea>
+    <div id="resultado"></div>
+  
+
+
+    <script>
+    
+    const comentario = document.getElementById("comentario");
+    const prohibido = ["horrible","horroroso","espantoso"];
+    const divREs=document.querySelector("#resultado");
+    
+    textArea.getEventListner("Keyup", ()=>{
+        //leer datos
+        let texto= textArea.value;
+        //procesamos
+        for (i=0; i< prohibido.length; i++){
+            const ofensivo= prohibido[i];
+            const censura= "***";
+
+            texto= texto.replaceAll(ofensivo, censura);
+
+        }
+
+        //imprimimos
+        comentario.innerText = texto;
+    })
+        
+    </script>
+</body>
+</html>

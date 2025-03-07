@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion de Strings</title>
+    <style>
+        .hl{
+        
+            color:lightpink; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+    1. <!--  **Mayúsculas y Minúsculas en Títulos:**
+
+    *   Pide al alumno que cree un archivo HTML con un título (`<h1>`) que contenga texto en minúsculas.
+    *   Usando JavaScript, seleccionar el elemento `h1` y transformar el texto a mayúsculas utilizando `.toUpperCase()`. Mostrar el resultado en la consola.
+    *   Repetir el ejercicio, pero transformando el texto a minúsculas con `.toLowerCase()`. -->
+    <h1 id="titulo">Este es el titulo</h1>
+    <div id="upperCase"></div>
+    <div id="lowerCase"></div>
+
+ 
+    2. <!-- **Extracción de Iniciales:**
+
+    *   Solicitar al alumno que cree un párrafo (`<p>`) con el nombre completo de una persona (ej: "Juan Pérez").
+    *   Mediante JavaScript, extraer las iniciales del nombre y apellido utilizando `.split()` y `.slice()`.
+    *   Mostrar las iniciales en un elemento `span` dentro del mismo párrafo. -->
+
+    <p id="fullname">Juan Pérez </p>
+    <p>Iniciales: <span id = "iniciales"></span></p>
+
+
+   3.  <!--  **Reemplazo de Palabras en un Input:**
+
+    *   Crear un input (`<input>`) con un texto predefinido que contenga una frase que se desee cambiar.
+    *   Utilizar `.replaceAll()` para buscar la palabra "TuMarca" y cambiarla por el mismo valor pero entre tags de <span> con una clase para resaltarla. 
+    *   Imprimir el resultado en un div con el texto corregido. -->
+
+        Escribe un texto
+    <input type="text" id="inputEj3" placeholder="Ingrese un texto.." value="">
+    <!-- <button id="btnEj3">Revisar texto</button> -->
+
+   <div id="resultadoEj3">
+  <span id="marca" class="hl">CEI</span> .
+    </div>
+
+
+
+<!--         Nivel 2: Validación y Limpieza de Datos de Formulario -->
+
+1.  <!-- Eliminación de Espacios en Nombres de Usuario:
+
+    *   Crear un formulario HTML con un campo de entrada (`<input type="text">`) para el nombre de usuario.
+    *   Al enviar el formulario, utilizar `.trim()` para eliminar los espacios en blanco al inicio y al final del nombre de usuario ingresado.
+    *   Mostrar el nombre de usuario "limpio" en un elemento HTML (ej: un `<span>`) debajo del campo de entrada.-->
+
+
+
+    <input type="text" id="fraseInput">
+    <p  id="resultado"></p>
+
+
+ 2. <!-- **Verificación de URL:**
+
+    *   Crear un campo de entrada (`<input type="url">`) para que el usuario ingrese una URL.
+    *   Utilizar `.startsWith()` para verificar si la URL comienza con "http://" o "https://". Si no es así, agregar "https://" al inicio de la URL.
+    *   Mostrar la URL validada en un elemento HTML. -->
+
+
+
+
+
+ 3.<!--  **Filtrado de Comentarios:**
+
+    *   Crear un área de texto (`<textarea>`) para que los usuarios ingresen comentarios.
+    *   Utilizar `.includes()` para detectar palabras ofensivas o no deseadas dentro del comentario.
+    *   Reemplazar las palabras ofensivas con asteriscos ("\*") utilizando `.replace()` y mostrar el comentario filtrado en un elemento HTML. -->
+        
+
+
+
+<!-- **Nivel 3: Manipulación Avanzada de Texto para Diseño Dinámico** -->
+
+<!-- 1.  **Creación de Resumen de Artículos:**
+
+    *   Simular un artículo largo en un elemento `div`.
+    *   Utilizar `.slice()` para extraer los primeros 100 caracteres del artículo y crear un resumen.
+    *   Agregar un enlace "Leer más..." que muestre el artículo completo al hacer clic. -->
+
+<!-- 2.  **Generación de Etiquetas (Tags) a partir de un Texto:**
+
+    *   Crear un campo de entrada para que el usuario ingrese una lista de palabras clave separadas por comas.
+    *   Utilizar `.split()` para convertir la cadena de palabras clave en un array.
+    *   Crear dinámicamente elementos `span` con cada palabra clave como texto y agregarlos a un contenedor HTML.
+     -->
+<!-- 3.  **Animación de Texto con Repetición:**
+
+    *   Crear un elemento `h1` con un texto corto.
+    *   Utilizar `.repeat()` para repetir el texto varias veces y crear un efecto de "marquee" o "ticker" horizontal utilizando CSS y JavaScript. -->
+
+
+    <script>
+
+        // ej1:
+        const titulo= getElementById("titulo");
+
+        const txtMayuscula= titulo.innerText.toUpperCase() ;
+        console.log(titulo.innerText.toUpperCase()    );
+
+
+        console.log(titulo.innerText.toLowerCase()    );
+
+        // ejerc clase1:
+        // const titulo = document.querySelector("#titulo");
+        // const divMayusculas =  document.querySelector("");
+        // const divMinusculas = document.querySelector("");
+
+        // let tituloMayuscula = titulo.toUpperCase
+        // divM
+
+
+         // ej.2
+
+         //obtener txt del input
+         const fullname = document.getElementById("fullname").innerText;
+        //separa las palabras
+         const palabra = fullname.innerText.split(" ");
+         //corta solo la 1a letra
+         const iniciales = palabra[0] .slice(0,1) .toUpperCase() + palabra[1] .slice(0,1).toUpperCase();
+        //mostrar iniciales
+         document.getElementById("iniciales").innerText= iniciales;
+
+
+         // ej.3
+         //obtener txt del input
+         //declaro variables
+         const inputEj3= document.querySelector("#inputEj3");
+         const resultadoEj3= document.querySelector("#resultadoEj3");
+        //  const btnEj3= document.querySelector("#btnEj3");
+        const marca="CEI";
+        const nuevaMarca=  `<span class='hl'>${marca}</span>`;
+
+        //Funciones
+        inputEj3.addEventListener("keyup"/*"click"*/, () =>{
+            
+                const inputText=inputEj3.value;
+                
+                //para cambiar nuestrto texto
+                // resultadoEj3.innerHTML=inputText.replaceAll(marca, nuevaMarca);
+                //replace+ Regex cambia nuestro textp
+                //RegEXP g -> global
+                //RegEXP i -> ignora may y mins
+                const marcaRegex = new RegExp(marca,'gi');
+                resultadoEj3.innerHTML=inputText.replace(marcaRegex, nuevaMarca);
+
+            
+
+        });
+
+         inputEj3.value="Hola";
+
+       
+        //muestra resultado en el parrafo
+        // document.getElementById("resultado").innertext = nuevoInput;
+
+
+      
+
+
+    </script>
+</body>
+</html>
