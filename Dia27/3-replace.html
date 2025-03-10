@@ -21,13 +21,13 @@
     
     const comentario = document.getElementById("comentario");
     const prohibido = ["horrible","horroroso","espantoso"];
-    const divREs=document.querySelector("#resultado");
-    
-    textArea.getEventListner("Keyup", ()=>{
+    const divRes=document.getElementById("resultado");
+
+    comentario.addEventListener("keyup", ()=>{
         //leer datos
-        let texto= textArea.value;
+        let texto= comentario.value;
         //procesamos
-        for (i=0; i< prohibido.length; i++){
+        for (let i=0; i< prohibido.length; i++){
             const ofensivo= prohibido[i];
             const censura= "***";
 
@@ -36,7 +36,7 @@
         }
 
         //imprimimos
-        comentario.innerText = texto;
+        divRes.innerText = texto;
     })
         
     </script>
