@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazo de palabras en un Input: ** </title>
+</head>
+
+<body>
+    3. <!--  **Reemplazo de Palabras en un Input:**
+
+    *   Crear un input (`<input>`) con un texto predefinido que contenga una frase que se desee cambiar.
+    *   Utilizar `.replaceAll()` para buscar la palabra "TuMarca" y cambiarla por el mismo valor pero entre tags de <span> con una clase para resaltarla. 
+    *   Imprimir el resultado en un div con el texto corregido. -->
+
+    Escribe un texto
+    <input type="text" id="inputEj3" placeholder="Ingrese un texto.." value="">
+    <!-- <button id="btnEj3">Revisar texto</button> -->
+
+    <div id="resultadoEj3">
+        <span id="marca" class="hl">CEI</span> .
+    </div>
+
+
+    <script>
+        // ej.3
+        //obtener txt del input
+        //declaro variables
+        const inputEj3 = document.querySelector("#inputEj3");
+        const resultadoEj3 = document.querySelector("#resultadoEj3");
+        //  const btnEj3= document.querySelector("#btnEj3");
+        const marca = "CEI";
+        const nuevaMarca = `<span class='hl'>${marca}</span>`;
+
+        //Funciones
+        inputEj3.addEventListener("keyup"/*"click"*/, () => {
+
+            const inputText = inputEj3.value;
+
+            //para cambiar nuestrto texto
+            // resultadoEj3.innerHTML=inputText.replaceAll(marca, nuevaMarca);
+            //replace+ Regex cambia nuestro textp
+            //RegEXP g -> global
+            //RegEXP i -> ignora may y mins
+            const marcaRegex = new RegExp(marca, 'gi');
+            resultadoEj3.innerHTML = inputText.replace(marcaRegex, nuevaMarca);
+
+
+
+        });
+
+        inputEj3.value = "Hola";
+
+
+        //muestra resultado en el parrafo
+        // document.getElementById("resultado").innertext = nuevoInput;
+
+
+
+
+    </script>
+
+</body>
+
+</html>

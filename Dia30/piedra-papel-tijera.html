@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Piedra, Papel o Tijera</h2>
+
+    <button id="btnPiedra">Piedra</button>
+    <button id="btnPapel">Papel</button>
+    <button id="btnTijera">Tijera</button>
+
+    <div id="txtResultado" class="resultado"></div>
+
+    <p>
+
+        <!-- victoriasJ1 <span id="victoriasJ1"></span> <br>
+        victoriasJ2 <span id="victoriasJ2"></span> <br>
+        Empates: <span id="empate"></span> -->
+    </p>
+
+
+    <script>
+        //Variables
+        const btnPiedra= document.getElementById("btnPiedra")
+        const btnPapel = document.getElementById("btnPapel")
+        const btnTijeras = document.getElementById("btnTijera")
+        
+        let victoriasJ1 = 0;
+        let victoriasJ2 = 0;
+        let empates = 0;
+
+        //Funciones y EventListener
+        btnPiedra.addEventListener("click", ()=>{
+            jugar("piedra");
+        });
+        btnPapel.addEventListener("click", ()=>{
+            jugar("papel");
+        });
+        btnTijera.addEventListener("click", ()=>{
+            jugar("tijera");
+        });
+        
+
+
+
+        //funcion princ del juego
+        function jugar(jugador) {
+
+            const jugadorIA= seleccionDeIA();
+            // if (resultado == empate) {
+            //     empate++;
+            // } else if (resultado == j1) {
+
+            // } else {
+
+            // }
+            console.log(`yo tire${jugador} - la IA tiro${jugadorIA}`);
+           const resultado = queJugadorGana(usuario,jugadorIA);
+
+
+            imprimirResultados();
+        }
+
+        //que obtuvo el ordenador 
+        function seleccionDeIA() {
+            const opciones = ['piedra', 'papel', 'tijera'];
+            const num = Math.floor(Math.random() * opciones.length);
+
+            return opciones[num];  // alert(num);//0,1,2
+            // if(num==0){ return '';}
+            // if(num==0){ return '';}
+            // if(num==0){ return '';}
+
+            // opciones.forEach((item, index) => {
+            //     if(num == index){
+            //         return item;
+            //     }
+            // })
+        }
+
+        function queJugadorGana(j1, j2) {
+            // return piedra>tijera>papel ? piedra  : papel  : tijera ;
+            //return jugador1 == jugador2 ? "empate"  :jugador 1 == "piedra" & jugador 2 == 
+
+            if (j1 == j2) { return "es un empate "; }
+            // casos dnd gana jg1
+            if ((j1 == " tijera" && j2 == " papel")
+                (j1 == " piedra" && j2 == " tijera")
+                (j1 == " papel" && j2 == " piedra")
+            ) {
+                return "Ganaste";
+            }
+            //por descarte gana jg2
+            return "Perdiste";
+        }
+    </script>
+</body>
+
+</html>

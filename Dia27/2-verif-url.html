@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificacion URL</title>
+</head>
+<body>
+
+    <input type="url"  id="url"  placeholder="Escribe una URL">
+    <button id="btn"></button>
+    <p>URL validada: <span id="resultado"></span></p>
+
+
+    <script>
+
+        const url =document.getElementById("url");
+        const btn= document.getElementById("btn")
+        const resultado=document.getElementById("resultado")
+
+        btn.addEventListener("click", () => {
+            //leer datos
+            let url= url.value;
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach y Map</title>
+    <style>
+        p{
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae sapiente deleniti provident labore ab cum velit, quae quia eos officia voluptatem eius blanditiis quaerat error perspiciatis esse exercitationem quibusdam?</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, eum, aspernatur in expedita facilis totam omnis culpa laborum, ipsa perspiciatis numquam! Animi deserunt omnis magni porro dicta iusto esse eligendi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, consequuntur veniam numquam hic molestiae nihil, adipisci esse iure sit rem minima reprehenderit? Nostrum harum quis cupiditate qui dignissimos eaque. Nam.</p>
+
+    <button class="btn">Boton 1</button>
+    <button class="btn">Boton 2</button>
+
+    <div class="card">Tarjeta 1</div>
+    <div class="card">Tarjeta 2</div>
+    <div class="card">Tarjeta 3</div>
+
+    <button class="btnToggleCard">Ocultar/Mostrar</button>
+
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+
+
+    <!-- ejercicio 4 -->
+
+    <nav id="menu"></nav>
+
+
+    <script>
+       // Cambiar los estios de tdos los parrafos , poniendo su color en "#333" y su fuente a 16px
+       const listaParrafos = document.querySelectorAll("p");
+       listaParrafos.forEach((parrafo)=>{
+        parrafo.style.color ="#333";
+        parrafo.style.fontSize='32px';
+
+        
+       })
+
+// Teniendo 2 botones con clss "btn" usar forEach para agregar un evento de click a cada uno y que al hacer click cambie su color de fondo a # 007bff y texto blanco
+       const listaBotones =document.querySelectorAll("btn");
+       listaBotones.forEach((boton)=>{
+        boton.addEventListener("click",()=>{
+
+        boton.style.volor="#fff";
+        boton.style.backgroundColor ="#007bff";   
+        })
+       
+       });
+
+//Mostar /ocultar ".card" y crer un boton que los muestre o los oculte a todos cuando le haga click.
+
+const listCard = document.querySelectorAll(".card");
+//toggle:prender o apagar
+const btnToggleCard = document.querySelectorAll(".btnToggleCard");
+btnToggleCard.addEventListener("click", ()=>{
+    //va a recorrer todas las tarjetas
+    listaCards.forEach(card =>{
+        // aque pregunta si el element del display esta oculto muetsralo o escondelo
+       // if ( card.style.display == ""){
+
+       //activar/desactivar la clase "hidden" para cada tarjeta
+       card.classList.toggle("hidden")
+            
+
+        
+    });
+})
+
+// 4. Crear un menu dinamicamentr dado el array [ "Home", "nosotros", "contacto"]. Usar forEach para crear un enlace <a> y agregarla a nuestro <nav id ="menu">
+//     Home ->  <a href ="#Home">Home</a>
+//     nosotros -> <a href ="#Nosotros">Nosotros</a>
+const listaMenu =["Home", "nosotros", "contacto"];
+const navegacion = document.getElementById("menu");
+listaMenu.forEach( item => {
+    ///             <a href="#Home">    Home  </a>
+    const enlace = `<a href="#${item}">${item}</a>"`;
+
+    //concatenamos al final el nuevo link usando+=
+    navegacion.innerHTML+=enlace;
+});
+
+</script>
+
+    <!-- ejercicio 4 -->
+<!-- 
+    <nav id="menu">
+        <a href="#Contacto">Contacto</a>
+    </nav> -->
+
+
+</body>
+</html>

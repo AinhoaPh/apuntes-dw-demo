@@ -1,0 +1,90 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzar Moneda</title>
+</head>
+<body>
+    <!-- Hacer una Web que me permita lanzar una moneda y me muestre al azar el resultado.
+
+Con cada lanzamiento cuente la cantidad de caras y de cruces.
+
+Tambien que calculen el porcentaje de caras que han salido. -->
+<h2>Lanzar una moneda</h2>
+
+<button id="lanzarBtn">Lanzar</button>
+
+<p>Caras</p>
+<p>cruces</p>
+
+<div class="resultado"></div>
+
+<h2>Piedra, Papel o Tijera</h2>
+
+<button id="piedra">Piedra</button>
+<button id="papel">Papel</button>
+<button id="tijera">Tijera</button>
+
+<div id="resultado" class="resultado"></div>
+
+<p>
+   victoriasJ1  <span id="victoriasJ1"></span> <br>
+   victoriasJ2  <span id="victoriasJ2"></span> <br>
+   Empates: <span id= "empate"></span>
+</p>
+
+<script>
+
+    //juego moneda:
+
+    let caras = 0;
+    let cruces=0;
+    
+
+    const lanzar = document.getElementById("lanzarBtn");
+    const cara = document.querySelector("cara");
+    const cruz = document.querySelector("cruz");
+    const resultado = document.querySelector("resultado");
+
+    function lanzar(cara,cruz){
+        if(cara>cruz){
+            return cara;
+        }else{
+            return cruz;
+        }
+    }
+
+    // juego P,p,T:
+    let victoriasJ1 = 0;
+    let victoriasJ2 = 0;
+    let empates = 0;
+
+    function jugar(){
+
+    }
+    function seleccionDeIa({
+        const opciones = [piedra, papel, tijera]
+        
+
+    })
+
+    function queJugadorGana ( j1,j2 ){
+    // return piedra>tijera>papel ? piedra  : papel  : tijera ;
+    //return jugador1 == jugador2 ? "empate"  :jugador 1 == "piedra" & jugador 2 == 
+    
+if (j1 == j2) {return "es un empate ";}
+  // casos dnd gana jg1
+if ((j1 == " tijeras" && j2 == " papel") 
+    (j1 == " piedra" && j2 == " tijeras")
+    (j1 == " papel" && j2 == " piedra")
+) {
+    return "Ganaste";
+}
+//por descarte gana jg2
+ return "Perdiste";
+}
+
+</script>
+</body>
+</html>

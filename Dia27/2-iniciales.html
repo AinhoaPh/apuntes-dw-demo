@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciales</title>
+</head>
+
+<body>
+
+    2. <!-- **Extracción de Iniciales:**
+
+    *   Solicitar al alumno que cree un párrafo (`<p>`) con el nombre completo de una persona (ej: "Juan Pérez").
+    *   Mediante JavaScript, extraer las iniciales del nombre y apellido utilizando `.split()` y `.slice()`.
+    *   Mostrar las iniciales en un elemento `span` dentro del mismo párrafo. -->
+
+    <p id="fullname">Juan Pérez </p>
+    <p>Iniciales: <span id="iniciales"></span></p>
+
+
+    <script>
+        // ej.2
+
+        //obtener txt del input
+        const fullname = document.getElementById("fullname").innerText;
+        //separa las palabras
+        const palabra = fullname.innerText.split(" ");
+        //corta solo la 1a letra
+        const iniciales = palabra[0].slice(0, 1).toUpperCase() + palabra[1].slice(0, 1).toUpperCase();
+        //mostrar iniciales
+        document.getElementById("iniciales").innerText = iniciales;
+
+    </script>
+
+</body>
+
+</html>
