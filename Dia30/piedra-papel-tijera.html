@@ -4,66 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Piedra, Papel o Tijera</title>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: "Crotah";
+            /* se elije el nombre*/
+            src: url("fonts/Crotahfreeversion-Italic.ttf") format('truetype');
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+         /* Header */
+         /* .main__header{
+            position: relative;
+            z-index: 1; 
+        }  */
+
+       
+        .header__h1 {
+            font-family: "Crotah";
+            /* position: absolute; */
+        }
+
+        img {
+            width: 100%;
+            opacity: 0.75;
+            
+        }
+
+        /* Main */
+        .main {
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            background-color: rgb(242, 223, 228);
+            font-size: 50px;
+
+
+        }
+
+        /* Botones */
+        /* .main__btn {} */
+
+        .btn {
+            transition: background-color 0.5s, transform 0.5s;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgb(248, 236, 239);
+            background-color: rgb(253, 245, 246);
+
+
+
+        }
+
+        .btn:hover {
+            transform: scale(1.5);
+            background-color: rgb(245, 224, 229);
+
+        }
+
+        .resultado {
+            font-family: fantasy;
+
+        }
+    </style>
 </head>
 
-<body>
-    <h2>Piedra, Papel o Tijera</h2>
+<body class="main">
+    <header class="main__header">
+        <h1 class="header__h1">Piedra, Papel o Tijera</h1>
 
-    <button id="btnPiedra">Piedra</button>
-    <button id="btnPapel">Papel</button>
-    <button id="btnTijera">Tijera</button>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.OZWeb6XuO_C6lpMEzNEiAwHaEK&pid=Api&P=0&h=180"
+            alt="piedra, papel o tijera">
 
-    <div id="txtResultado" class="resultado"></div>
+    </header>
 
-    <p>
 
-        <!-- victoriasJ1 <span id="victoriasJ1"></span> <br>
-        victoriasJ2 <span id="victoriasJ2"></span> <br>
-        Empates: <span id="empate"></span> -->
-    </p>
+    <div class="main__btn">
+        <button class="btn" id="btnPiedra">Piedra 👊🏻 </button>
+        <button class="btn" id="btnPapel">Papel 🧻 </button>
+        <button class="btn" id="btnTijera">Tijera ✂️ </button>
+    </div>
+
+    <button id="btnAiVsAi">Auto Play!</button>  
+
+    <h3 id="txtResultado" class="resultado">Resultado:</h3>
+
+
+    <p> Ganadas: <span id="txtWin">0</span></p>
+    <p>Perdidas: <span id="txtLoose">0</span></p>
+    <p>Empatadas: <span id="txtDrawin">0</span></p>
+
 
 
     <script>
         //Variables
-        const btnPiedra= document.getElementById("btnPiedra")
-        const btnPapel = document.getElementById("btnPapel")
-        const btnTijeras = document.getElementById("btnTijera")
-        
+        const btnPiedra = document.getElementById("btnPiedra");
+        const btnPapel = document.getElementById("btnPapel");
+        const btnTijera = document.getElementById("btnTijera");
+
+        const btnIaVsIa= document.getElementById("btnIaVsIa");
+
+        const divResultado = document.getElementById("txtResult");
+        const spanGanadas = document.getElementById("txtWin");
+        const dspanPerdidas = document.getElementById("txtLoose");
+        const spanEmpatadas= document.getElementById("txtDrawin");
+
         let victoriasJ1 = 0;
         let victoriasJ2 = 0;
         let empates = 0;
 
         //Funciones y EventListener
-        btnPiedra.addEventListener("click", ()=>{
-            jugar("piedra");
-        });
-        btnPapel.addEventListener("click", ()=>{
-            jugar("papel");
-        });
-        btnTijera.addEventListener("click", ()=>{
-            jugar("tijera");
-        });
-        
+        btnPiedra.addEventListener("click", () => { jugar("piedra"); });
+        btnPapel.addEventListener("click", () => { jugar("papel"); });
+        btnTijera.addEventListener("click", () => { jugar("tijera"); });
+        btnIaVsIa.addEventListener("click", ()=>{IaVsIa() })
+
+        let cantGanaste = 0;
+        let cantPerdiste = 0;
+        let cantEmpataste = 0;
 
 
 
         //funcion princ del juego
         function jugar(jugador) {
 
-            const jugadorIA= seleccionDeIA();
-            // if (resultado == empate) {
-            //     empate++;
-            // } else if (resultado == j1) {
+            const jugadorIA = seleccionDeIA();
+            const resultado = queJugadorGana(jugador, jugadorIA);
+            console.log(`yo tire ${jugador} - la IA tiro ${jugadorIA}`);
+            console.log(resultado);
 
-            // } else {
+            if (resultado === "es un empate") {
+                cantEmpataste++;
+            } else if (resultado === "Ganaste") {
+                cantGanaste++;
+            } else {
+                cantPerdiste++;
+            }
 
-            // }
-            console.log(`yo tire${jugador} - la IA tiro${jugadorIA}`);
-           const resultado = queJugadorGana(usuario,jugadorIA);
+            imprimirResultado();
+        }
+        function AiVsAi(){
 
-
-            imprimirResultados();
+            setInterval(() => {
+                //repite una funcion multiples veces dependiendo del 2nd parametro
+                console.log("JUEGO AUTOMATICO")
+            
+            const jugadorIA2 = seleccionDeIA();
+            jugar(jugadorIA2);//simular que esta jugando el j1
+            }, 1000)// cada 1seg
         }
 
         //que obtuvo el ordenador 
@@ -71,10 +175,11 @@
             const opciones = ['piedra', 'papel', 'tijera'];
             const num = Math.floor(Math.random() * opciones.length);
 
-            return opciones[num];  // alert(num);//0,1,2
-            // if(num==0){ return '';}
-            // if(num==0){ return '';}
-            // if(num==0){ return '';}
+            return opciones[num];
+            // alert(num);//0,1,2
+            // if(num==0){ return 'piedra';}
+            // if(num==0){ return 'papel';}
+            // if(num==0){ return 'tijera';}
 
             // opciones.forEach((item, index) => {
             //     if(num == index){
@@ -83,21 +188,36 @@
             // })
         }
 
+        //quien gano entre j1 y j2
         function queJugadorGana(j1, j2) {
-            // return piedra>tijera>papel ? piedra  : papel  : tijera ;
-            //return jugador1 == jugador2 ? "empate"  :jugador 1 == "piedra" & jugador 2 == 
 
-            if (j1 == j2) { return "es un empate "; }
+            if (j1 == j2) { return "es un empate"; }
             // casos dnd gana jg1
-            if ((j1 == " tijera" && j2 == " papel")
-                (j1 == " piedra" && j2 == " tijera")
-                (j1 == " papel" && j2 == " piedra")
+            if ((j1 == "tijera" && j2 == "papel") ||
+                (j1 == "piedra" && j2 == "tijera") ||
+                (j1 == "papel" && j2 == "piedra")
             ) {
                 return "Ganaste";
             }
             //por descarte gana jg2
             return "Perdiste";
         }
+
+        //imprimir resultados en pantalla
+        function imprimirResultado(resultadoTxt) {
+            // resultado CG
+            document.getElementById("txtWin").textContent = cantGanaste;
+            document.getElementById("txtLoose").textContent = cantPerdiste;
+            document.getElementById("txtDrawin").textContent = cantEmpataste;
+
+
+        }
+
+
+        //3. Ejecutar nuestro codigo
+        seleccionDeIA();
+        
+
     </script>
 </body>
 
