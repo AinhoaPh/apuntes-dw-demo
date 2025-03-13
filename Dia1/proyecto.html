@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-
-    /* Colores
-     - header: 
+        
+        /*----------|
+        |  Colores  | 
+        |-----------*/
+    /* - header: 
             background-color:#2bd0cb ;
         - main:
             background-color: #f4f1f1;
@@ -18,160 +21,139 @@
             background-color: #ccc;
 
     */
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        /*---------|
+        |   Reset  | 
+        |----------*/ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        /*----------|
+        |   Header  | 
+        |-----------*/
+       
+        .header {
+            display: flex;
+            height: 70px;
+            width: 100%;
+            grid-area: header;
+            padding: 10px;
+            background-color: #2bd0cb;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .nav__links {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        /*--------|
+        |   Main  | 
+        |---------*/
+
     
 
-    
-    /* Header */
-    .main{
-        display: grid;
-        grid-template-columns: 200px 1fr 1fr;
-        grid-template-rows: 50px 600px 1fr 50px;
-    }
+        /*----------|
+        |  Sidebar  | 
+        |-----------*/
 
-    .header {
-        display: flex;
-        height: 50px;
-        width: 100%;
-        grid-area: header;
-        padding: 10px;
-        background-color: #2bd0cb;
-        justify-content: space-between;
-        align-items: center;
+       
 
-     }
-    .nav {
-        display: flex;
-        align-items: center;
-        
-     }
-     
-    .nav__links {
-        text-decoration: none;
-        color:#fff;
-
-     }
-
-     /* Main */
-    .main {
-        display: grid;
-        height: 100vh;
-        grid-area: 
-        "header  header  header"
-        "hero    hero    sidebar"
-        "content content sidebar"
-        "footer  footer  footer ";
-     }
-     
-
-     /*Hero*/
-    .hero {
-        height: 400px;
-        
-        grid-area: hero;
-        background-color: #f3f3f3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 10px;
+        /*----------|
+        |   Footer  | 
+        |-----------*/
+        .footer {
+            display: flex;
+            height: 70px;
+            width: 100%;
+            grid-area: footer;
+            padding: 10px;
+            background-color: #2bd0cb;
+            justify-content: center;
+            align-items: center;
         }
-
-    .hero__h2 {
-        font-size: 36px;
-        position: absolute;
-        color:#000;
-        font-weight: bold;
-           
-         
-        }
-
-    .hero__img {
-        width:100%;
-        opacity: 0.7;
-        transition: transform 1s;
-        }
-
-    .hero__img:hover {
-        transform: scale(1.5);
-        }
-
-
-
-     /* Sidebar */
-    .sidebar {
-        grid-area: sidebar;
-        height: 100vh;
-        width: 100%;
-     }
-
-     /* Footer */
-    .footer{
-        display: flex;
-        height: 50px;
-        width: 100%;
-        grid-area: footer;
-        padding: 10px;
-        background-color: #2bd0cb;
-        justify-content: center;
-        align-items: center;
-     }
     </style>
 </head>
+
 <body>
     <header class="header">
-          <!-- Navbar -->
-    <nav class="nav">
-        <img src="#" alt="logo">
-        <span class="search-container">
-            <input type="text" placeholder="Buscar receta...">
-            <button>🔍</button>
-        </span>
-        <!-- es mejor con etiqueta a o li o las dos??-->
-        <div class="nav__slinks">
-            <a href="#">Inicio</a>
-            <a href="#">Contacto</a>
-            <a href="#">Ayuda</a>
-        </div>
-    </nav>
+        <h1>Animaloteca</h1>
+        <!-- Navbar -->
+        <nav class="nav">
+            <img src="#" alt="logo">
+            <span class="search-container">
+                <input type="text" placeholder="Buscar receta...">
+                <button>🔍</button>
+            </span>
+
+            <ul>
+                <li class="#">Dietas y Recetas</li>
+                <li class="#">Servicios</li>
+                <li class="#">Consejos</li>
+                <li class="#">Adopcion y Protectoras</li>
+                <li class="#">Animales perdidos</li>
+            </ul>
+        </nav>
 
     </header>
-    
-    <main class="main">
-        <!--Hero-->
-        <section class="hero">
-            <h1 class="hero__h2">LOGO</h1>
-            <img class="hero__img" src="/Dia19/img/blue.jpeg" alt="Imagen">
-
+    <main>
+        <h2>Frase</h2>
+        <img src="#" alt="imagen inicio">
+        <br>
+        <section id="#">
+            <h3>Dietas y Recetas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis dolore libero eos
+                reprehenderit, saepe deleniti labore doloribus quod repudiandae? Assumenda aspernatur quasi doloremque
+                similique enim repudiandae, voluptates voluptas nam.</p>
         </section>
-    
-    <aside class="sidebar">Sidebar
-    <ul>
-        <li class="">Dietas y Recetas</li>
-        <li class="">Servicios</li>
-        <li class="">Consejos</li>
-        <li class="">Adopcion y Protectoras</li>
-        <li>Animales perdidos</li>
-    </ul>  
-    </aside> 
-    <section>
-        <h2>Contendio</h2>
-    </section>
-    <section>
-        <h2>Contenido</h2>
-    </section>
-</main>
+        <br>
+        <section id="#">
+            <h3>Servicios</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eius, nesciunt quisquam doloremque modi
+                porro temporibus omnis quibusdam laudantium eveniet, facere ex aliquam odio dignissimos consectetur quis
+                at ducimus qui.</p>
+        </section>
+        <br>
+        <section id="#">
+            <h3>Consejos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi, illo nihil hic at ipsa rerum dolorum
+                natus, itaque sint corrupti quidem libero earum enim aut tempora, magni accusamus reiciendis.</p>
+        </section>
+        <br>
+        <section id="#">
+            <h3>Adopcion y Protectoras</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nihil quo id illum in eligendi
+                reiciendis labore eveniet consectetur, perspiciatis vitae incidunt eum error corporis unde, totam
+                veritatis mollitia ducimus.</p>
+        </section>
+        <br>
+        <section id="#">
+            <h3>Animales perdidos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit nostrum cum dolores
+                itaque esse, omnis, saepe eveniet optio expedita sit? Officiis laboriosam tenetur quae, atque voluptate
+                facilis ex numquam.</p>
+        </section>
+        <br>
+    </main>
     <footer class="footer">
-        <p class="footer__p">LOGO &copy; 2025 - Todos los derechos reservados.  
+        <p class="footer__p">LOGO &copy; 2025 - Todos los derechos reservados.
             <a class="footer__a" href="#">Términos y Condiciones</a>
-         </p>
+        </p>
     </footer>
-    
+
 </body>
+
 </html>
