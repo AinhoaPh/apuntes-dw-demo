@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  rgb(241, 232, 234);
+        }
+        .acordeon {
+            width: 90%;
+            max-width: 900px;
+            background-color: rgb(242, 223, 228);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .acordeon__bloque {
+            background-color: rgb(248, 104, 169);
+            margin: 0 0 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .acordeon__h2 {
+            background-color: rgb(246, 201, 213);
+            margin: 0 0 10px;
+            padding: 20px;
+            border-radius: 10px;
+            transition:all 0.5s ease;
+            cursor: pointer;
+           
+        }
+        .acordeon__h2:hover{
+            transform: scale(0.95);
+        }
+        
+
+        .acordeon__contenido {
+            background-color: rgb(255, 220, 226);
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+          
+        }
+
+        .acordeon__bloque--activo .acordeon__contenido {
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="acordeon">
+
+        <div class="acordeon__bloque">
+            <h2 class="acordeon__h2">Titular 1</h2>
+            <p class="acordeon__contenido">Soy el contenido 1</p>
+        </div>
+        <div class="acordeon__bloque">
+            <h2 class="acordeon__h2">Titular 2</h2>
+            <p class="acordeon__contenido">Soy el contenido 2</p>
+        </div>
+        <div class="acordeon__bloque">
+            <h2 class="acordeon__h2">Titular 3</h2>
+            <p class="acordeon__contenido">Soy el contenido 3</p>
+        </div>
+        <div class="acordeon__bloque">
+            <h2 class="acordeon__h2">Titular 4</h2>
+            <p class="acordeon__contenido">Soy el contenido 4</p>
+        </div>
+
+    </div>
+    <script>
+        const bloque = document.querySelectorAll(".acordeon__bloque");
+        const h2 = document.querySelectorAll(".acordeon__h2");
+
+        h2.forEach((cadaH2, i) => {
+            h2[i].addEventListener("click", () => {
+                bloque.forEach((cadaBloque, i) => {
+                    bloque[i].classList.remove("acordeon__bloque--activo");
+                })
+                bloque[i].classList.add("acordeon__bloque--activo");
+            })
+        })
+    </script>
+</body>
+
+</html>

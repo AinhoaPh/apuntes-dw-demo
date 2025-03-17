@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <h1>Menu de cafeteria</h1>
+    <pre>
+    Crear 3 secciones (cafe,bocadillo,bebida)
+    Para cada seccion: crear 3 botones:
+        -Aregar 1 al carrito
+        -Aregar 2 al carrito
+        -Aregar 3 al carrito
+
+    Agregar un boton al final para ver total de items
+    Agregar un boton para vaciar el carrito
+</pre>
+
+    <h2>Café</h2>
+    Agregar:
+    <button class="btn" id="btn-cafe-1">1</button>
+    <button class="btn" id="btn-cafe-2">2</button>
+    <button class="btn" id="btn-cafe-3">3</button>
+
+    <h2>Bocadillo</h2>
+
+    <button class="btn" id="btn-bocadillo-1">1</button>
+    <button class="btn" id="btn-bocadillo-2">2</button>
+    <button class="btn" id="btn-bocadillo-3">3</button>
+
+
+    <h2>Bebida</h2>
+
+    <button class="btn" id="btn-bebida-1">1</button>
+    <button class="btn" id="btn-bebida-2">2</button>
+    <button class="btn" id="btn-bebida-3">3</button>
+
+
+    <hr>
+    <section>
+        <button class="btn" id="btn-total">Ver total de Items</button>
+        <button class="btn" id="btn-vaciar">Vaciar el carrito</button>
+        <div id="resultado">
+            
+        </div>
+    </section>
+    <script>
+        // Haciendo la correcta referencia a los botones con el querySelector
+
+        const btnCafe1 = document.querySelector("#btn-cafe-1");
+        const btnCafe2 = document.querySelector("#btn-cafe-2");
+        const btnCafe3 = document.querySelector("#btn-cafe-3");
+        const btnBocadillo1 = document.querySelector("#btn-bocadillo-1");
+        const btnBocadillo2 = document.querySelector("#btn-bocadillo-2");
+        const btnBocadillo3 = document.querySelector("#btn-bocadillo-3");
+        const btnBebida1 = document.querySelector("#btn-bebida-1");
+        const btnBebida2 = document.querySelector("#btn-bebida-2");
+        const btnBebida3 = document.querySelector("#btn-bebida-3");
+        const btnTotal = document.querySelector("#btn-total");
+        const btnVaciar = document.querySelector("#btn-vaciar");
+
+        const resultado = document.querySelector("#resultado");
+
+        // Inicializando las variables para llevar la cuenta de los productos
+        let totalItems = 0;
+        let cantCafe = 0;
+        let cantBoca = 0;
+        let cantDrnk = 0;
+
+        // Evento para los botones de café
+        btnCafe1.addEventListener("click", () => AgregarCarrito(1, "cafe"));
+        btnCafe2.addEventListener("click", () => AgregarCarrito(2, "cafe"));
+        btnCafe3.addEventListener("click", () => AgregarCarrito(3, "cafe"));
+
+        // Evento para los botones de bocadillo
+        btnBocadillo1.addEventListener("click", () => AgregarCarrito(1, "boca"));
+        btnBocadillo2.addEventListener("click", () => AgregarCarrito(2, "boca"));
+        btnBocadillo3.addEventListener("click", () => AgregarCarrito(3, "boca"));
+
+        // Evento para los botones de bebida
+        btnBebida1.addEventListener("click", () => AgregarCarrito(1, "drnk"));
+        btnBebida2.addEventListener("click", () => AgregarCarrito(2, "drnk"));
+        btnBebida3.addEventListener("click", () => AgregarCarrito(3, "drnk"));
+
+        // Evento para ver el total de los productos en el carrito
+        btnTotal.addEventListener("click", MostrarTotal);
+
+        // Evento para vaciar el carrito
+        btnVaciar.addEventListener("click", BorrarCarrito);
+
+        // Funcion de agregar al carrito
+        function AgregarCarrito(cant, tipo) {
+            console.log("Agregando cantidad: ", cant);
+
+            switch (tipo) {
+                case "cafe":
+                    cantCafe += cant;
+                    break;
+                case "boca":
+                    cantBoca += cant;
+                    break;
+                case "drnk":
+                    cantDrnk += cant;
+                    break;
+            }
+            totalItems += cant;
+            MostrarTotal();  // Llamamos la funcion para actualizar los totales
+        }
+
+        // Funcion de mostrar los totales de items
+        function MostrarTotal() {
+            resultado.innerHTML = `<ul>
+                                        <li>Café: ${cantCafe}</li>
+                                        <li>Bocadillos: ${cantBoca}</li>
+                                        <li>Bebidas: ${cantDrnk}</li>
+                                    </ul>
+                                    Total de Items: ${totalItems}`;
+        }
+
+        // Funcion para vaciar el carrito
+        function BorrarCarrito() {
+            cantCafe = 0;
+            cantBoca = 0;
+            cantDrnk = 0;
+            totalItems = 0;
+            MostrarTotal();  // Llamamos la funcion para actualizar el total después de vaciar
+        }
+    </script>
+</body>
+
+</html>

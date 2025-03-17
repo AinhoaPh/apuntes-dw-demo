@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <h1>Menu de cafeteria</h1>
+    <pre>
+    Crear 3 secciones (cafe,bocadillo,bebida)
+    Para cada seccion: crear 3 botones:
+        -Aregar 1 al carrito
+        -Aregar 2 al carrito
+        -Aregar 3 al carrito
+
+    Agregar un boton al final para ver total de items
+    Agregar un boton para vaciar el carrito
+</pre>
+
+    <h2>Café</h2>
+    Agregar:
+    <button class="btn" data-cant="1" data-tipo="cafe">1</button>
+    <button class="btn" data-cant="2" data-tipo="cafe">2</button>
+    <button class="btn" data-cant="3" data-tipo="cafe">3</button>
+
+    <h2>Bocadillo</h2>
+    <button class="btn" data-cant="1" data-tipo="boca">1</button>
+    <button class="btn" data-cant="2" data-tipo="boca">2</button>
+    <button class="btn" data-cant="3" data-tipo="boca">3</button>
+
+    <h2>Bebida</h2>
+    <button class="btn" data-cant="1" data-tipo="drnk">1</button>
+    <button class="btn" data-cant="2" data-tipo="drnk">2</button>
+    <button class="btn" data-cant="3" data-tipo="drnk">3</button>
+
+    <hr>
+    <section>
+        <button class="btn" id="btn-total">Ver total de Items</button>
+        <button class="btn" id="btn-vaciar">Vaciar el carrito</button>
+        <div id="resultado"></div>
+    </section>
+
+    <script>
+        // Obtener los botones
+        const listaBotones = document.querySelectorAll(".btn");
+        const btnTotal = document.querySelector("#btn-total");
+        const btnVaciar = document.querySelector("#btn-vaciar");
+        const resultado = document.getElementById("resultado");
+
+        // Inicializar variables para el carrito
+        let totalItems = 0;
+        let cantCafe = 0;
+        let cantBoca = 0;
+        let cantDrnk = 0;
+
+        // Agregar el evento de click a todos los botones con la clase "btn"
+        listaBotones.forEach(btn => {
+            btn.addEventListener("click", AgregarCarrito);
+        });
+
+        // Evento para ver el total
+        btnTotal.addEventListener("click", MostrarTotal);
+
+        // Evento para vaciar el carrito
+        btnVaciar.addEventListener("click", BorrarCarrito);
+
+        // Función de agregar al carrito
+        function AgregarCarrito(e) {
+            const item = e.target; // Obtener el botón que fue presionado
+
+            // Obtener la cantidad y el tipo de artículo desde los atributos de datos
+            const cant = parseInt(item.getAttribute("data-cant"));
+            const tipo = item.getAttribute("data-tipo");
+
+            // Incrementar la cantidad de items en función del tipo seleccionado
+            switch (tipo) {
+                case "cafe":
+                    cantCafe += cant;
+                    break;
+                case "boca":
+                    cantBoca += cant;
+                    break;
+                case "drnk":
+                    cantDrnk += cant;
+                    break;
+            }
+
+            // Incrementar el total de items
+            totalItems += cant;
+
+            // Actualizar el total
+            MostrarTotal();
+        }
+
+        // Función de mostrar totales
+        function MostrarTotal() {
+            resultado.innerHTML = `<ul>
+                                        <li>Café: ${cantCafe}</li>
+                                        <li>Bocadillos: ${cantBoca}</li>
+                                        <li>Bebidas: ${cantDrnk}</li>
+                                    </ul>
+                                     Total: ${totalItems}`;
+        }
+
+        // Función de borrar carrito
+        function BorrarCarrito() {
+            // Restablecer todos los valores a cero
+            cantCafe = 0;
+            cantBoca = 0;
+            cantDrnk = 0;
+            totalItems = 0;
+
+            // Actualizar el total
+            MostrarTotal();
+        }
+    </script>
+</body>
+
+</html>

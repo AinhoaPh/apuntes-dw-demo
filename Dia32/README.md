@@ -26,7 +26,7 @@ boton.addEventListener("click", function ()=> {
     miFuncion("Tomi");
 })
 //Ejecutar la funcion sin enviar parametros
-boton.addEventListener("click", ()=>miFuncion);
+boton.addEventListener("click", miFuncion);
 //Ejecutar la funcion enviando parametro la debo meter dentro de una funcion flecha 
 boton.addEventListener("click", ()=>miFuncion("Maria"));
 
@@ -47,12 +47,12 @@ Crear un elemento que muestre un mensaje cuando el raton para por encima de el
 
 ### Parametro "e" (event/evento)
 
-Es un objeto que pontiene informacion sobre el evento ocurrido. Este de pasaa utomaticamente a la funcion que maneja el evento 
+Es un objeto que contiene informacion sobre el evento ocurrido. Este de pasaa automaticamente a la funcion que maneja el evento. Evento hecho objeto.
 
 ```js
 function handleClick(){
     console.log("El boton ha sido clickeado");
-    console.log("Coordenadas del mouse: ", e.clientX, e.clientY);
+    console.log("Coordenadas del mouse: ", e.clientX, e.clientY);//posiciones del mouse en eje x e y
 }
 boton.addEventListener('click', handleClick);
 
