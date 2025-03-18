@@ -6,18 +6,18 @@
     <title>Pestañas con HTML, CSS y JavaScript</title>
     <style>
         /* Estilos para el contenedor de las pestañas */
-        .tabs-container {
+        .container{
             width: 80%;
             margin: 0 auto;
         }
 
-        /* Estilos para las pestañas */
-        .tabs {
+        /* Estilos para los botones */
+        .btnList {
             display: flex;
             cursor: pointer;
         }
 
-        .tab {
+        .btn {
             flex: 1;
             padding: 10px;
             background-color: #f1f1f1;
@@ -25,71 +25,76 @@
             transition: background-color 0.3s ease;
         }
 
-        .tab:hover {
+        .btn:hover {
             background-color: #ddd;
         }
 
-        .tab-active {
+        .btn-activo {
             background-color: #fff;
             border-bottom: 2px solid #007BFF;
         }
 
         /* Estilos para el contenido de las pestañas */
-        .tab-content {
+        .bloque {
             display: none;
             padding: 20px;
             border: 1px solid #ddd;
             border-top: none;
         }
 
-        .tab-content-active {
+        .bloque-activo {
             display: block;
         }
     </style>
 </head>
 <body>
-    <div class="tabs-container">
-        <!-- Pestañas -->
-        <div class="tabs">
-            <div class="tab tab-active" data-tab="1">Pestaña 1</div>
-            <div class="tab" data-tab="2">Pestaña 2</div>
-            <div class="tab" data-tab="3">Pestaña 3</div>
+    <div class="container">
+        <!-- Botones -->
+        <div class="btnList">
+            <button class="btn btn-activo">Botón 1</button>
+            <button class="btn">Botón 2</button>
+            <button class="btn">Botón 3</button>
         </div>
         <!-- Contenido de las pestañas -->
-        <div class="tab-content tab-content-active" data-content="1">
+        <div class="subcontainer">
+        <div class="bloque bloque-activo">
             <h2>Contenido de la Pestaña 1</h2>
             <p>Este es el contenido de la primera pestaña.</p>
         </div>
-        <div class="tab-content" data-content="2">
+        <div class="bloque">
             <h2>Contenido de la Pestaña 2</h2>
             <p>Este es el contenido de la segunda pestaña.</p>
         </div>
-        <div class="tab-content" data-content="3">
+        <div class="bloque">
             <h2>Contenido de la Pestaña 3</h2>
             <p>Este es el contenido de la tercera pestaña.</p>
         </div>
     </div>
+    </div>
 
     <script>
         // Seleccionamos todas las pestañas y el contenido de las pestañas
-        const tabs = document.querySelectorAll('.tab');
-        const contents = document.querySelectorAll('.tab-content');
+        const btnList = document.querySelectorAll(".btn");
+        const bloque = document.querySelectorAll(".bloque");
 
         // Añadimos un evento de clic a cada pestaña
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Obtenemos el valor de data-tab de la pestaña clicada
-                const tabNumber = tab.getAttribute('data-tab');
+        btnList.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                btnList.forEach((Btn) => {;
 
                 // Removemos la clase activa de todas las pestañas y contenidos
-                tabs.forEach(t => t.classList.remove('tab-active'));
-                contents.forEach(c => c.classList.remove('tab-content-active'));
+                btn.classList.remove("btn-activo");
 
-                // Añadimos la clase activa a la pestaña y contenido correspondiente
-                tab.classList.add('tab-active');
-                document.querySelector(`.tab-content[data-content="${tabNumber}"]`).classList.add('tab-content-active');
-            });
-        });
+                bloque.classList.remove("bloque-activo");
+            })
+
+             // Añadimos la clase activa a la pestaña y contenido correspondiente
+            btn.classList.add("btn-activo");
+
+            bloque.classList.add("bloque-activo");
+
+            })
+        })
     </script>
 </body>
 </html>

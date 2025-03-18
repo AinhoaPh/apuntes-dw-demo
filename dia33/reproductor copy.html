@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <style>
+        .card {
+            border-radius: 8px;
+            background-color: #ccc;
+            padding: 10px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            overflow: hidden;
+        }
+        .card img{
+            width: 100px;
+            height: 100px;
+            margin-right: 5px;
+        }
+
+        .controllers {
+            margin: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Music Player</h1>
+    <div id="playList">
+        <!-- <div class="card">
+            <span class="artista"></span>
+            <span class="mp3"></span>
+        </div> -->
+    </div>
+
+
+
+    <!-- Cancion Actual -->
+    <div id="cancionActual"></div>
+
+    <!-- Buttons for controls -->
+    <div id="controllers">
+        <button id="btnAnt">⏪</button>
+        <button id="btnPlay">▶️</button>
+        <button id="btnPause">⏸</button>
+        <button id="btnSig">⏩</button>
+    
+
+    <!-- Button to show Tema 3 info -->
+    <button id="btnTema3">Tema 3</button>
+    </div>
+    <!-- Display song info -->
+    <!-- <div id="song-info">
+        <p id="song-name">Cancion:</p>
+        <p id="song-artist">Artista:</p>
+    </div> -->
+    <script>
+        //Parte 1
+        const playList = document.getElementById("playList");
+        const btnTema3 = controllers.querySelector("#btnTema3");
+        const controllers = document.querySelector(".controllers");
+        const cancionActual = document.querySelector("cancionActual)")
+
+        let idCancion = 0;// id de la cancion reproduciendose
+
+
+        // 1. Crear array de canciones
+        const listaCanciones = [
+            "soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+            "soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+        ];
+        // Por si queréis sacar canciones de aquí, también se puede : https://archive.org/details/rosalia-aunque-es-de-noche/BAD+BUNNY+x+ROSAL%C3%8DA+-+LA+NOCHE+DE+ANOCHE.mp3
+
+        listaCanciones.forEach((cancion, idx) => {
+            console.log(cancion);
+        })
+
+        // 2. Crear array de artistas
+        const listaArtistas = [
+            "Paquita la del barrio",
+            "Michael Jackson",
+            "Marea",
+            "INXS",
+            "Amaia"
+        ];
+        const listaColores = ["Rojo","Negro","Rosa","Morado","Azul"];
+
+
+        listaCanciones.forEach((cancion, idx) => {
+            const artista = listaArtistas[idx];
+            const color = listaColores[idx];
+            const imagen = listaCover[idx];
+
+            // console.log(artista);
+            // console.log(cancion);
+
+            playlist.innerHTML += `
+                                    <div class="card" id="${idx}">
+                                        
+                                        <img src=""
+
+                                        <h3>${cancion}</h3>
+                                        
+                                        <span> ${artista}</span>
+                
+                                    </div> `;
+        });
+
+        // 3. Array con imágenes
+        const listaCover = [
+            "https://via.placeholder.com/200x150?text=Song1",
+            "https://via.placeholder.com/200x150?text=Song2",
+            "https://via.placeholder.com/200x150?text=Song3",
+            "https://via.placeholder.com/200x150?text=Song4",
+            "https://via.placeholder.com/200x150?text=Song5"
+        ];
+        const cantItems  =listaArtistas.length;
+
+        const handleCargarCancion = () => {
+
+            // console.log("Me hicieron click en Tema:", i);
+            const artista = listaCanciones[idCancion];
+            const cancion = listaCancion[idCancion];
+            
+
+            console.log("El artista es:", artista, " y la cancion es : ", cancion);
+
+            cancionActual.innerHTML = `   <h3>${cancion}</h3>
+                
+                                         <span> ${artista}</span> `;
+        }
+        btnTema3.addEventListener("click", () => {handleCargarCancion()});
+
+
+        document.addEventListener("click", (e) => {
+            console.log(event.target.id);
+            handleCargarCancion();
+        })
+
+
+        // Parte 3
+
+        handleCargarCancion(1);
+        handleCargarCancion(3);
+        handleCargarCancion(4);
+
+
+
+    </script>
+</body>
+
+</html>
+// Parte 1
+        const playList = document.getElementById("playlist");
+        const controllers = document.querySelector(".controllers");
+        const btn3 = controllers.querySelector("#btn3");
+        const cancionActual = document.querySelector("#cancionActual");
+
+        let idCancion = 1; // id de la canción reproduciondose.
+
+        // const listaBotones = controllers.querySelectorAll("button");
+        // console.log("Los botones son:", listaBotones);
+listaCanciones.forEach( (cancion, idx) => {
+
+            // accedemos a sus elementos relacionados
+            const artista = listaArtistas[idx];
+            const color = listaColores[idx];
+            const imagen = listaCover[idx];
+
+            // console.log(cancion);
+            // console.log(artista);
+
+            // el += concatena el valor anterior con este nuevo valor.
+            playList.innerHTML += `<div class="card" id="${idx}">
+                                        <img src=
+// el += concatena el valor anterior con este nuevo valor.
+            playList.innerHTML += `<div class="card" id="${idx}">
+                                        <img src="${imagen}" />
+                                        <div>
+                                            <h3>${artista}</h3>
+                                            <span>${cancion}</span>
+                                        </div>
+                                    </div>`;
+
+        });
+const handleCargarCancion = ()=> {
+            // imprimir en consola los datos de canción #i
+            // console.log("me hicieron click en tema: ",i);
+
+            const artista = listaArtistas[idCancion];
+            const cancion = listaCanciones[idCancion];
+
+            console.log("El artista es: ",artista, " y la cancion es: ", cancion);
+
+            cancionActual.innerHTML = ` <h3>${artista}</h3>
+                                        <span>${cancion}</span>`;
+        }
+Tomás Sánchez
+22:06
+btn3.addEventListener("click", ()=> {
+            idCancion=3;
+            handleCargarCancion();
+        });
+// Agregar eventListener de click al documento
+        // podemos acceder a distinos valores como por ej: al id del target.
+        document.addEventListener("click", (e)=> {
+            console.log(event.target.id);
+            handleCargarCancion();
+        })
+
+        // Parte 3
+        // Reprodución canción actual
+        handleCargarCancion();

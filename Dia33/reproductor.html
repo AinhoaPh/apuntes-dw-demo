@@ -69,9 +69,17 @@
 
         listaArtistas.forEach( (cancion,idx) =>{
             const artista = listaArtista[idx];
+            const color = listaColores[idx];
 
             console.log(artista);
             console.log(cancion);
+
+            playlist.innerHTML=`
+            <div class="card">
+                Tema: ${cancion}
+                Artista: ${artista}
+                Color Preferido: ${color}
+            </div> `;
         })
 
         // 3. Array con imágenes
