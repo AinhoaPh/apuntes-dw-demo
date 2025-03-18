@@ -24,31 +24,40 @@
             background-color: rgb(242, 223, 228);
             padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .acordeon__bloque {
-            background-color: rgb(248, 104, 169);
+            background-color: rgb(230, 185, 205);
+            color:#000000;
             margin: 0 0 10px;
             padding: 10px;
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .acordeon__h2 {
-            background-color: rgb(246, 201, 213);
+            background-color:rgb(241, 232, 234);
             margin: 0 0 10px;
             padding: 20px;
             border-radius: 10px;
             transition:all 0.5s ease;
             cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
            
         }
         .acordeon__h2:hover{
             transform: scale(0.95);
+         
+        }
+        .acordeon__bloque:hover{
+            background-color: rgb(227, 70, 191);
         }
         
 
         .acordeon__contenido {
-            background-color: rgb(255, 220, 226);
+            background-color: rgb(242, 235, 237);
+            color:#111;
             padding: 0;
             height: 0;
             overflow: hidden;
@@ -59,6 +68,7 @@
         .acordeon__bloque--activo .acordeon__contenido {
             height: 80px;
         }
+
     </style>
 </head>
 
