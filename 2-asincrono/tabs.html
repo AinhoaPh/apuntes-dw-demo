@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pestañas con HTML, CSS y JavaScript</title>
     <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         /* Estilos para el contenedor de las pestañas */
         .container{
             width: 80%;
@@ -15,23 +20,32 @@
         .btnList {
             display: flex;
             cursor: pointer;
+            
         }
 
         .btn {
             flex: 1;
             padding: 10px;
-            background-color: #f1f1f1;
+            background-color: rgb(19, 96, 129);
+            color:#fff;
             text-align: center;
             transition: background-color 0.3s ease;
+            cursor: pointer;
+            transition:all 0.3s ease;
+            border-radius: 8px;
         }
 
         .btn:hover {
-            background-color: #ddd;
+            background-color: #3dc8e0;
+            color:#fff;
+            border-bottom: #3dc8e0;
+            transform: scale(1.1);
         }
 
         .btn-activo {
-            background-color: #fff;
+            background-color: #3dc8e0;
             border-bottom: 2px solid #007BFF;
+            color:#fff;
         }
 
         /* Estilos para el contenido de las pestañas */
@@ -40,6 +54,8 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-top: none;
+            border-radius: 8px;
+            background-color: rgb(233, 244, 252);
         }
 
         .bloque-activo {
@@ -75,7 +91,7 @@
     <script>
         // Seleccionamos todas las pestañas y el contenido de las pestañas
         const btnList = document.querySelectorAll(".btn");
-        const bloque = document.querySelectorAll(".bloque");
+        const bloqueList = document.querySelectorAll(".bloque");
 
         // Añadimos un evento de clic a cada pestaña
         btnList.forEach((btn, i) => {
@@ -85,11 +101,11 @@
                 // Removemos la clase activa de todas las pestañas y contenidos
                 btn.classList.remove("btn-activo");
 
-                bloque.classList.remove("bloque-activo");
+                btn.classList.add("btn-activo");
             })
+            bloque.classList.remove("bloque-activo");
 
              // Añadimos la clase activa a la pestaña y contenido correspondiente
-            btn.classList.add("btn-activo");
 
             bloque.classList.add("bloque-activo");
 
