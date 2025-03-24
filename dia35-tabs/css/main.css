@@ -25,6 +25,8 @@ body {
     padding: 20px;
     z-index: 1;
 
+    overflow-y: auto;
+
     left: 100%; /* por defecto fuera de pantalla */
     transition: left 0.3s ease-in-out;
 
@@ -86,3 +88,4 @@ body {
 .nav-button:hover {
     color: #000;
 }
+

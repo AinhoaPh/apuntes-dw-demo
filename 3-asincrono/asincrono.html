@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta marca="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincrono 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            background-color: #191919;
+            color: #fefefe;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .listaMarcas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .marca {
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease, color 0.3s;
+
+        }
+
+        .marca:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .fondo {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <div class="fondo"></div>
+
+    <div class="listaMarcas">
+        <span class="marca">ZPump Urban Fit Reebok</span>
+        <span class="marca">Coach2o Font Vella</span>
+        <span class="marca">RCar Revista Car</span>
+        <span class="marca">Emotional Pulse Seidor</span>
+        <span class="marca">Alhambra Cerveza Alhambra</span>
+        <span class="marca">Actimel Danone</span>
+        <span class="marca">ffuuss OTS Group</span>
+        <span class="marca">Delicious Día</span>
+        <span class="marca">Roca Sanitarios</span>
+        <span class="marca">Deep State Fox</span>
+    </div>
+
+</body>
+<script>
+    const fondo = document.querySelector(".fondo");
+    const listaMarcas = document.querySelectorAll(".marca");
+
+    marca.forEach((fondo) => {
+        marca.addEventListener("mouseover", () => {
+            fondo.style.backgroundImage
+        }
+
+        )
+    })
+
+</script>
+
+</html>

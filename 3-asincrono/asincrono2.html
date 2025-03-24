@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincrono 2op</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #191919;
+            color: #fefefe;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+
+        }
+
+        .listaRazas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+            width: 100%;
+            list-style: none;
+            max-width: auto;
+        }
+
+        
+        .razas {
+            cursor: pointer;
+            color: #aaa;
+            font-weight: bold;
+            font-size: 50px;
+            transition: transform 0.3s ease, color 0.3s;
+            text-align: center;
+            
+            
+        }
+
+        .razas:hover {
+            transform: scale(1.1);
+            color: #fefefe;
+        }
+
+        .img {
+            opacity: 0;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+
+        .img.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="listaRazas">
+            <li class="razas">
+                <img class="img" src="./img/img1.jpeg" alt="Scottish Fold ">
+                <p>Felis Margarita</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img2.jpeg" alt="Ragdoll">
+                <p>Ragdoll</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img3.jpeg" alt="Bengalí">
+                <p>Bengalí</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img4.jpeg" alt="Maine Coon">
+                <p>Maine Coon</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img5.jpeg" alt="Siberiano">
+                <p>Siberiano</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img6.jpeg" alt="Noruego del Bosque">
+                <p>Noruego del Bosque</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img7.jpeg" alt="Angora Turco">
+                <p>Angora Turco</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img8.jpeg" alt="Siamés">
+                <p>Siamés</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img9.jpeg" alt="Persa">
+                <p>Persa</p>
+            </li>
+            <li class="razas">
+                <img class="img" src="./img/img10.jpeg" alt="British Shorthair">
+                <p>British Shorthair</p>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+<script src="./js/script1.js"></script>
+
+</html>

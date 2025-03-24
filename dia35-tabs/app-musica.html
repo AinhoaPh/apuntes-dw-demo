@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App de Música</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/dia35-tabs/css/main.css">
+    <link rel="stylesheet" href="/dia35-tabs/css/lista-temas.css">
+  
 </head>
 <body>
     <div class="container">
@@ -15,7 +17,7 @@
         </div>
         <div id="tab2" class="tab-content active" style="background-color: #add8e6;">
             <h1>Lista de Reproducción</h1>
-            <ul id="containerCanciones">
+            <ul class="containerCanciones" id="containerCanciones">
                 <li class="cardCancion">
                     <img src="./img/tema1.jpg" alt="artista">
                     <div>
@@ -23,23 +25,27 @@
                         <small>artista</small>
                     </div>
                 </li>
-                <li>Canción 2</li>
-                <li>Canción 3</li>
+               
             </ul>
             <div>
                 Canción Actual
             </div>
         </div>
-        <div id="tab3" class="tab-content" style="background-color: #90ee90;">
+        <div id="tab3" class="tab-content" style="background-color: #ccc;">
 
                 <h1>Canción Actual</h1>
                 <div class="player">
-                    <i class="fas fa-play"></i>
-                    <i class="fas fa-pause"></i>
-                    <i class="fas fa-step-forward"></i>
                     <i class="fas fa-step-backward"></i>
+                    <i class="fas fa-pause"></i>
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-step-forward"></i>
                 </div>
-                <audio src="" controls></audio>
+                <div>
+                    <img src="./${imagen}" alt="${artista}" style="width:200px;">
+                    <h2>${titulo}</h2>
+                    <p>${artita}</p>
+                </div>
+                <audio src="" controls id="audioPlayer"></audio>
             
         </div>
     </div>
@@ -50,79 +56,7 @@
         <button class="nav-button" data-tab="tab3"><i class="fas fa-volume-up"></i><span>Canción</span></button>
     </nav>
 
-    <script>
-        const containerBloques = document.querySelector(".container");
-const listaBloques = containerBloques.querySelectorAll(".tab-content");
-const listaButtons = document.querySelectorAll(".nav-button");
-const containerCanciones = document.getElementById("containerCanciones");
+    <script src="/dia35-tabs/js/script-tomas.js"></script>
 
-const listaTemas = [
-    {   id: 1, 
-        titulo: "Canción 1", 
-        artista: "Artista 1", 
-        imagen: "img1.jpg",  
-        fuente:"https://mi-musica.com/tema-1.mp3" },
-
-    { id: 2,
-        titulo: "Canción 2",
-        artista: "Artista 2",
-        imagen: "img2.jpg",  
-        fuente:"https://mi-musica.com/tema-2.mp3" },
-
-     { id: 3,
-        titulo: "Canción 3",
-        artista: "Artista 3",
-        imagen: "img3.jpg",  
-        fuente:"https://mi-musica.com/tema-3.mp3" }
-   
-    
-    ];
-
-
-listaBloques.forEach((button, idx) => {
-
-
-    button.addEventListener("click", () => {
-        //obtenemos el id del target que quiero mostrar
-        const target = button.getAttribute('data-tab');
-
-        //Actualizar la visiibilidad d los bloques
-        listaBloques.forEach(bloque => {
-            bloque.classList.remove("active");
-            //si el bloque es el que me einteresa agregar active
-            if (bloque.if == target) {
-                bloque.classList.add("active");
-            }
-        });
-
-
-
-        //Actualizar el boton activo de navegacion
-        listaButtons.forEach((button) => {
-            btn.classList.remove("active");
-        });
-        button.classList.add("active");
-    
-
-
-    });
-
-});
-
-    listaTemas.forEach(tema => {
-        const {id, titulo, artista, imagen, fuente}= tema;
-        console.log(titulo);
-
-        containerCanciones.innerHTML += ` <li class="cardCancion">
-                    <img class="imgCancion"src="${imagen}" alt="${artista}">
-                    <div>
-                        <h2 class="tittleCancion">${titulo}</h2>
-                        <small class="artistaCancion">${artista}</small>
-                    </div>
-                </li>`;
-    })
-
-
-    </script>
 </body>
 </html>
