@@ -1,9 +1,9 @@
 
-// 1️⃣ Definir las variables
+// Definir las variables
 const listaRazas = document.querySelectorAll(".razas");
 const listaImg = document.querySelectorAll(".img");
 
-// 2️⃣ Definir los eventos
+// Definir los eventos
 for (let i = 0; i < listaRazas.length; i++) {
     listaRazas[i].addEventListener("mouseover", () => {
         // Quitamos la clase 'active' de todas las imágenes
