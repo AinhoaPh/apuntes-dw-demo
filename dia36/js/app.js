@@ -45,25 +45,46 @@ const ocultarError = ()=>{
 }
 
 const mostrarDatos = (datos) =>{
-    // imprimir en oantalla las tarjetas de usuarios 
-    
+    // imprimir en pantalla las tarjetas de usuarios 
+
 }
 
-const cargarDatos = () => {
-    fetch("./db/datos.json")
-        .then(response=> response.json())
-        .then(data =>{
-            console.log("Tus datos de la DB son:", data);
-            //llamar a la funcion de mostrar datos
-            mostrarDatos(data);
-        })
-        .catch( e =>{
-            console.warn("Tuvimos un error obteniendo los datos");
-        });
+const cargarDatos = async() => {
+try{    const response = await fetch("./db/datos.json")
+         const listaUsuarios = await response.json();
+
+         mostrarDatos(listaUsuarios);
+         }catch(error){
+            console.warn("TUVIMOS UN ERROR OBTENIENDO DATOS")
+         }
     
+
 }
 
+// const cargarDatos = () => {
+//     fetch("./db/datos.json")
+//         .then(response=> response.json())
+//         .then(data =>{
+//             console.log("Tus datos de la DB son:", data);
+//             //llamar a la funcion de mostrar datos
+//             mostrarDatos(data);
+//         })
+//         .catch( e =>{
+//             console.warn("Tuvimos un error obteniendo los datos");
+//         });
+    
+// }
 cargarBtn.addEventListener("click", cargarDatos);
+
+const filtrarPorExperiencia = ()=> {
+    const filtrados = listaUsuarios.filter(perfil = perfil.experiencia )
+    mostrarDatos(filtrados);
+
+}
+
+cargarBtn.
+limpiarBtn.
+filtarBtn.
 
 
 //__________________________

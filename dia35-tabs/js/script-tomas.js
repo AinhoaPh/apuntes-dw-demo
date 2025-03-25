@@ -160,11 +160,11 @@ pauseBtn.addEventListener("click", ()=>{
 nextBtn.addEventListener("click", ()=>{
     posicionTemaActual++;
    const idCancion =  listaTemas[posicionTemaActual].id;
-    cargarCancion(idcancion);
+    cargarCancion(idCancion);
 })
 prevBtn.addEventListener("click", ()=>{
     posicionTemaActual--;
     console.log("Posicion es: ", posicionTemaActual)
    const idCancion =  listaTemas[posicionTemaActual].id;
-    cargarCancion(idcancion);
+    cargarCancion(idCancion);
 })

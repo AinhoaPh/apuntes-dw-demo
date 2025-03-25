@@ -153,7 +153,7 @@ La funcion `Fetch()` nos permite hacer una peticion y nos devuelve una promesa
 
 //mandar una pregunta, convierte la respuesta a JSON y responde con el nombre 
 fetch("https://jsonplaceholder.typicode.com/users/1")
-    .then( response => response.json() )// convierte(procesa) nuestra respuesta a JSON(formato similar al objeto)
+    .then( response => response.json() )// convierte(procesa) nuestra respuesta a JSON(formato similar al objeto) encadena acciones una detras d otrA PORQUE CADA paso tiene una function con un valor y devuelve un return que aunque no este esta simplifcado 
     .then ( datos =>{
         console.log(datos)
     })
