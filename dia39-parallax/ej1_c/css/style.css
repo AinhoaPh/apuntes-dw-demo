@@ -1,0 +1,69 @@
+.parallax-contenedor{
+    position:relative;/*Esto es necesario para posicionar hijos en absolute*/
+    height: 80vh;
+    overflow: hidden;/*Ocultar parte del fondo que no entre*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+}
+.parallax-bg{
+    position: absolute;
+    top:-20%;
+    left:0;
+    width: 100%;
+    height: 140%;
+    background-size: cover;
+    background-position: center center;
+    /* z-index: -1; */
+}
+
+/*Estilos para elemento flotante */
+/*posiciion inicial independiente para cada elemento*/
+.parallax-flotante{
+    position: absolute;
+    height: auto;
+    max-width: 150px;
+     z-index: 2;
+     will-change: transform;/*optimizacion */
+}
+#flotante-1{
+    bottom:15%;
+    left:10%;
+    width: 200px;
+}
+#flotante-2{
+    bottom:20%;
+    left:5%;
+    width: 200px;
+}
+#flotante-3{
+    bottom:10%;
+    right:40px;
+    width: 200px;
+    opacity: 0;
+}
+.parallax-contenido{
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    color: #fff;
+    max-width: 600px;
+    width: 80vw;
+}
+.seccion.normal{
+    min-height: 20vh;/*para poder harcer scroll*/
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+@media(prefers-reduce-motion: reduce){
+    .parallax-bg, .parallax-elemento-flotante{
+        /*Desactivar transition animacione sy efec*/
+        transition: none;
+    }
+
+}

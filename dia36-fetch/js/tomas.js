@@ -10,9 +10,9 @@ const errorText = document.getElementById("errorText");
 const toggleSpinner = (visible) => {
     // spinner.classList.toggle("hidden");
     if(visible == "on"){
-        spinner.classList.add("hidden");
-    } else {
         spinner.classList.remove("hidden");
+    } else {
+        spinner.classList.add("hidden");
     }
 }
 // Función para Mostrar Error
@@ -24,16 +24,18 @@ const mostrarError = (mensaje) => {
 const ocultarError = () => {
     errorContainer.classList.add("hidden");
 }
+
+
+
 const mostrarDatos = (listaUsuarios) => {
     // imprimir en pantalla las tarjetas de usuarios
     perfilesContainer.innerHTML +="";
-    if(listaUsuarios.lenght == 0){
-        perfilesContainer.innerHTML= "No se encontraron usuarios en la base de datos";
+    toggleSpinner("off");
+
+    if(listaUsuarios.length == 0){
+        perfilesContainer.innerHTML= "<div>No se encontraron usuarios en la base de datos</div>";
         return;//salimos de la funcion antes 
-    }else{
-
     }
-
     listaUsuarios.forEach(usuario=>{
        perfilesContainer.innerHTML += crearTarjetaPerfil(usuario);
     })
@@ -46,8 +48,8 @@ const crearTags =(listaDeItems)=>{
     }).join(' ')//ahora da espacios y devuelve un HTML en ve de un array
     return miHtml;
 }
-    const crearTarjetaPerfil = (usuario) =>{
-        const{id,profesion,habilidades,experiencia,avatar}=usuario;
+ const crearTarjetaPerfil = (usuario) =>{
+        const{id,nombre,profesion,habilidades,experiencia,avatar}=usuario;
 
         const crearTarjetaPerfil = crearTags(habilidades)
      return `<div class="profile-card bg-white rounded-lg shadow-md overflow-hidden">
@@ -67,7 +69,26 @@ const crearTags =(listaDeItems)=>{
                 </div>
             </div>`
     };
+    const cargarDatos = async() => {
+        try{
+                toggleSpinner("on");
+                esperar(1500);
 
+            const response = await fetch("./db/datos.json")
+            const listaUsuarios = await response.json();
+        
+                 mostrarDatos(listaUsuarios);
+                 }catch(error){
+                    console.warn("TUVIMOS UN ERROR OBTENIENDO DATOS")
+                 }
+            
+        
+        }
+
+function esperar(milisegundos) {
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < milisegundos);
+}
 cargarBtn.addEventListener("click", cargarDatos);
 
 // ------------------------------------------------------------

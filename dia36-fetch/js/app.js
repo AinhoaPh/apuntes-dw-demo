@@ -44,13 +44,15 @@ const ocultarError = ()=>{
     errorContainer.classList.add("hidden");
 }
 
-const mostrarDatos = (datos) =>{
+const mostrarDatos = (listaUsuarios) =>{
     // imprimir en pantalla las tarjetas de usuarios 
 
 }
 
 const cargarDatos = async() => {
-try{    const response = await fetch("./db/datos.json")
+try{
+        toggleSpinner("on");  
+      const response = await fetch("./db/datos.json")
          const listaUsuarios = await response.json();
 
          mostrarDatos(listaUsuarios);
@@ -82,8 +84,10 @@ const filtrarPorExperiencia = ()=> {
 
 }
 
-cargarBtn.
-limpiarBtn.
+cargarBtn.addEventListener("click",()=>{
+
+})
+limpiarBtn.addEventListener("click",)
 filtarBtn.
 
 
