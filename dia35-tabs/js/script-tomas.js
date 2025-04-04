@@ -124,7 +124,7 @@ function cargarCancion(id){
 
     if(!cancion){return;}
 
-const{titulo,imagne,artista,fuente}=cancion;
+const{id,titulo,imagen,artista,fuente}=cancion;
 
     console.log(cancion);
     audioPlayer.src = cancion.fuente;
