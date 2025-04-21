@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protectoras</title>
+    <link rel="stylesheet" href="/proyecto/css/style.css">
+    <style>
+        .bloque{
+            display:none;
+        }
+        .bloque.active{
+            display: block;
+        }
+        .tablist{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+           
+        }
+        .tab.active{
+            border-bottom: 2px solid #3dc8e0;
+          
+        }
+        .tab:hover{
+            color:red;
+        }
+        .contentlist{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="#" alt="logo">
+        <!-- Navbar -->
+        <nav class="nav">
+
+            <!-- <span class="search-container">
+                <input type="text" placeholder="Buscar receta...">
+                <button>🔍</button>
+            </span> -->
+
+            <ul class="nav__links">
+                <li class="nav__links"><a href="/proyecto/index.html">Inicio</a></li>
+                <li class="nav__links"><a href="./dietas-y-recetas.html">Recetas</a></li>
+                <li class="nav__links"><a href="./consejos.html">Consejos</a></li>
+                <li class="nav__links"><a href="./protectoras-refugios.html">Protectoras & Refugios</a></li>
+                <li class="nav__links"><a href="./conocenos.html">Conócenos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+  
+        <article class="hero">
+            <h1 class="hero__h1">Protectoras, Refugios & Centros de Recuperación</h1>
+            <h2>Abandonar No Es Una Opción</h2>
+
+            <img class="hero__img" src="#" alt="imagen inicio">
+        </article>
+
+    <ul class="tablist">
+    <li class="tab active">Comunidad Madrid</li>
+    <li class="tab">Boton 2</li>
+    <li class="tab">Boton 3</li>
+    </ul>
+
+    <!-- <div class="bloque">A mi no me seleccionaron porque no estoy dentro de .content</div> -->
+
+    <main class="contentlist">
+    <div class="bloque active">            
+        <h3>Perros y Gatos</h3>
+        <ul >
+
+            <li>El Refugio</li>
+            <li>Perros y gatos rescatados del abandono y maltrato.</li>
+            <li>Web: elrefugio.org</li>
+            <li>Teléfono: 917 303 680</li>
+        </ul>
+        <ul>
+            <li>ANAA (Asociación Nacional de Amigos de los Animales)</li>
+            <li>Protección, rehabilitación y adopción de perros y gatos.</li>
+            <li>Web: anaaweb.org</li>
+            <li>Teléfono: 913 197 975</li>
+        </ul>
+        ⸻
+        <h3>Animales Domésticos (conejos, cobayas, hurones, pequeños roedores, aves domésticas)</h3>
+        <ul>
+
+            <li>La Madriguera</li>
+            <li>Protección y adopción de animales pequeños y exóticos: conejos, hurones, roedores, etc.</li>
+            <li>Web: lamadriguera.org</li>
+        </ul>
+        <ul>
+            <li>APPA La Madrileña</li>
+            <li>Acoge y da en adopción animales domésticos no convencionales.</li>
+            <li>Facebook: facebook.com/appalamadrilena</li>
+        </ul>
+        ⸻
+
+        <h3>Aves y Aves Exóticas</h3>
+        <ul>
+            <li>Vetcon - Proyecto solidario</li>
+            <li>Acogen aves exóticas cedidas o rescatadas.</li>
+            <li>Web: vetcon.es/adopciones</li>
+        </ul>
+        <ul>
+            <li>GREFA (también atienden aves rapaces y salvajes)</li>
+            <li>Cría, rehabilitación y reintroducción de aves autóctonas y exóticas.</li>
+            <li>Web: grefa.org</li>
+        </ul>
+        ⸻
+
+        <h3>Fauna Salvaje y Silvestre</h3>
+        <ul>
+            <li>CRAS (Centro de Recuperación de Animales Silvestres)</li>
+            <li>Rehabilitación de fauna silvestre: erizos, zorros, reptiles, aves silvestres, etc.</li>
+            <li>Dirección: Tres Cantos</li>
+            <li>Web: comunidad.madrid/cras</li>
+        </ul>
+        ⸻
+
+        <h3>Fauna Exótica y Mamíferos No Domésticos</h3>
+        <ul>
+            <li>Vetcon Adopciones</li>
+            <li>Tienen fichas de reptiles, loros, iguanas, etc.</li>
+            <li>Web: vetcon.es</li>
+        </ul>
+        ⸻
+
+        <h3>Rapaces y Fauna Irrecuperable</h3>
+        <ul>
+            <li>GREFA</li>
+            <li>Principal centro de España en aves rapaces, reptiles, mamíferos silvestres. Mantienen animales
+                irrecuperables para educación ambiental.</li>
+            <li>Web: grefa.org</li>
+        </ul>
+        <ul>
+            <li>Kuna Ibérica</li>
+            <li>Refugio de fauna salvaje irrecuperable. Centro educativo y de concienciación.</li>
+            <li>Localización: Navas del Rey (Madrid)</li>
+            <li>Web: kunaiberica.es</li>
+        </ul></div>
+    <div class="bloque">Contenido 2</div>
+    <div class="bloque">Contenido 3</div>
+    </main>
+    <footer class="footer">
+        <p class="footer__p">LOGO &copy; 2025 - Todos los derechos reservados.
+            <a class="footer__a" href="#">Términos y Condiciones</a>
+        </p>
+    </footer>
+
+
+</body>
+<script>
+const containerBloques = document.querySelector(".contentlist");
+const listaBloques = containerBloques.querySelectorAll(".bloque");
+const listaTabs = document.querySelectorAll(".tab");
+
+// listaBloques.forEach((bloque)=>{
+//     console.log(bloque);
+// });
+
+listaBloques.forEach((tab, idx)=>{
+    //posiciocn de la lista de tabs:
+    // console.log(idx);
+   
+
+    //esto es lo mismo que los dos console de antes 
+    // console.log(listaTabs[idx]);
+    // console.log(listaBloques["indice:"idx])
+
+    listaTabs[idx].addEventListener("click", ()=>{
+        //A todos lo bloques sacarlela clase .active
+        listaBloques.forEach((bloque, id) =>{
+            listaBloques[id].classList.remove("active");
+            listaTabs[id].classList.remove("active");
+        })
+        //agregar la clase .active
+        listaBloques[idx].classList.add("active");
+        listaTabs[idx].classList.add("active");
+
+
+    });
+
+});
+
+
+
+</script>
+
+
+</html>
