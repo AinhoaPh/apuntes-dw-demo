@@ -9,84 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/proyecto/css/style.css">
-    <style>
-        .bloque {
-            display: none;
 
-        }
-
-        .bloque.active {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            gap: 20px;
-            height: 100%;
-            font-size: 24px;
-            width: 100%;
-            justify-content: flex-start;
-            align-items: center;
-
-
-
-
-        }
-
-        .tablist {
-            display: flex;
-            gap: 20px;
-            list-style-type: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .tab.active {
-            border-bottom: 2px solid #3dc8e0;
-            font-size: 30px;
-
-        }
-
-        .tab:hover {
-            color: red;
-        }
-
-        .contentlist {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        ul {
-
-            border-radius: 2px solid #333;
-            list-style: none;
-        }
-
-        .bloque__contenido {
-            /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
-            border: 3px solid #8d8d8d;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 4px 6px 12px #6f6d6d80;
-            background-color: rgb(247, 247, 247);
-            width: 70%;
-
-        }
-
-        h3 {
-
-            font-size: 30px;
-
-        }
-
-        .bloque__li {
-            font-size: 28px;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
@@ -114,12 +37,10 @@
 
     <main class="contentlist">
 
-        <article class="hero">
+        <div class="hero">
             <!-- <img class="hero__img"  src="#" alt="no-abandones"> -->
             <h1 class="hero__h1">Protectoras, Refugios & Centros de Recuperación</h1>
-
-
-        </article>
+        </div>
         <div class="hero__h2">
             <h2>Abandonar No Es Una Opción</h2>
         </div>
@@ -221,7 +142,7 @@
             </div>
 
 
-            <!-- valencia -->
+            <!-- Valencia -->
             <div class="bloque">
                 <section class="bloque__contenido">
                     <h3>Perros y Gatos:</h3>
@@ -237,7 +158,7 @@
                         <li>Centro Municipal de Acogida de Especies Exóticas y Avifauna</li>
                         <li>Especies: Aves domésticas y exóticas.</li>
                         <li>Dirección: Calle Cocoters, Valencia.</li>
-                        <li>Horario: 10:00 – 13:00 horas.</li>
+                        <li>Horario: 10:00 - 13:00 horas.</li>
                         <li>Información adicional: Centro Municipal de Acogida de Especies Exóticas y Avifauna</li>
                     </ul>
                     <h3>Fauna Exótica:</h3>
@@ -245,7 +166,7 @@
                         <li>Centro Municipal de Acogida de Especies Exóticas y Avifauna</li>
                         <li>Especies: Reptiles, loros y otros animales exóticos.</li>
                         <li>Dirección: Calle Cocoters, Valencia.</li>
-                        <li>Horario: 10:00 – 13:00 horas.</li>
+                        <li>Horario: 10:00 - 13:00 horas.</li>
                         <li>Información adicional: Centro Municipal de Acogida de Especies Exóticas y Avifauna</li>
                     </ul>
                     <h3>Fauna Salvaje y Rapaces:</h3>
@@ -340,6 +261,7 @@
             <!-- Galicia -->
             <div class="bloque">
                 <section class="bloque__contenido">
+
                     <h3>Perros y Gatos:</h3>
                     <ul>
                         <li>APADAN (Asociación Protectora de Animales Domésticos Abandonados de Culleredo)</li>
@@ -591,8 +513,9 @@
                         <li>Dirección: Guadalajara.</li>
                         <li>Sitio web: madridvegano.es</li>
                     </ul>
+                    </section>
             </div>
-        
+
         </section>
     </main>
     <footer class="footer">
@@ -627,7 +550,7 @@
                 listaBloques[id].classList.remove("active");
                 listaTabs[id].classList.remove("active");
             })
-            //agregar la clase .active
+            //agregar la clase active
             listaBloques[idx].classList.add("active");
             listaTabs[idx].classList.add("active");
 

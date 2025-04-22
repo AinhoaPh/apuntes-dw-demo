@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos</title>
     <link rel="stylesheet" href="/proyecto/css/style.css">
+    <style>
+        .acordeon__bloque--activo .acordeon__contenido {
+            height: auto;
+            padding: 20px;
+        }
+
+        /* .acordeon__contenido {
+            background-color: rgb(242, 235, 237);
+            color: #111;
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+
+        } */
+        .acordeon__contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    padding: 0;
+    height: 0;
+    
+
+}
+    </style>
 </head>
 
 <body>
@@ -36,98 +64,143 @@
     <main class="container">
         <article class="hero">
             <h1 class="hero__h1">Consejos & Cuidado Animal</h1>
-    
+
             <img class="hero__img" src="#" alt="imagen consejos">
         </article>
-        <section>
+        <section class="bloque__contenido">
             <h2>Consejos Generales</h2>
-            
-        </section>
+            <ul>
+                <li>Revisiones veternarias periódicas, es importante acudir para detectar posibles enfermedades y tener
+                    todas las vacunas al día para protegerlo de toda adversidad posible. Identificaión y microchip.</li>
+                <li>Asegura su entorno de posibles amenazas.</li>
+                <li>Evita castigos físicos o gritos, la educación positiva fortalece más el vinculo y lo aleja de
+                    posibles problemas de conducta en el futuro.</li>
 
-        <section class="acordeon">
-            <h2>Consejos Estacionales</h2>
+                <li>Si en la rutina del peludo la alimentación siempre va después de los paseos, esto evita que se pueda
+                    producir una torsión de estómago, es una aletración por acumulación de líquido, gas y alimento que
+                    puede ser mortal. Los paseos deberán estar alejados 2 horas antes o después de las comidas.</li>
+                <li>Tras el transcurso de un largo paseo o debido a una gran excitacion del animal, bien sea porque haya
+                    hecho deporte o haya estado jugando, no se le debe de dar agua en ninguno de los casos hasta que por
+                    lo menos hayan transcurrido al menos 30 min. se haya calmado y regulado, lo conveniente es un paseo
+                    tranquilo y después se puede proceder a darle agua, esto evitará que se produzcan problemas como la
+                    torsión de estómago. Algunos síntomas serián como no poder tumbarse,abdomen muy hinchado, nauseas,
+                    salivacion excesiva e inquietud. </li>
+                <li>La ubicación del bebedero en los felinos, se recomienda que esté alejado tanto del arenero, como del
+                    comedero. Los felinos necesitan tener sus espacios y por instinto evitan contaminar su fuente de
+                    hidratación con las bacterias de los alimentos.</li>
+                <li>Alimentar a nuestros perros y gatos( sobre todo los gatos) con comida húmeda(latas) ayuda a prevenir
+                    problemas renales y urinarios por su alto contenido en agua. La comida húmeda aporta hidratación
+                    adicional, mientras que el pienso seco ayuda a una buena salud dental. </li>
+            </ul>
+
+
+        </section>
+<h2>Consejos Estacionales</h2>
+        <section class="acordeon acordeon__bloque">
             
+
             <h2 class="acordeon__h2">Primavera</h2>
 
             <div class="acordeon__contenido">
-            <img src="#" alt="Primavera">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente, illum aliquid non earum sunt
-                temporibus, laboriosam illo voluptate alias enim inventore iste debitis facere totam fugit aut! Ex, sed!
-            </p>
-            <h3>Orugas procesionarias </h3>
-            <img src="#" alt="oruga">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus est dolorem quos molestias
-                repudiandae commodi numquam, iusto optio dolor id illo sunt reprehenderit repellat quam esse totam
-                dignissimos quidem!</p>
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
-        </div>
+                <img src="#" alt="Primavera">
+                <p> Consejos a tener en cuenta para la llegada de la Primavera.</p>
+                <h3>Orugas procesionarias </h3>
+                <img src="#" alt="oruga">
+                <p>La procesionaria es un insecto que abunda en los pinos de Europa, Asia, el norte de África y algunas
+                    zonas de América del Sur.
+
+                    Las orugas (larvas) están cubiertas de pelos urticantes que se desprenden y flotan en el aire, por
+                    lo que pueden provocar irritación en oídos, nariz y garganta puesto que son altamente venenosos para
+                    los animales, así como intensas reacciones alérgicas. La sustancia que le atribuye esta capacidad
+                    urticante es una toxina termolábil denominada Thaumatopina.</p>
+                <ul>
+                    <p>Los síntomas más característicos son:</p>
+                    <li>Vómitos y diarreas, en la mayoria de los casos con sangre.</li>
+                    <li>Pupilas dilatadas.</li>
+                    <li>Agitacion y nerviosismo repentino.</li>
+                    <li>Segregación exagerada de saliva.</li>
+                    <li>Fiebre.</li>
+                    <li>Desorientación e inestabilidad.</li>
+                    <li>Expresa dolor y lamido excesivo en alguna parte del cuerpo.</li>
+                </ul>
+                <ul>
+                    <p>Consejos en caso de contacto con la procesionaria:
+
+                    </p>
+                    <li>Manteniendo la calma, procede a quitar todos los pelos urticantes o lava sin frotar con
+                        abundante agua fria la zona afectada. </li>
+                    <li>Evita que se lama la zona a tratar para evitar que pueda ingerir algún pelo urticante que no se
+                        haya podido eliminar</li>
+                    <li>Acude lo antes posible al veterinario para prevenir reacciones letales</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="acordeon">
+        <section class="acordeon acordeon__bloque">
             <h2 class="acordeon__h2">Verano</h2>
 
             <div class="acordeon__contenido">
-            <img src="#" alt="Verano">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente, illum aliquid non earum sunt
-                temporibus, laboriosam illo voluptate alias enim inventore iste debitis facere totam fugit aut! Ex, sed!
-            </p>
-            <h3>Orugas procesionarias </h3>
-            <img src="#" alt="oruga">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus est dolorem quos molestias
-                repudiandae commodi numquam, iusto optio dolor id illo sunt reprehenderit repellat quam esse totam
-                dignissimos quidem!</p>
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
-        </div>
+                <img src="#" alt="Verano">
+                <p>En la época de Verano, es importante la hora de los paseos debido a varios factores, uno de ellos que
+                    hay que tener muy encuenta son las altas temperaturas que pueden alcanzar ls diferentes pavimentos a
+                    los que se exponen los peludos.
+                </p>
+                <h3>Recomendaciones:</h3>
+                <img src="#" alt="oruga">
+                <p> Una manera rápida de comprobar la temperatura del pavimiento sería poniendo la parte superior de la
+                    mano en el pavimento y comprobar si somos capaces de soportarlo o nos produce alguna molestia, de
+                    esa manera podremos saber si la almohadilla estará segura de quemaduras en el paseo.
+
+</p>
+                <ul>
+                    <li>Se recomienda que los paseos se realicen en las primeras horas de la mañana y en las últimas de la
+                        tarde.</li>
+                    <li>Importante también el uso de protector solar, específica para animales, sobre todo en las zonas
+                    expuesta al sol que no esten suficientemente pobladas </li>
+                    <li>Proporciona todos los días agua limpia y fresca, situado en un lugar con sombra en el que también puedan descansar y no estén expuestos a altas temperaturas. Se recomienda cambiar varias veces a lo largo del día para evitar calentamiento.</li>
+                    <li>-</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="acordeon">
+        <section class="acordeon acordeon__bloque">
             <h2 class="acordeon__h2">Otoño</h2>
 
             <div class="acordeon__contenido">
-            <img src="#" alt="Otoño">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente, illum aliquid non earum sunt
-                temporibus, laboriosam illo voluptate alias enim inventore iste debitis facere totam fugit aut! Ex, sed!
-            </p>
-            <h3>Orugas procesionarias </h3>
-            <img src="#" alt="oruga">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus est dolorem quos molestias
-                repudiandae commodi numquam, iusto optio dolor id illo sunt reprehenderit repellat quam esse totam
-                dignissimos quidem!</p>
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
-        </div>
+                <img src="#" alt="Otoño">
+
+                <h3>Orugas procesionarias </h3>
+                <img src="#" alt="oruga">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus est dolorem quos molestias
+                    repudiandae commodi numquam, iusto optio dolor id illo sunt reprehenderit repellat quam esse totam
+                    dignissimos quidem!</p>
+                <ul>
+                    <li>Seca bien al animal si llueve o pisa zonas húmedas o con barro.</li>
+                    <li>Es época de setas y hongos, evita que coma cualquie cosa del suelo.</li>
+                    <li>Proporciona abrigo a las razas pequeñas o de pelo corto.</li>
+                    <li>Cuidado con las aguas estancadas que se puedan producir por las lluvias.</li>
+                </ul>
+            </div>
         </section>
 
         <section class="acordeon">
             <h2 class="acordeon__h2">Invierno</h2>
 
             <div class="acordeon__contenido">
-            <img src="#" alt="Invierno">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente, illum aliquid non earum sunt
-                temporibus, laboriosam illo voluptate alias enim inventore iste debitis facere totam fugit aut! Ex, sed!
-            </p>
-            <h3>Orugas procesionarias </h3>
-            <img src="#" alt="oruga">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus est dolorem quos molestias
-                repudiandae commodi numquam, iusto optio dolor id illo sunt reprehenderit repellat quam esse totam
-                dignissimos quidem!</p>
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
-        </div>
+                <img src="#" alt="Invierno">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente, illum aliquid non earum sunt
+                    temporibus, laboriosam illo voluptate alias enim inventore iste debitis facere totam fugit aut! Ex,
+                    sed!
+                </p>
+                <h3>Recomendaciones: </h3>
+                <img src="#" alt="oruga">
+                <ul>
+                    <li>Revisa el vehículo antes de arrancar, muchos animales utilizan los motores para refugiarse de las bajas temperaturas.</li>
+                    <li>-Proporciona ropa adecuada para razas de pelo corto y limita la exposicion al aire libre con bajas temperaturas, puede provocar congelación e hipotermia.</li>
+                    <li>Proporciona un lugar seco y cálido para los animales, libre de corrientes. Para animales adultos, puedes optar por mantas eléctricas evitando que se acuesten en suelos fríos evitarás problemas articulares.</li>
+                    
+                </ul>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -137,9 +210,9 @@
     </footer>
 </body>
 <script>
-    const acordeonList = document.querySelectorAll(".acordeon");
-    const h2List = document.querySelectorAll(".acordeon__h2");
-    const contentList = document.querySelectorAll(".acordeon__contenido");
+    // const acordeonList = document.querySelectorAll(".acordeon");
+    // const h2List = document.querySelectorAll(".acordeon__h2");
+    // const contentList = document.querySelectorAll(".acordeon__contenido");
 
 
     // 1º forma 
@@ -157,13 +230,26 @@
 
     // 2º forma 
 
-    acordeonList.forEach((h2List, i)=>{
-        h2List.addEventListener("click",()=> {
-            acordeon__contenido.classList.remove("hidden");
+    // acordeonList.forEach((h2List, i) => {
+    //     h2List.addEventListener("click", () => {
+    //         acordeon__contenido.classList.remove("hidden");
+    //     })
+    //     acordeon__contenido.classList.add("hidden");
+    // })
+
+
+
+    const bloque = document.querySelectorAll(".acordeon__bloque");
+    const h2 = document.querySelectorAll(".acordeon__h2");
+
+    h2.forEach((cadaH2, i) => {
+        h2[i].addEventListener("click", () => {
+            bloque.forEach((cadaBloque, i) => {
+                bloque[i].classList.remove("acordeon__bloque--activo");
+            })
+            bloque[i].classList.add("acordeon__bloque--activo");
         })
-        acordeon__contenido.classList.add("hidden");
     })
- 
 
 </script>
 
