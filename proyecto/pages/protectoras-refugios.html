@@ -14,7 +14,7 @@
 
 <body>
     <header class="header">
-        <img src="#" alt="logo">
+        <picture><img class="header__logo" src="../img/logo.jpg" alt="logo"></picture>
         <!-- Navbar -->
         <nav class="nav">
 
@@ -40,9 +40,9 @@
         <div class="hero">
             <!-- <img class="hero__img"  src="#" alt="no-abandones"> -->
             <h1 class="hero__h1">Protectoras, Refugios & Centros de Recuperación</h1>
-        </div>
-        <div class="hero__h2">
-            <h2>Abandonar No Es Una Opción</h2>
+        
+        
+            <h2 class="hero__h2" >Abandonar No Es Una Opción</h2>
         </div>
         <section class="container">
 
@@ -558,6 +558,43 @@
         });
 
     });
+
+      /* Protectoras*/
+      const madridList =[
+        {
+            categoria: "Perros y gatos",
+            protectora: [
+                {
+                    id 1,
+                    nombre: "El Refugio",
+                    direccion:"",
+                    sitio web: "elrefugio.org",
+                    teléfono:  "917 303 680"
+
+                },
+                {
+                    id 2,
+                    nombre: "ANAA (Asociación Nacional de Amigos de los Animales)",
+                    direccion:"",
+                    sitio web: " anaaweb.org",
+                    teléfono:  " 913 197 975"
+                }
+            ]
+
+
+
+        }
+     ];
+     
+     const madridContainer = document.getElementById("madrid");
+        madridList.forEach(bloque, i=>{
+            const protectoraHTML = `
+            <h3>${bloque.categoria}</h3>
+            <li>
+
+        })
+
+
 
 
 
