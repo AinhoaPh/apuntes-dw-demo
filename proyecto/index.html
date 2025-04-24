@@ -7,11 +7,12 @@
     <title>Proyecto</title>
 
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.google.com/specimen/Dancing+Script" rel="stylesheet">
-    
+
 
     <script src="./js/script.js" defer></script>
 
@@ -19,10 +20,10 @@
 
 <body>
     <header class="header">
-        <picture  ><img class="header__logo" src="./img/logo.jpg" alt="logo"></picture>
+        <picture><img class="header__logo" src="./img/logo.jpg" alt="logo"></picture>
         <!-- Navbar -->
         <nav class="nav">
-            
+
 
             <!-- <span class="search-container">
                 <input type="text" placeholder="Buscar receta...">
@@ -30,11 +31,11 @@
             </span> -->
 
             <ul class="nav__links">
-                <li class="nav__links"><a href="/proyecto/index.html">Inicio</a></li>
-                <li class="nav__links"><a href="/proyecto/pages/dietas-y-recetas.html">Recetas</a></li>
-                <li class="nav__links"><a href="/proyecto/pages/consejos.html">Consejos</a></li>
-                <li class="nav__links"><a href="./pages/protectoras-refugios.html">Protectoras & Refugios</a></li>
-                <li class="nav__links"><a href="./pages/conocenos.html">Conócenos</a></li>
+                <li><a class="nav__links" href="/proyecto/index.html">Inicio</a></li>
+                <li><a class="nav__links" href="/proyecto/pages/dietas-y-recetas.html">Recetas</a></li>
+                <li><a class="nav__links" href="/proyecto/pages/consejos.html">Consejos</a></li>
+                <li><a class="nav__links" href="./pages/protectoras-refugios.html">Protectoras & Refugios</a></li>
+                <li><a class="nav__links" href="./pages/conocenos.html">Conócenos</a></li>
             </ul>
         </nav>
 
@@ -50,48 +51,58 @@
 
         <h2 class="container__h2">Frase</h2>
         <section class="card">
-            <h3 class="card__h3">Dietas / Recetas</h3>
-            <img src="#" alt="imagen dietas" class="card-img">
 
-            <p class="card__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis dolore
-                libero eos
-                reprehenderit, saepe deleniti labore doloribus quod repudiandae? Assumenda aspernatur quasi doloremque
-                similique enim repudiandae, voluptates voluptas nam.</p>
+            <picture ><img class="card__img" src="./img/recetas.jpg" alt="imagen dietas" loading="lazy"></picture>
+            <div class="card__contenido">
+                <h3 class="card__h3">Recetas</h3>
+
+                <p class="card__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis dolore
+                    libero eos
+                    reprehenderit, saepe deleniti labore doloribus quod repudiandae? Assumenda aspernatur quasi
+                    doloremque
+                    similique enim repudiandae, voluptates voluptas nam.</p>
+            </div>
+
         </section>
 
-        <section id="#" class="card">
-            <img src="#" alt="imagen adopción" class="card-img">
-            <h3 class="card__h3">Adopción</h3>
-            <p class="card__p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eius, nesciunt quisquam
-                doloremque modi
-                porro temporibus omnis quibusdam laudantium eveniet, facere ex aliquam odio dignissimos consectetur quis
-                at ducimus qui.</p>
-        </section>
 
         <section id="#" class="card">
-            <img src="#" alt="imagen tips" class="card-img">
-            <h3 class="card__h3">Consejos</h3>
+       
+                <picture><img  class="card__img" src="./img/consejos.jpg" alt="imagen tips" loading="lazy"></picture>
+     <div class="card__contenido">
+
+                <h3 class="card__h3">Consejos</h3>
+           
             <p class="card__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi, illo nihil hic at
                 ipsa rerum dolorum
                 natus, itaque sint corrupti quidem libero earum enim aut tempora, magni accusamus reiciendis.</p>
+ </div>
         </section>
 
         <section id="#" class="card">
-            <img src="#" alt="imagen protectoras" class="card-img">
-            <h3 class="card__h3">Protectoras / Refugios</h3>
+            <picture ><img class="card__img" src="./img/protect.jpg" alt="imagen protectoras" loading="lazy"></picture>
+            <div class="card__contenido">
+
+                <h3 class="card__h3">Protectoras & Refugios</h3>
+            
             <p class="card__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nihil quo id illum in
                 eligendi
                 reiciendis labore eveniet consectetur, perspiciatis vitae incidunt eum error corporis unde, totam
                 veritatis mollitia ducimus.</p>
+</div>
         </section>
 
         <section id="#" class="card">
-            <img src="#" alt="imagen Conócenos" class="card-img">
-            <h3 class="card__h3">Conócenos</h3>
+            
+                <picture ><img class="card__img" src="./img/logo.jpg" alt="imagen Conócenos" loading="lazy"></picture>
+
+                <div class="card__contenido">
+                <h3 class="card__h3">Conócenos</h3>
             <p class="card__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit nostrum
                 cum dolores
                 itaque esse, omnis, saepe eveniet optio expedita sit? Officiis laboriosam tenetur quae, atque voluptate
                 facilis ex numquam.</p>
+</div>
         </section>
 
     </main>

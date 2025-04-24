@@ -1,12 +1,11 @@
 /*----------| |  Colores  |  |-----------*/
-/* - header: 
+/*      - header: 
             background-color:#2bd0cb ;
         - main:
             background-color: #f4f1f1;
-        -sidebar: 
-            background-color: #8e8c8c;
+
         -footer:
-            background-color: #ccc;
+            background-color: #2bd0cb;
 
     */
 /*---------| |   Reset  |  |----------*/
@@ -22,11 +21,12 @@
 
 .header {
     display: flex;
+
     height: 70px;
     width: 100%;
     /* grid-area: header; */
     padding: 10px;
-    background-color: #2bd0cb;
+    background-color: #0c6a6b;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 10px #4b4b4b;
@@ -36,12 +36,13 @@
 
 .nav {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 15px;
     width: 100%;
     letter-spacing: 2px;
-
+    color: #fff;
 
 
 
@@ -50,21 +51,22 @@
 
 .nav__links {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: 15px;
+    color: #fff;
+    text-decoration: none;
 
 
 }
-.header__logo{
+
+.header__logo {
     display: flex;
     height: 60px;
     width: 60px;
 }
 
-li a {
-    text-decoration: none;
-    color: #fff;
-}
+
 
 /*--------| |   Main  |  |---------*/
 
@@ -73,11 +75,12 @@ body {
     width: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background-image: url('../img/flores.jpeg') ; 
+    background-image: url('../img/flores.jpeg');
     font-family: "DancingScript";
-} 
+}
 
 
+/*--------| |   Hero  |  |---------*/
 .hero {
     display: flex;
     flex-direction: column;
@@ -93,6 +96,8 @@ body {
     z-index: -1;
     width: 100%;
     height: 100%;
+   
+    object-fit: contain;
 }
 
 .hero__h1 {
@@ -104,15 +109,18 @@ body {
     text-shadow: 8px 8px 12px#eef1f1;
 
 }
-.hero__h2{
-    display:flex;
-    flex-direction:column ;
+
+.hero__h2 {
+    display: flex;
+    flex-direction: column;
 }
 
+
+/*----------||  Card  | |-----------*/
 .container {
     display: flex;
     flex-direction: column;
-   
+
     height: 100%;
     width: 100%;
     justify-content: center;
@@ -123,20 +131,20 @@ body {
 
 .card {
     display: flex;
-    
-    border: 4px solid #2bd0cb;
+    align-items: center;
+    border: 4px solid #1f9894;
     width: 70%;
-    background: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 4px 6px 30px #2bd0cb;
-    height: 200px;
+    box-shadow: 4px 6px 30px #1f9894;
+    
+    max-height: 600px;
     text-align: center;
     overflow: hidden;
     /* crear con js un ver mas..*/
     margin: 10px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease;
     gap: 10px
 }
 
@@ -147,7 +155,10 @@ body {
 .card__h3 {
     display: flex;
     justify-content: center;
-    
+    font-size: 28px;
+    text-decoration: underline;
+   
+
 
 }
 
@@ -156,28 +167,43 @@ body {
     font-size: 24px;
     justify-content: center;
     
+  
+
 }
 
-.card-img {
-    width: 100%;
+.card__img {
+    width: 100px;
     
+    height: 100px;
+
 }
 
+.card__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    color: #111;
+    width: 100%;
+    height: 100%;
+   
+}
 
+/*----------||  Consejos (acordeon)  | |-----------*/
 .acordeon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-   
-    
+    width: 60%;
     gap: 10px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 4px 6px 30px #1f9894;
+    color: #0c6a6b;
     
-
 }
 
 .acordeon__h2 {
@@ -185,7 +211,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
 
 }
 
@@ -198,18 +224,28 @@ body {
     max-height: 70%;
 }
 
+
+
+.acordeon__bloque--activo .acordeon__contenido {
+    height: auto;
+    padding: 20px;
+}
+
 .acordeon__contenido {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     overflow: hidden;
     transition: all 0.5s ease;
+    padding: 0;
+    height: 0;
+   
+
 
 }
-
-
-/*----------||  Protectoras  | |-----------*/
+/*----------||  Protectoras (Tab)  | |-----------*/
 
 .contentlist {
     display: flex;
@@ -218,7 +254,9 @@ body {
     align-items: center;
     height: 100%;
     
+
 }
+
 .bloque {
     display: none;
 
@@ -232,29 +270,31 @@ body {
     height: 100%;
     font-size: 24px;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    list-style: none;
+    
+    text-align: center;
 
 }
 
 .bloque__contenido {
-    /* display: flex;
+     display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center; 
     border: 4px solid #2bd0cb;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 4px 6px 30px #93cbc9;
-    background-color: rgb(247, 247, 247);
+    list-style: none;
     width: 70%;
-    
+    background-color: #eef5fd;
     
 }
 
 .bloque__li {
     font-size: 28px;
     text-decoration: underline;
+    list-style: none;
 }
 
 .tablist {
@@ -264,7 +304,8 @@ body {
     font-size: 24px;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #eef5fd;
 }
 
 .tab.active {
@@ -278,7 +319,19 @@ body {
 }
 
 
-
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    border: 4px solid #2bd0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 30px #93cbc9;
+    width: 70%;
+    background-color: #eef5fd;
+    
+}
 /*----------||   Footer  | |-----------*/
 .footer {
     display: flex;
@@ -286,8 +339,9 @@ body {
     width: 100%;
     /* grid-area: footer; */
     padding: 10px;
-    background-color: #2bd0cb;
+    background-color: #0c6a6b;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
+    color: #fff;
 }
