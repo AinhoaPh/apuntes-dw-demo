@@ -34,6 +34,13 @@
 
 }
 
+.header__logo {
+    display: flex;
+    height: 60px;
+    width: 60px;
+}
+
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -43,27 +50,30 @@
     width: 100%;
     letter-spacing: 2px;
     color: #fff;
-
+    transition: transform 0.5s ease;
+    
 
 
 
 }
 
-.nav__links {
+
+.nav__ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 15px;
-    color: #fff;
-    text-decoration: none;
-
+ 
 
 }
-
-.header__logo {
-    display: flex;
-    height: 60px;
-    width: 60px;
+.nav__links{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.nav__toggle{
+    display: none;
+    cursor: pointer;
 }
 
 
@@ -71,14 +81,28 @@
 /*--------| |   Main  |  |---------*/
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-image: url('../img/flores.jpeg');
     font-family: "DancingScript";
+    
 }
 
+/* .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    border: 4px solid #2bd0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 30px #93cbc9;
+    width: 70%;
+    background-color: #eef5fd;
+    
+} */
 
 /*--------| |   Hero  |  |---------*/
 .hero {
@@ -86,13 +110,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    text-align: center;
+    height: 20vh;
     width: 100%;
-
+    position: relative;
+    
+    z-index: 0;
+    padding: 20px;
 }
 
 .hero__img {
-    position: relative;
+    
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -103,7 +131,7 @@ body {
 .hero__h1 {
     position: absolute;
     z-index: 1;
-    font-size: 150px;
+    font-size: 4vw;
     letter-spacing: 6px;
     color: #0c6a6b;
     text-shadow: 8px 8px 12px#eef1f1;
@@ -113,6 +141,11 @@ body {
 .hero__h2 {
     display: flex;
     flex-direction: column;
+    color: #0c6a6b;
+    text-shadow: 8px 8px 12px#eef1f1;
+    font-size: 2vw;
+
+
 }
 
 
@@ -120,13 +153,14 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-
+    margin-top: 0;
     height: 100%;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    margin: 40px;
+    
+    padding: 10px;
 }
 
 .card {
@@ -137,25 +171,26 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 4px 6px 30px #1f9894;
-    
+    background-color: #eef5fd;
     max-height: 600px;
     text-align: center;
     overflow: hidden;
-    /* crear con js un ver mas..*/
     margin: 10px;
-    cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.5s ease;
     gap: 10px
 }
-
-.card:hover {
-    transform: scale(1.05), #ccc;
+.card__h2{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #0c6a6b;
 }
+
 
 .card__h3 {
     display: flex;
     justify-content: center;
-    font-size: 28px;
+    font-size: 2rem;
     text-decoration: underline;
    
 
@@ -164,7 +199,7 @@ body {
 
 .card__p {
     display: flex;
-    font-size: 24px;
+    font-size: 1.2rem;
     justify-content: center;
     
   
@@ -172,9 +207,9 @@ body {
 }
 
 .card__img {
-    width: 100px;
+    width: 80px;
     
-    height: 100px;
+    height: 80px;
 
 }
 
@@ -183,12 +218,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 20px;
     gap: 10px;
-    color: #111;
+    color: #0c6a6b;
     width: 100%;
     height: 100%;
+    font-size: 1.2rem;
    
+}
+.card__imgList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /*----------||  Consejos (acordeon)  | |-----------*/
@@ -200,9 +247,11 @@ body {
     width: 60%;
     gap: 10px;
     padding: 30px;
+    border: 4px solid #1f9894;
     border-radius: 10px;
     box-shadow: 4px 6px 30px #1f9894;
     color: #0c6a6b;
+    background-color: #eef5fd;
     
 }
 
@@ -241,6 +290,8 @@ body {
     transition: all 0.5s ease;
     padding: 0;
     height: 0;
+    font-size: 1.2rem;
+    
    
 
 
@@ -268,7 +319,7 @@ body {
     padding: 10px;
     gap: 20px;
     height: 100%;
-    font-size: 24px;
+    font-size: 1.2rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -281,22 +332,36 @@ body {
      display: flex;
     flex-direction: column;
     justify-content: center; 
-    border: 4px solid #2bd0cb;
+    border: 4px solid #1f9894;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 4px 6px 30px #93cbc9;
-    list-style: none;
+    box-shadow: 4px 6px 30px #1f9894;
+    
     width: 70%;
     background-color: #eef5fd;
+    color: #0c6a6b;
     
 }
 
-.bloque__li {
-    font-size: 28px;
+.bloque__h3{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
     text-decoration: underline;
-    list-style: none;
+    color: #0c6a6b;
 }
 
+.bloque__contenido ul {
+    list-style:none;
+    
+}
+
+.bloque__title{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #0c6a6b;
+}
 .tablist {
     display: flex;
     gap: 20px;
@@ -306,6 +371,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     background-color: #eef5fd;
+    padding: 20px;
+    text-shadow: 2px 2px 2px #1f9894;
+    color: #0c6a6b;
 }
 
 .tab.active {
@@ -319,19 +387,7 @@ body {
 }
 
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    border: 4px solid #2bd0cb;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 4px 6px 30px #93cbc9;
-    width: 70%;
-    background-color: #eef5fd;
-    
-}
+
 /*----------||   Footer  | |-----------*/
 .footer {
     display: flex;
@@ -345,3 +401,26 @@ body {
     letter-spacing: 2px;
     color: #fff;
 }
+
+@media (max-width:468px){
+  .nav__links{
+    display: none;
+  }
+  .nav__toggle{
+    display: block;
+  }
+
+.nav__toggle.active{
+    display: flex;
+    cursor: pointer;
+    color: #fff;
+    height: 40px
+}
+.card{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+};
+ 
