@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos | Animaloteca</title>
     <link rel="stylesheet" href="/proyecto/css/style.css">
-    <script src="../js/script.js" defer></script>
+    <script></script>
 
 </head>
 
@@ -205,6 +205,35 @@
     </footer>
 </body>
 <script>
+    // const acordeonList = document.querySelectorAll(".acordeon");
+    // const h2List = document.querySelectorAll(".acordeon__h2");
+    // const contentList = document.querySelectorAll(".acordeon__contenido");
+
+
+    // 1º forma 
+
+    // acordeonList.forEach((acordeon, i)=>{
+    //     acordeon.addEventListener("click", () => {
+    //         h2List.forEach((acordeon__h2)=>{acordeon__h2.classList.remove("active")});
+    //         h2List[i].classList.add("active");
+    //     });
+    //     acordeon.addEventListener("click", () => {
+    //       h2List[i].classList.remove("active");
+    //     });
+    // })
+
+
+    // 2º forma 
+
+    // acordeonList.forEach((h2List, i) => {
+    //     h2List.addEventListener("click", () => {
+    //         acordeon__contenido.classList.remove("hidden");
+    //     })
+    //     acordeon__contenido.classList.add("hidden");
+    // })
+
+
+
     const bloque = document.querySelectorAll(".acordeon__bloque");
     const h2 = document.querySelectorAll(".acordeon__h2");
 
@@ -218,6 +247,5 @@
     })
 
 </script>
-
 
 </html>

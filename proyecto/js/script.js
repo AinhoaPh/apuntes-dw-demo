@@ -1,52 +1,109 @@
 
-    const sectionsData = [
-        {
-            img: "assets/image1.jpg",
-            title: "Dietas y Recetas",
-            description: "Esta es la descripción de la sección 1."
-        },
-        {
-            img: "assets/image2.jpg",
-            title: "Servicios",
-            description: "Aquí tenemos la información de la sección 2."
-        },
-        {
-            img: "assets/image3.jpg",
-            title: "Consejos",
-            description: "Esto es lo que puedes encontrar en la sección 3."
-        },
-        {
-            img: "assets/image3.jpg",
-            title: "Adopcion y Protectoras",
-            description: "Esto es lo que puedes encontrar en la sección 3."
-        },
-        {
-            img: "assets/image3.jpg",
-            title: "Animales perdidos",
-            description: "Esto es lo que puedes encontrar en la sección 3."
-        },
-    ];
-    const container = document.getElementById("sections-container");
+   
 
-    sectionsData.forEach(section => {
-        const sectionElement = document.createElement("section");
-        sectionElement.classList.add("custom-section");
+   
+   //Menu toggle
+    const navToggle = document.querySelector(".nav__toggle");
+    const navList = document.querySelector(".nav__ul");
 
-        sectionElement.innerHTML =
-            `<img src="${section.img}" alt="${section.title}">
-                <h3>${section.title}</h3>
-                <p>${section.description}</p>
-                `;
+    navToggle.addEventListener("click", () => {
+        navList.classList.toggle("active");
+    }
+    );
 
-                container.appendChild(sectionElement);
+
+    // Consejos (acordeon)
+
+    const bloque = document.querySelectorAll(".acordeon__bloque");
+    const h2 = document.querySelectorAll(".acordeon__h2");
+
+    h2.forEach((cadaH2, i) => {
+        h2[i].addEventListener("click", () => {
+            bloque.forEach((cadaBloque, i) => {
+                bloque[i].classList.remove("acordeon__bloque--activo");
+            })
+            bloque[i].classList.add("acordeon__bloque--activo");
+        })
+    })
+
+
+    // Protectoras (tabs )
+    const containerBloques = document.querySelector(".contentlist");
+    const listaBloques = containerBloques.querySelectorAll(".bloque");
+    const listaTabs = document.querySelectorAll(".tab");
+
+
+
+    listaBloques.forEach((tab, idx) => {
+
+
+        listaTabs[idx].addEventListener("click", () => {
+
+            listaBloques.forEach((bloque, id) => {
+                listaBloques[id].classList.remove("active");
+                listaTabs[id].classList.remove("active");
+            })
+
+            listaBloques[idx].classList.add("active");
+            listaTabs[idx].classList.add("active");
+
+
+        });
+
     });
 
 
-    //menu toggle
-    const navToggle = document.querySelector(".nav__toggle");
-    const navLinks = document.querySelectorAll(".nav__link");
+// Agregar la clase bloque__h3 a todos los h3 dentro de bloque__contenido
+const bloqueH3 = document.querySelectorAll(".bloque__contenido h3");
+bloqueH3.forEach(h3 =>{ h3.classList.add("bloque__h3")});   
 
-    navToggle.addEventListener("click", () => {
-        document.body.classList.toggle(".active");
-    }
-    );
+
+
+// Intento de codigo para crear el html pero no funciona 
+    
+    
+//      const madridList = [
+//         {
+//              categoria: "Perros y gatos",
+//              protectora: [
+//                  {
+//                      id 1,
+//                      centro: "El Refugio",
+//                      direccion: "",
+//                      sitio web: "elrefugio.org",
+//                      teléfono: "917 303 680"
+
+//                  },
+//                  {   
+//                      id 2,
+//                      centro: "ANAA (Asociación Nacional de Amigos de los Animales)",
+//                      direccion: "",
+//                      sitio web: " anaaweb.org",
+//                      teléfono: " 913 197 975"
+//                  }
+//              ]
+
+
+
+//          }
+//      ];
+//      const {id,centro,direccion,sitio web,telefono} = protectora;
+
+//      const madridContainer = document.getElementById("madrid");
+//      madridList.forEach(bloque, i => {
+//          const protectoraHTML = `
+//              <h3>${categoria}</h3>
+//               <ul>
+//                  <li >${centro}</li>
+//                  <li>${direccion}</li>
+//                  <li>${sitio web}</li>
+//                  <li>${telefono}</li>
+//              </ul>
+//          `;
+//          madridContainer.innerHTML += protectoraHTML;
+
+//          })
+
+
+
+
